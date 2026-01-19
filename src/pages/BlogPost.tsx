@@ -53,7 +53,7 @@ export function BlogPost() {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeHighlight]}
             >
-              {getLocalizedContent(article.content, currentLang)}
+              {currentLang === 'zh' ? article.contentZh : article.contentEn}
             </ReactMarkdown>
           </div>
         </article>

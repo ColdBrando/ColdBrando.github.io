@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate-articles": "node scripts/generate-articles.js",
+    "prebuild": "npm run generate-articles",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
