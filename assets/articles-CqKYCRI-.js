@@ -1226,7 +1226,7 @@ AI不是终点，而是新的起点。重要的是找到真正有价值的场景
 **欢迎交流**：
 - GitHub: [ColdBrando](https://github.com/ColdBrando)
 - Email: your-email@example.com
-`,date:"2026-01-19",tags:["AI","API","LLM","Guide","Tutorial"],readTime:15},{id:"building-with-claude",title:{en:"Building a Personal Website with Claude Code: From Zero to Live",zh:"与Claude Code共建个人网站：从零到上线"},excerpt:{en:"I've always wanted to create a personal blog to share my technical articles and insights. But every time I thought about the work involved - learning ...",zh:"我一直想建立一个个人博客网站，分享我的技术文章和心得。但每次想到需要学习React、TypeScript、配置构建工具、部署到GitHub Pages等一系列工作，就觉得太复杂，迟迟没有动手。..."},contentEn:`# Building a Personal Website with Claude Code: From Zero to Live
+`,date:"2026-01-19",tags:["AI","API","LLM","Guide","Tutorial"],readTime:15,isPaid:!1},{id:"building-with-claude",title:{en:"Building a Personal Website with Claude Code: From Zero to Live",zh:"与Claude Code共建个人网站：从零到上线"},excerpt:{en:"I've always wanted to create a personal blog to share my technical articles and insights. But every time I thought about the work involved - learning ...",zh:"我一直想建立一个个人博客网站，分享我的技术文章和心得。但每次想到需要学习React、TypeScript、配置构建工具、部署到GitHub Pages等一系列工作，就觉得太复杂，迟迟没有动手。..."},contentEn:`# Building a Personal Website with Claude Code: From Zero to Live
 
 I've always wanted to create a personal blog to share my technical articles and insights. But every time I thought about the work involved - learning React, TypeScript, configuring build tools, deploying to GitHub Pages - it felt too complex, and I kept putting it off.
 
@@ -1881,7 +1881,7 @@ AI辅助开发已经到来，而且效果惊人。关键是：
 这个网站只是一个开始。我相信，有了AI辅助，每个人都可以快速实现自己的想法，专注于自己擅长的事，创造更大的价值。
 
 让我们一起探索这个AI赋能的新时代吧！
-`,date:"2026-01-16",tags:["AI","Claude Code","Productivity","Development"],readTime:8},{id:"edge-computing",title:{en:"Understanding Edge Computing",zh:"理解边缘计算"},excerpt:{en:"Edge computing is a distributed computing paradigm that brings computation and data storage closer to the location where it is needed, improving respo...",zh:"边缘计算是一种分布式计算范式，它将计算和数据存储带到更接近需要的地方，从而提高响应时间并节省带宽。..."},contentEn:`# Understanding Edge Computing
+`,date:"2026-01-16",tags:["AI","Claude Code","Productivity","Development"],readTime:8,isPaid:!1},{id:"edge-computing",title:{en:"Understanding Edge Computing",zh:"理解边缘计算"},excerpt:{en:"Edge computing is a distributed computing paradigm that brings computation and data storage closer to the location where it is needed, improving respo...",zh:"边缘计算是一种分布式计算范式，它将计算和数据存储带到更接近需要的地方，从而提高响应时间并节省带宽。..."},contentEn:`# Understanding Edge Computing
 
 Edge computing is a distributed computing paradigm that brings computation and data storage closer to the location where it is needed, improving response times and saving bandwidth.
 
@@ -1927,7 +1927,7 @@ Edge computing is not about replacing the cloud, but complementing it to create 
 - **智慧城市**：交通管理监控
 
 边缘计算不是要取代云，而是与云互补，创建更高效、响应更快的系统。
-`,date:"2026-01-15",tags:["Architecture","Cloud","Infrastructure"],readTime:5},{id:"print-stability",title:{en:"Print Service Stability Governance in Distributed POS Systems",zh:"分布式POS系统打印稳定性专项治理实录"},excerpt:{en:"In restaurant SaaS systems, printers are the sole entry point for physical fulfillment. Orders and receipts all need print output, and any lost order ...",zh:"在餐饮SaaS系统中，打印机是物理履约的唯一入口。订单、小票都需要打印输出，一旦丢单就会导致漏做菜，直接造成经济损失。..."},contentEn:`# Print Service Stability Governance in Distributed POS Systems
+`,date:"2026-01-15",tags:["Architecture","Cloud","Infrastructure"],readTime:5,isPaid:!1},{id:"print-stability",title:{en:"Print Service Stability Governance in Distributed POS Systems",zh:"分布式POS系统打印稳定性专项治理实录"},excerpt:{en:"In restaurant SaaS systems, printers are the sole entry point for physical fulfillment. Orders and receipts all need print output, and any lost order ...",zh:"在餐饮SaaS系统中，打印机是物理履约的唯一入口。订单、小票都需要打印输出，一旦丢单就会导致漏做菜，直接造成经济损失。..."},contentEn:`# Print Service Stability Governance in Distributed POS Systems
 
 In restaurant SaaS systems, printers are the sole entry point for physical fulfillment. Orders and receipts all need print output, and any lost order results in missed dishes, directly causing revenue loss.
 
@@ -2937,7 +2937,7 @@ if (!networkHealthMonitor.isHealthy(printerIp)) {
 4. **异常恢复引导**：图文并茂的故障排除指南
 
 稳定性优化永无止境，这是一个持续改进的过程。
-`,date:"2026-01-14",tags:["Print","Stability","Distributed Systems","Hardware"],readTime:12},{id:"dda-architecture",title:{en:"DDD Architecture in Practice: Memory Storage + Proto vs Room",zh:"DDD 架构实践：内存存储 + Proto 替代 Room"},excerpt:{en:"In our previous project, we adopted a unique data storage approach: instead of using Room database, we used in-memory storage with Protocol Buffers. T...",zh:"在之前的项目中，我们采用了一种独特的数据存储方案：不使用 Room 数据库，而是采用内存存储 + Protocol Buffers。本文将分享这一架构设计的思路和实践经验。..."},contentEn:`# DDD Architecture in Practice: Memory Storage + Proto vs Room
+`,date:"2026-01-14",tags:["Print","Stability","Distributed Systems","Hardware"],readTime:12,isPaid:!0},{id:"dda-architecture",title:{en:"DDD Architecture in Practice: Memory Storage + Proto vs Room",zh:"DDD 架构实践：内存存储 + Proto 替代 Room"},excerpt:{en:"In our previous project, we adopted a unique data storage approach: instead of using Room database, we used in-memory storage with Protocol Buffers. T...",zh:"在之前的项目中，我们采用了一种独特的数据存储方案：不使用 Room 数据库，而是采用内存存储 + Protocol Buffers。本文将分享这一架构设计的思路和实践经验。..."},contentEn:`# DDD Architecture in Practice: Memory Storage + Proto vs Room
 
 In our previous project, we adopted a unique data storage approach: instead of using Room database, we used in-memory storage with Protocol Buffers. This article shares the rationale and practical experience behind this architectural decision.
 
@@ -3317,7 +3317,7 @@ fun safeLoad(): UserList? {
 关键是要深入理解自己的业务需求和技术约束，选择最适合的方案，而不是最流行的方案。
 
 我们的实践证明了这一点：系统运行稳定，性能优异，开发效率高。这就是好的架构设计。
-`,date:"2026-01-12",tags:["DDD","Android","Architecture","Proto"],readTime:10},{id:"distributed-systems",title:{en:"Distributed POS System Architecture: A Practical Journey",zh:"分布式POS系统架构设计实战"},excerpt:{en:"In the overseas restaurant SaaS business, I led the architecture transformation from centralized to distributed edge computing. This was a journey ful...",zh:"在海外餐饮SaaS业务中，我主导了从中心化到分布式边缘计算的架构转型。这是一次充满挑战的实践，本文分享两种架构的差异、优缺点以及转型过程中的思考。..."},contentEn:`# Distributed POS System Architecture: A Practical Journey
+`,date:"2026-01-12",tags:["DDD","Android","Architecture","Proto"],readTime:10,isPaid:!0},{id:"distributed-systems",title:{en:"Distributed POS System Architecture: A Practical Journey",zh:"分布式POS系统架构设计实战"},excerpt:{en:"In the overseas restaurant SaaS business, I led the architecture transformation from centralized to distributed edge computing. This was a journey ful...",zh:"在海外餐饮SaaS业务中，我主导了从中心化到分布式边缘计算的架构转型。这是一次充满挑战的实践，本文分享两种架构的差异、优缺点以及转型过程中的思考。..."},contentEn:`# Distributed POS System Architecture: A Practical Journey
 
 In the overseas restaurant SaaS business, I led the architecture transformation from centralized to distributed edge computing. This was a journey full of challenges. This article shares the differences between these two architectures, their pros and cons, and insights from the transformation process.
 
@@ -4336,5 +4336,5 @@ monitoring.track(
 架构选择的关键是：**深入理解业务场景，找到最适合的方案**。
 
 对于餐饮SaaS系统，"快"比"完美"更重要。
-`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8}];function r(n,e){return n[e]||n.en}const i=t;export{i as a,r as g};
-//# sourceMappingURL=articles-BBi6sp3u.js.map
+`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,e){return n[e]||n.en}const r=t;export{r as a,i as g};
+//# sourceMappingURL=articles-CqKYCRI-.js.map
