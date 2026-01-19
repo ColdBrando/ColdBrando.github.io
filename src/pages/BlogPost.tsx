@@ -1,6 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
 import { articles } from '../data/articles';
 import './BlogPost.css';
+import 'highlight.js/styles/github-dark.css';
 
 export function BlogPost() {
   const { id } = useParams<{ id: string }>();
@@ -41,54 +45,12 @@ export function BlogPost() {
           </header>
 
           <div className="article-body">
-            {article.content.split('\n').map((paragraph, index) => {
-              if (paragraph.startsWith('# ')) {
-                return (
-                  <h1 key={index} className="markdown-h1">
-                    {paragraph.slice(2)}
-                  </h1>
-                );
-              }
-              if (paragraph.startsWith('## ')) {
-                return (
-                  <h2 key={index} className="markdown-h2">
-                    {paragraph.slice(3)}
-                  </h2>
-                );
-              }
-              if (paragraph.startsWith('### ')) {
-                return (
-                  <h3 key={index} className="markdown-h3">
-                    {paragraph.slice(4)}
-                  </h3>
-                );
-              }
-              if (paragraph.trim().startsWith('- ')) {
-                return (
-                  <li key={index} className="markdown-li">
-                    {paragraph.slice(2)}
-                  </li>
-                );
-              }
-              if (paragraph.trim().match(/^\d+\./)) {
-                return (
-                  <li key={index} className="markdown-li">
-                    {paragraph}
-                  </li>
-                );
-              }
-              if (paragraph.includes('```')) {
-                return null; // Skip code block markers for now
-              }
-              if (paragraph.trim() === '') {
-                return <br key={index} />;
-              }
-              return (
-                <p key={index} className="markdown-p">
-                  {paragraph}
-                </p>
-              );
-            })}
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeHighlight]}
+            >
+              {article.content}
+            </ReactMarkdown>
           </div>
         </article>
       </div>

@@ -59,10 +59,10 @@
 .app-footer {
   padding: 2rem;
   text-align: center;
-  border-top: 1px solid #eaeaea;
-  color: #666;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
   font-size: 0.9rem;
-  background: #f9f9f9;
+  background: var(--bg-secondary);
 }
 
 .app-footer p {
