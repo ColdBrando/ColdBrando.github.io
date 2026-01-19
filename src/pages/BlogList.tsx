@@ -1,11 +1,13 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { articles } from '../data/articles';
 import { SearchBar } from '../components/SearchBar';
 import { TagFilter } from '../components/TagFilter';
 import './BlogList.css';
 
 export function BlogList() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
@@ -43,11 +45,11 @@ export function BlogList() {
   return (
     <div className="blog-list">
       <div className="container">
-        <h1>All Articles</h1>
+        <h1>{t('blog.title')}</h1>
 
         <SearchBar
           onSearch={setSearchQuery}
-          placeholder="Search articles by title or content..."
+          placeholder={t('blog.searchPlaceholder')}
         />
 
         <TagFilter
@@ -57,7 +59,7 @@ export function BlogList() {
         />
 
         <p className="results-count">
-          {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'} found
+          {t('blog.articlesFound', { count: filteredArticles.length })}
         </p>
 
         <div className="articles">
@@ -68,7 +70,7 @@ export function BlogList() {
                 <p className="excerpt">{article.excerpt}</p>
                 <div className="meta">
                   <span className="date">{article.date}</span>
-                  <span className="read-time">{article.readTime} min read</span>
+                  <span className="read-time">{t('blog.readTime', { count: article.readTime })}</span>
                 </div>
                 <div className="tags">
                   {article.tags.map((tag) => (
@@ -84,14 +86,14 @@ export function BlogList() {
 
         {filteredArticles.length === 0 && (
           <div className="no-results">
-            <p>No articles found matching your criteria.</p>
+            <p>{t('blog.noResults')}</p>
             <button
               onClick={() => {
                 setSearchQuery('');
                 setSelectedTags([]);
               }}
             >
-              Clear filters
+              {t('blog.clearFilters')}
             </button>
           </div>
         )}

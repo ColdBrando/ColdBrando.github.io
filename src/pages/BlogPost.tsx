@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
@@ -7,6 +8,7 @@ import './BlogPost.css';
 import 'highlight.js/styles/github-dark.css';
 
 export function BlogPost() {
+  const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const article = articles.find((a) => a.id === id);
 
@@ -14,8 +16,8 @@ export function BlogPost() {
     return (
       <div className="blog-post">
         <div className="container">
-          <h1>Article Not Found</h1>
-          <Link to="/blog">← Back to articles</Link>
+          <h1>{t('blog.articleNotFound')}</h1>
+          <Link to="/blog">{t('blog.backToArticles')}</Link>
         </div>
       </div>
     );
@@ -25,7 +27,7 @@ export function BlogPost() {
     <div className="blog-post">
       <div className="container">
         <Link to="/blog" className="back-link">
-          ← Back to articles
+          {t('blog.backToArticles')}
         </Link>
 
         <article className="article-content">

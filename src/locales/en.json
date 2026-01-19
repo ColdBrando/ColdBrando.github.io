@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "articles": "Articles"
+  },
+  "home": {
+    "welcome": "Welcome to My Blog",
+    "subtitle": "Exploring Technology, Architecture, and Engineering",
+    "featuredArticles": "Featured Articles",
+    "techStack": "Tech Stack"
+  },
+  "blog": {
+    "title": "All Articles",
+    "searchPlaceholder": "Search articles by title or content...",
+    "filterByTags": "Filter by tags",
+    "all": "All",
+    "articlesFound": "{{count}} articles found",
+    "articlesFound_one": "{{count}} article found",
+    "noResults": "No articles found matching your criteria.",
+    "clearFilters": "Clear filters",
+    "readTime": "{{count}} min read",
+    "backToArticles": "← Back to articles",
+    "articleNotFound": "Article Not Found"
+  },
+  "article": {
+    "tableOfContents": "Table of Contents"
+  },
+  "footer": {
+    "copyright": "Built with React + TypeScript + Vite"
+  }
+}

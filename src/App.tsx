@@ -1,12 +1,16 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeToggle } from './components/ThemeToggle';
+import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { Home } from './pages/Home';
 import { BlogList } from './pages/BlogList';
 import { BlogPost } from './pages/BlogPost';
 import './App.css';
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <ThemeProvider>
       <Router>
@@ -17,8 +21,9 @@ function App() {
                 <h1>My Blog</h1>
               </Link>
               <nav className="nav">
-                <Link to="/" className="nav-link">Home</Link>
-                <Link to="/blog" className="nav-link">Articles</Link>
+                <Link to="/" className="nav-link">{t('nav.home')}</Link>
+                <Link to="/blog" className="nav-link">{t('nav.articles')}</Link>
+                <LanguageSwitcher />
                 <ThemeToggle />
               </nav>
             </div>
@@ -31,7 +36,7 @@ function App() {
             </Routes>
           </main>
           <footer className="app-footer">
-            <p>&copy; 2026. Built with React + TypeScript + Vite</p>
+            <p>&copy; 2026. {t('footer.copyright')}</p>
           </footer>
         </div>
       </Router>

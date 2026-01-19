@@ -1,0 +1,27 @@
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  transition: background 0.2s;
+  min-width: 2.5rem;
+}
+
+.lang-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-button.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+}

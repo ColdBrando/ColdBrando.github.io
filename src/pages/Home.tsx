@@ -1,19 +1,21 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { articles } from '../data/articles';
 import './Home.css';
 
 export function Home() {
+  const { t } = useTranslation();
   const featuredArticles = articles.slice(0, 3);
 
   return (
     <div className="home">
       <section className="hero">
-        <h1>Welcome to My Blog</h1>
-        <p className="hero-subtitle">Exploring Technology, Architecture, and Engineering</p>
+        <h1>{t('home.welcome')}</h1>
+        <p className="hero-subtitle">{t('home.subtitle')}</p>
       </section>
 
       <section className="featured-section">
-        <h2>Featured Articles</h2>
+        <h2>{t('home.featuredArticles')}</h2>
         <div className="articles-grid">
           {featuredArticles.map((article) => (
             <article key={article.id} className="article-card">
@@ -22,7 +24,7 @@ export function Home() {
                 <p className="article-excerpt">{article.excerpt}</p>
                 <div className="article-meta">
                   <span className="article-date">{article.date}</span>
-                  <span className="article-read-time">{article.readTime} min read</span>
+                  <span className="article-read-time">{t('blog.readTime', { count: article.readTime })}</span>
                 </div>
                 <div className="article-tags">
                   {article.tags.map((tag) => (
@@ -38,7 +40,7 @@ export function Home() {
       </section>
 
       <section className="tech-stack">
-        <h2>Tech Stack</h2>
+        <h2>{t('home.techStack')}</h2>
         <div className="tech-grid">
           <div className="tech-item">React</div>
           <div className="tech-item">TypeScript</div>

@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "首页",
+    "articles": "文章"
+  },
+  "home": {
+    "welcome": "欢迎来到我的博客",
+    "subtitle": "探索技术、架构与工程",
+    "featuredArticles": "精选文章",
+    "techStack": "技术栈"
+  },
+  "blog": {
+    "title": "所有文章",
+    "searchPlaceholder": "搜索文章标题或内容...",
+    "filterByTags": "按标签筛选",
+    "all": "全部",
+    "articlesFound": "找到 {{count}} 篇文章",
+    "articlesFound_one": "找到 {{count}} 篇文章",
+    "noResults": "没有找到符合条件的文章",
+    "clearFilters": "清除筛选",
+    "readTime": "{{count}} 分钟阅读",
+    "backToArticles": "← 返回文章列表",
+    "articleNotFound": "文章未找到"
+  },
+  "article": {
+    "tableOfContents": "目录"
+  },
+  "footer": {
+    "copyright": "使用 React + TypeScript + Vite 构建"
+  }
+}

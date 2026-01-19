@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import './TagFilter.css';
 
 interface TagFilterProps {
@@ -7,9 +8,11 @@ interface TagFilterProps {
 }
 
 export function TagFilter({ tags, selectedTags, onTagToggle }: TagFilterProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="tag-filter">
-      <h3>Filter by tags</h3>
+      <h3>{t('blog.filterByTags')}</h3>
       <div className="tag-list">
         <button
           className={`tag-button ${selectedTags.length === 0 ? 'active' : ''}`}
@@ -17,7 +20,7 @@ export function TagFilter({ tags, selectedTags, onTagToggle }: TagFilterProps) {
             selectedTags.forEach(tag => onTagToggle(tag));
           }}
         >
-          All
+          {t('blog.all')}
         </button>
         {tags.map((tag) => (
           <button
