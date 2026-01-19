@@ -5,9 +5,10 @@
   },
   "home": {
     "welcome": "欢迎来到我的博客",
-    "subtitle": "探索技术、架构与工程",
+    "subtitle": "分享技术、AI工具与创作之旅",
     "featuredArticles": "精选文章",
-    "techStack": "技术栈"
+    "recentArticles": "最新文章",
+    "viewAll": "查看全部 →"
   },
   "blog": {
     "title": "所有文章",

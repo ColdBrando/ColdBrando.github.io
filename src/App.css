@@ -7,11 +7,17 @@
 .app-header {
   padding: 1.5rem 2rem;
   border-bottom: 1px solid #eaeaea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4A90E2 0%, #0051D5 100%);
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+/* Dark mode header - iOS style */
+[data-theme='dark'] .app-header {
+  background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%);
+  border-bottom: 1px solid #48484a;
 }
 
 .header-content {

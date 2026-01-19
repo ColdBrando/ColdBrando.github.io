@@ -16,7 +16,12 @@
 }
 
 .search-input:focus {
-  border-color: #667eea;
+  border-color: #4A90E2;
+}
+
+/* Dark mode - iOS style */
+[data-theme='dark'] .search-input:focus {
+  border-color: #0a84ff;
 }
 
 .search-icon {

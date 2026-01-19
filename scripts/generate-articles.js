@@ -30,6 +30,16 @@ const articlesConfig = {
     tags: ['DDD', 'Android', 'Architecture', 'Proto'],
     readTime: 10,
   },
+  '5-print-stability': {
+    date: '2026-01-21',
+    tags: ['Print', 'Stability', 'Distributed Systems', 'Hardware'],
+    readTime: 12,
+  },
+  '6-building-with-claude': {
+    date: '2026-01-22',
+    tags: ['AI', 'Claude Code', 'Productivity', 'Development'],
+    readTime: 8,
+  },
 };
 
 // Extract title from markdown (first h1)

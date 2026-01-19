@@ -29,12 +29,24 @@
 }
 
 .tag-button:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #4A90E2;
+  color: #4A90E2;
 }
 
 .tag-button.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-color: #667eea;
+  background: linear-gradient(135deg, #4A90E2 0%, #0051D5 100%);
+  border-color: #4A90E2;
   color: white;
+}
+
+/* Dark mode - iOS style */
+[data-theme='dark'] .tag-button:hover {
+  border-color: #636366;
+  color: #ebebf5;
+}
+
+[data-theme='dark'] .tag-button.active {
+  background: linear-gradient(135deg, #3a3a3c 0%, #2c2c2e 100%);
+  border-color: #48484a;
+  color: #ebebf5;
 }

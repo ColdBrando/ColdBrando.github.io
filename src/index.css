@@ -24,17 +24,17 @@
   --code-bg: #f4f4f4;
 }
 
-/* Dark Theme */
+/* Dark Theme - iOS Style (Soft) */
 [data-theme='dark'] {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #242424;
-  --bg-tertiary: #2d2d2d;
-  --text-primary: #e6e6e6;
-  --text-secondary: #b8b8b8;
-  --text-tertiary: #888888;
-  --border-color: #3d3d3d;
-  --shadow: rgba(0, 0, 0, 0.3);
-  --code-bg: #2d2d2d;
+  --bg-primary: #1c1c1e;
+  --bg-secondary: #2c2c2e;
+  --bg-tertiary: #3a3a3c;
+  --text-primary: #ebebf5;
+  --text-secondary: #98989d;
+  --text-tertiary: #636366;
+  --border-color: #48484a;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --code-bg: #2c2c2e;
 }
 
 * {

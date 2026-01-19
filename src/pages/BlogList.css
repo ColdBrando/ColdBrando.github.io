@@ -92,7 +92,7 @@
 }
 
 .no-results button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4A90E2 0%, #0051D5 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -100,6 +100,12 @@
   cursor: pointer;
   font-size: 1rem;
   transition: transform 0.2s;
+}
+
+/* Dark mode - iOS style */
+[data-theme='dark'] .no-results button {
+  background: linear-gradient(135deg, #3a3a3c 0%, #2c2c2e 100%);
+  color: #ebebf5;
 }
 
 .no-results button:hover {

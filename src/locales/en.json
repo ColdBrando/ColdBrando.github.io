@@ -5,9 +5,10 @@
   },
   "home": {
     "welcome": "Welcome to My Blog",
-    "subtitle": "Exploring Technology, Architecture, and Engineering",
+    "subtitle": "Sharing Technology, AI Tools, and Creative Journey",
     "featuredArticles": "Featured Articles",
-    "techStack": "Tech Stack"
+    "recentArticles": "Recent Articles",
+    "viewAll": "View All →"
   },
   "blog": {
     "title": "All Articles",
