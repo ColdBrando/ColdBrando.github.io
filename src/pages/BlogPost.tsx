@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
-import { articles } from '../data/articles';
+import { articles, getLocalizedContent } from '../data/articles';
 import './BlogPost.css';
 import 'highlight.js/styles/github-dark.css';
 
 export function BlogPost() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const article = articles.find((a) => a.id === id);
 
@@ -23,6 +23,8 @@ export function BlogPost() {
     );
   }
 
+  const currentLang = i18n.language;
+
   return (
     <div className="blog-post">
       <div className="container">
@@ -32,10 +34,10 @@ export function BlogPost() {
 
         <article className="article-content">
           <header className="article-header">
-            <h1>{article.title}</h1>
+            <h1>{getLocalizedContent(article.title, currentLang)}</h1>
             <div className="article-meta">
               <span className="date">{article.date}</span>
-              <span className="read-time">{article.readTime} min read</span>
+              <span className="read-time">{t('blog.readTime', { count: article.readTime })}</span>
             </div>
             <div className="tags">
               {article.tags.map((tag) => (
@@ -51,7 +53,7 @@ export function BlogPost() {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeHighlight]}
             >
-              {article.content}
+              {getLocalizedContent(article.content, currentLang)}
             </ReactMarkdown>
           </div>
         </article>

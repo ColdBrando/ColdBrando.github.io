@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { articles } from '../data/articles';
+import { articles, getLocalizedContent } from '../data/articles';
 import './Home.css';
 
 export function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const featuredArticles = articles.slice(0, 3);
+  const currentLang = i18n.language;
 
   return (
     <div className="home">
@@ -20,8 +21,8 @@ export function Home() {
           {featuredArticles.map((article) => (
             <article key={article.id} className="article-card">
               <Link to={`/blog/${article.id}`} className="article-link">
-                <h3>{article.title}</h3>
-                <p className="article-excerpt">{article.excerpt}</p>
+                <h3>{getLocalizedContent(article.title, currentLang)}</h3>
+                <p className="article-excerpt">{getLocalizedContent(article.excerpt, currentLang)}</p>
                 <div className="article-meta">
                   <span className="article-date">{article.date}</span>
                   <span className="article-read-time">{t('blog.readTime', { count: article.readTime })}</span>
