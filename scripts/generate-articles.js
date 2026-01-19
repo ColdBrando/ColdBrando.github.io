@@ -25,6 +25,11 @@ const articlesConfig = {
     tags: ['Distributed Systems', 'Architecture', 'Backend'],
     readTime: 8,
   },
+  '4-dda-architecture': {
+    date: '2026-01-20',
+    tags: ['DDD', 'Android', 'Architecture', 'Proto'],
+    readTime: 10,
+  },
 };
 
 // Extract title from markdown (first h1)
