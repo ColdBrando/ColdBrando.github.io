@@ -4,10 +4,11 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import { articles, getLocalizedContent } from '../data/articles';
+import Paywall from '../components/Paywall';
 import './BlogPost.css';
 import 'highlight.js/styles/github-dark.css';
 
-export function BlogPost() {
+export default function BlogPost() {
   const { t, i18n } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const article = articles.find((a) => a.id === id);
@@ -24,6 +25,13 @@ export function BlogPost() {
   }
 
   const currentLang = i18n.language;
+  const isPaid = article.isPaid || false;
+
+  // Use preview content for paid articles, full content for free articles
+  // Preview is already truncated plain text, no decryption needed
+  const displayContent = isPaid
+    ? (currentLang === 'zh' ? article.contentPreviewZh : article.contentPreviewEn)
+    : (currentLang === 'zh' ? article.contentZh : article.contentEn);
 
   return (
     <div className="blog-post">
@@ -38,6 +46,12 @@ export function BlogPost() {
             <div className="article-meta">
               <span className="date">{article.date}</span>
               <span className="read-time">{t('blog.readTime', { count: article.readTime })}</span>
+              <span className="views">
+                <span className="busuanzi-container">
+                  {t('blog.views')}: <span id="busuanzi_value_page_pv">-</span>
+                </span>
+              </span>
+              {isPaid && <span className="paid-badge">付费内容</span>}
             </div>
             <div className="tags">
               {article.tags.map((tag) => (
@@ -53,8 +67,9 @@ export function BlogPost() {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeHighlight]}
             >
-              {currentLang === 'zh' ? article.contentZh : article.contentEn}
+              {displayContent}
             </ReactMarkdown>
+            {isPaid && <Paywall />}
           </div>
         </article>
       </div>

@@ -32,7 +32,7 @@
 npm run deploy
 
 # 2. 等待 1-2 分钟，访问网站
-# https://winterbrand.github.io
+# https://coldbrando.github.io
 ```
 
 ## 当前页面

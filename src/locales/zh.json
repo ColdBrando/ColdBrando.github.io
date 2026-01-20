@@ -1,7 +1,9 @@
 {
   "nav": {
+    "siteName": "码农·白兰度 的奇妙空间",
     "home": "首页",
-    "articles": "文章"
+    "articles": "文章",
+    "loading": "加载中..."
   },
   "home": {
     "welcome": "欢迎来到我的博客",
@@ -21,12 +23,19 @@
     "clearFilters": "清除筛选",
     "readTime": "{{count}} 分钟阅读",
     "backToArticles": "← 返回文章列表",
-    "articleNotFound": "文章未找到"
+    "articleNotFound": "文章未找到",
+    "views": "阅读量"
   },
   "article": {
     "tableOfContents": "目录"
   },
+  "paywall": {
+    "title": "付费内容",
+    "message": "这是付费文章的预览版本。",
+    "cta": "支付完整解锁",
+    "paymentPending": "付款码开发中，敬请期待..."
+  },
   "footer": {
-    "copyright": "使用 React + TypeScript + Vite 构建"
+    "copyright": "作者简介：技术从业者，关注AI、架构设计和商业模式思考。"
   }
 }

@@ -1,7 +1,9 @@
 {
   "nav": {
+    "siteName": "Cold Brando's Wonderful Space",
     "home": "Home",
-    "articles": "Articles"
+    "articles": "Articles",
+    "loading": "Loading..."
   },
   "home": {
     "welcome": "Welcome to My Blog",
@@ -21,12 +23,19 @@
     "clearFilters": "Clear filters",
     "readTime": "{{count}} min read",
     "backToArticles": "← Back to articles",
-    "articleNotFound": "Article Not Found"
+    "articleNotFound": "Article Not Found",
+    "views": "Views"
   },
   "article": {
     "tableOfContents": "Table of Contents"
   },
+  "paywall": {
+    "title": "Premium Content",
+    "message": "This is a preview of the premium article.",
+    "cta": "Unlock Full Access",
+    "paymentPending": "Payment code coming soon, stay tuned..."
+  },
   "footer": {
-    "copyright": "Built with React + TypeScript + Vite"
+    "copyright": "About the Author: Technology practitioner focusing on AI, architecture design, and business model thinking."
   }
 }

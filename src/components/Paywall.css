@@ -1,0 +1,70 @@
+.paywall {
+  margin: 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--paywall-bg-start, #f5f7fa) 0%, var(--paywall-bg-end, #e8ecf1) 100%);
+  border: 2px dashed var(--paywall-border, #cbd5e1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.paywall-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.paywall-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--paywall-title, #1e293b);
+}
+
+.paywall-message {
+  font-size: 1rem;
+  color: var(--paywall-text, #64748b);
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.paywall-button {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paywall-button:not(:disabled) {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.paywall-button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.paywall-pending {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: var(--paywall-pending, #94a3b8);
+  font-style: italic;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .paywall {
+    --paywall-bg-start: #1e293b;
+    --paywall-bg-end: #334155;
+    --paywall-border: #475569;
+    --paywall-title: #f1f5f9;
+    --paywall-text: #cbd5e1;
+    --paywall-pending: #94a3b8;
+  }
+}

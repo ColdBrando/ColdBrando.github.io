@@ -5,9 +5,12 @@ export interface ArticleFile {
   excerpt: LocalizedContent;
   contentEn: string;
   contentZh: string;
+  contentPreviewEn: string;
+  contentPreviewZh: string;
   date: string;
   tags: string[];
   readTime: number;
+  isPaid?: boolean;
 }
 
 export interface LocalizedContent {

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { articles, getLocalizedContent } from '../data/articles';
 import './Home.css';
 
-export function Home() {
+export default function Home() {
   const { t, i18n } = useTranslation();
   const featuredArticles = articles.slice(0, 3);
   const recentArticles = articles.slice(3, 8);

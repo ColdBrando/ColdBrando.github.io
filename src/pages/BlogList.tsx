@@ -6,7 +6,7 @@ import { SearchBar } from '../components/SearchBar';
 import { TagFilter } from '../components/TagFilter';
 import './BlogList.css';
 
-export function BlogList() {
+export default function BlogList() {
   const { t, i18n } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
