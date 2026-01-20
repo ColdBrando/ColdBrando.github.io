@@ -53,6 +53,12 @@ const articlesConfig = {
     tags: ['AI', 'Agent', 'Container', 'Future', 'Paradigm Shift'],
     readTime: 10,
     isPaid: false,  // AI时代容器技术，免费
+  },
+  'talent-reflection': {
+    date: '2026-01-21',
+    tags: ['Talent', 'Self-Discovery', 'Career', 'Growth'],
+    readTime: 8,
+    isPaid: false,  // 天赋发现反思，免费
   }
 };
 
