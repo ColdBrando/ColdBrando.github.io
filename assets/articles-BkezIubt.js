@@ -670,152 +670,69 @@ At its peak, this account had over 8,000 followers. But eventually I stopped pos
 大学期间，我维护了一个社交媒体账号，主要内容是搬运海外的音乐视频。不是创作，只是"发现-筛选-分享"。
 
 最高峰时，这个账号有8000多粉丝。但后来我停更了，不是因为没流量，而是因为——**我觉得内容质量不行了**。
-`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent"],readTime:6,isPaid:!1},{id:"self-discovery-02",title:{en:"Self-Discovery Part 2: The Shadow Side of Talent",zh:"自我探索之二：天赋的阴影面"},excerpt:{en:"After writing the first talent exploration article, I continued digging deeper....",zh:"在写完第一篇天赋探索文章后，我继续深挖。..."},contentEn:`# Self-Discovery Part 2: The Shadow Side of Talent
+`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent"],readTime:6,isPaid:!1},{id:"self-discovery-02",title:{en:"Self-Discovery Part 2: The Shadow Side of Talent",zh:"自我探索之二：天赋的阴影面"},excerpt:{en:"After writing the first talent exploration article, I continued digging deeper. This time I discovered something more essential....",zh:"写完第一篇天赋探索后，我继续深挖。这次发现了一些更本质的东西。..."},contentEn:`# Self-Discovery Part 2: The Shadow Side of Talent
 
-After writing the first talent exploration article, I continued digging deeper.
-
-This time I discovered something more essential: my talent isn't just "space builder" - there's an even more core pattern - **the "do-experience-improve" cycler**.
-
-But talents have shadow sides. I also saw how student era trauma has affected me until now.
+After writing the first talent exploration article, I continued digging deeper. This time I discovered something more essential.
 
 ---
 
-## Back to Age 16: Deeper Details
+## The Restless Repetition
 
-Continuing to recall age 16, I discovered more details:
+As a child, what I loved most was building mazes.
 
-### What Did I Build? - Mazes
+Not simple houses, but mazes—because they could be constantly changed. Every time I built one, I didn't follow a blueprint. I built while changing, adjusting whenever something felt wrong. After building, I would crawl inside and walk through it myself.
 
-Not simple houses, but **mazes**.
+Looking back, this behavior hid a pattern that would run through my entire life:
 
-**Why mazes?**
+**Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve**
 
-- Because mazes can be constantly changed
-- Because mazes have challenges
-- Because houses are too simple
+Whether organizing notes in school, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
 
-This choice already revealed my core trait: **I don't like "simply completed," I like "can be continuously optimized."**
-
-### How Did I Build? - Improving While Building
-
-Not building by blueprint, not building randomly, but **building while improving, changing whenever something felt wrong**.
-
-### After Building? - Crawling In to Experience Myself
-
-Not for others to see, not to admire from outside, but **crawling in myself, walking through**.
-
-This detail is crucial.
+But this pattern has its shadow side.
 
 ---
 
-## Core Pattern: Do-Experience-Improve
+## The Backside of Talent
 
-I realized a pattern that runs through my life:
+First is the cost of thinking too fast.
 
-\`\`\`
-Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve
-\`\`\`
+Others are still speaking, I've already thought of a better solution, so I blurt it out. The result is constantly being reminded: "Can you let others finish?" I'm not intentionally rude; my brain is just saying: "Don't waste time, I know a better way." This thinking agility makes me seem impatient in communication.
 
-| Age 16 | College | Work | Now |
-|--------|--------|------|-----|
-| Build mazes | Curate MVs | Repeatedly revise resume | API design debate |
-| Crawl in to experience | Raise standards | WoW raiding | |
-| Change if wrong | | | |
+Second is not tracking results.
 
-**I'm not a "create from zero" person, I'm an "optimizer."**
+I love the "do, improve, conquer" process, but I'm not good at "maintaining" and "tracking". For products I launch, I'm too lazy to check the data; for half-written articles, once my interest fades, I stop; for problems I've solved, once conquered, I lose interest. This isn't irresponsibility—my interest point is always in "how to make it better," not "keep it running."
 
-What I enjoy is not "completion," but the process of **"making things better."**
+Most serious is oversensitivity.
+
+When problems are pointed out at work, I toss and turn, my mind looping: "I messed up again," "Am I not good enough?" Rationally I know this is normal feedback, but emotionally I amplify "correction" into "rejection." This sensitivity keeps me constantly on edge.
 
 ---
 
-## The Shadow Side of Talent
+## The Source of Sensitivity
 
-Talent isn't pure advantage, it always has a shadow side.
+This oversensitivity has a reason.
 
-### My Shadows
+At one stage in my student days, I was excellent. My self-worth was stable: "I am excellent." But after the environment changed, I met many even better peers, and suddenly discovered that the advantages I was proud of counted for nothing here.
 
-**Shadow One: Fast Thinking, But Interrupting Others**
+Gradually falling behind in competition, I became sensitive and inferior. My "value anxiety" began from that time.
 
-Others are still speaking, I've already thought of a better solution, so I blurt it out.
+This explains why I'm still so sensitive to "being negated"—it's not just a professional issue, but triggers the insecurity buried in my student days.
 
-Boss: "Can you let others finish? I've said this so many times."
+But I recently realized something: my talents haven't disappeared because of inferiority.
 
-This isn't "being rude," it's **thinking too fast**. My brain is saying: "Don't waste time, I know a better way."
-
-**Shadow Two: Doing Without Tracking Results**
-
-| Did it | Didn't track |
-|-------|--------------|
-| Product launch | Didn't watch data metrics |
-| Curate MVs | Later stopped updating |
-| WoW raiding | After clearing, stopped playing |
-| Rearrange furniture | After changing, moved on |
-
-**I enjoy the "do/improve/conquer" process, but not good at "maintaining" and "tracking results."**
-
-This isn't "not closing loops," this is my behavioral pattern: after finishing something, interest shifts to the next thing.
-
-**Shadow Three: Oversensitive**
-
-Boss says: "Change this here," "That's wrong," "Where are the data metrics?"
-
-I toss and turn: "I messed up again," "Sorry boss," "I didn't do well again."
-
-**I amplify "correction" into "I messed up."**
+The optimization impulse from age 16, fast thinking, high standards—these traits have always been there. They were just obscured by inferiority, making me unable to use them properly.
 
 ---
 
-## Student Era Trauma: The Collapse of Self-Worth
-
-This "oversensitivity" has a reason.
-
-### Once: I Was Excellent
-
-At one stage in my student days, I was excellent, among the best of my peers.
-
-Back then my self-worth was stable: **"I am excellent."**
-
-### Later: Everything Changed
-
-After the environment changed, I met many even better peers.
-
-I suddenly discovered: the advantages I was proud of counted for nothing here.
-
-Gradually falling behind in competition, I became sensitive and inferior.
-
-**My "value anxiety" began from that time.**
-
-### Impact Until Now
-
-| Talent (innate) | Trauma (formed later) |
-|----------------|----------------------|
-| 16-year-old optimization impulse | Fear of negation |
-| Fast thinking | Fragile self-worth |
-| Learning ability | Inferiority |
-| High standards | Perfectionism |
-
-**The talent was always there, just obscured by inferiority.**
-
----
-
-## Without Survival Pressure...
+## Without Survival Pressure
 
 Someone asked me: if you had enough money, wouldn't starve, no one would judge you, what would you want to do?
 
 My answer: go back to my hometown and design the courtyard of my rural house.
 
-Not just build it, but:
-- Complete living capabilities
-- Heat insulation
-- Soundproof doors and windows
-- Courtyard wall privacy issues
-- Ventilation layout
-- Feng shui optimization
+Not just simple repairs, but systematic thinking: complete living capabilities, heat insulation, soundproof doors and windows, courtyard wall privacy issues, ventilation layout, even feng shui optimization.
 
-Notice this thinking pattern:
-- **Systematic thinking**: not single dimension, but holistic
-- **Focus on actual experience**: insulation, soundproofing, privacy, ventilation
-- **Not "looks good," but "feels good to live in"**
+Notice this thinking pattern: it's not "looking good," but "feeling good to live in." It focuses on actual experience, not surface effect.
 
 This connects directly with rearranging furniture at age 16.
 
@@ -823,406 +740,171 @@ This connects directly with rearranging furniture at age 16.
 
 ## Who Am I Really
 
-Connecting all the clues:
+Connecting all the clues, my core talent is **the "do-experience-improve" cycler**—whether facing physical space, information space, or mental space.
 
-### My Core Talent
+My strengths are: fast thinking, systematic thinking, optimization impulse, and high standards. I can quickly see what's "wrong" and know how to make it better.
 
-**"Do-Experience-Improve" Cycler + Space Builder**
+My shadows are: not tracking results, interrupting others, oversensitivity, fear of negation.
 
-- Whether physical space (furniture, house), information space (MVs), mental space (articles)
-- I'm always doing the same thing: build → experience → improve → re-experience
-
-### My Strengths
-
-| Strength | Manifestation |
-|----------|---------------|
-| Fast thinking | Can quickly think of better solutions |
-| Systematic thinking | Can see the big picture and connections |
-| Optimization impulse | See "wrong" and want to change |
-| High standards | Repeatedly improve, pursue "better" |
-| Aesthetic judgment | Can identify what's worthwhile, sufficient |
-
-### My Shadows
-
-| Shadow | Impact |
-|--------|--------|
-| Not closing loops | Done without tracking results |
-| Interrupting others | Anxious to express better ideas |
-| Oversensitive | Amplify correction into "I messed up" |
-| Value anxiety | Fear of negation |
-
-### My Trauma
-
-- Student era inferiority, collapse of self-worth
-- Still affecting me until now
+My trauma is: the value anxiety formed after falling behind in competition, still affecting me now.
 
 ---
 
-## Next Directions
+## What's Next
 
-I don't know yet what my career will ultimately be.
+I don't know yet what my career will ultimately be. But at least I understand one thing: I'm not suited for pure creation (from zero), not suited for detail fixing (finding bugs), and even less suited for maintenance work (tracking, maintaining).
 
-But at least I understand:
+What I might be suited for is: system optimization, space building, experience improvement. The key is finding work that lets me continuously "do-experience-improve."
 
-### I'm Not
+Talent discovery isn't something completed in one afternoon. But at least I'm starting to see my patterns—where my strengths are, and where my shadows are too. Trauma affected my self-worth, but didn't destroy my talents.
 
-- Pure creator (create from zero)
-- Detail optimizer (find bugs, fix)
-- Maintenance worker (track, maintain)
-
-### I Might Be
-
-- System optimizer (make things better)
-- Space builder (physical/information/mental)
-- Experience improver (focus on actual feeling)
-
-**The key: Find work that lets me "do-experience-improve."**
-
----
-
-## To Be Continued
-
-Talent discovery isn't something completed in one afternoon.
-
-But at least, I'm starting to see my patterns.
-
-**My strengths are there, and so are my shadows.**
-
-**Trauma affected my self-worth, but didn't destroy my talent.**
-
-Next, I'll continue exploring - how to truly let talent play a role in work.
+Next, I'll continue exploring how to truly let talents play a role in my work.
 
 If you're also searching for your own path, perhaps we can explore together.
-
----
-
-*This is the second article in the self-discovery series. If you have similar experiences or thoughts, welcome to connect.*
 `,contentZh:`# 自我探索之二：天赋的阴影面
 
-在写完第一篇天赋探索文章后，我继续深挖。
-
-这次发现了一些更本质的东西：我的天赋不仅是"空间构建者"，还有一个更核心的模式——**"做-体验-改"的循环者**。
-
-但天赋都有阴影面。我也看到了学生时代的创伤如何影响了我至今。
+写完第一篇天赋探索后，我继续深挖。这次发现了一些更本质的东西。
 
 ---
 
-## 回到16岁：更深层的细节
+## 不知疲倦的重复
 
-继续回忆16岁，我发现了更多细节：
+小时候我最喜欢做的事，是搭迷宫。
 
-### 我搭的是什么？——迷宫
+不是简单的房子，而是迷宫——因为可以不断改。每次搭的时候，我都不是按图纸来，而是边搭边改，觉得不对就改。搭完之后，我自己会钻进去，走一遍。
 
-不是简单的房子，而是**迷宫**。
+现在回想起来，这个行为藏着一个贯穿我人生的模式：
 
-**为什么是迷宫？**
+**做 → 体验 → 觉得不对 → 改 → 再体验 → 再改**
 
-- 因为迷宫可以不断改
-- 因为迷宫有挑战性
-- 因为房子太简单
+无论是学生时代整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
 
-这个选择已经暴露了我的核心特质：**我不喜欢"简单完成的"，我喜欢"可以不断优化的"。**
-
-### 我怎么搭？——边搭边改
-
-不是按图纸搭，不是随便搭，而是**边搭边改，觉得不对就改**。
-
-### 搭完之后？——自己钻进去体验
-
-不是给别人看，不是摆在那里欣赏，而是**自己钻进去，走一遍**。
-
-这个细节太关键了。
+但这套模式也有它的阴影面。
 
 ---
 
-## 核心模式：做-体验-改
+## 天赋的背面
 
-我意识到了一个贯穿我人生的模式：
+首先是思维太快的代价。
 
-\`\`\`
-做 → 体验 → 觉得不对 → 改 → 再体验 → 再改
-\`\`\`
+别人还在说话，我已经想到了更好的方案，于是脱口而出。结果就是常被人提醒："你能不能听别人说完？" 我不是故意没礼貌，只是大脑在说："别浪费时间了，我知道更好的办法。" 这种思维敏捷，让我在沟通中显得急躁。
 
-| 16岁 | 大学 | 工作 | 现在 |
-|------|------|------|------|
-| 搭迷宫 | 搬MV | 简历反复改 | API设计争论 |
-| 钻进去体验 | 提高标准 | 魔兽开荒 | |
-| 不对就改 | | | |
+其次是不爱追踪结果。
 
-**我不是"从0创造者"，我是"优化者"。**
+我喜欢"做、改、攻克"的过程，但不擅长"维持"和"追踪"。上线的产品，我懒得看数据；写到一半的文章，兴致过了就停了；攻克过的难题，解决完就失去了兴趣。这不是没责任心，而是我的兴趣点永远在"怎么让它变好"，而不是"维持它的运转"。
 
-我享受的不是"完成"，而是"让东西变好"的过程。
+最严重的是过度敏感。
+
+工作中被指出问题，我会辗转难眠，脑子里循环播放："我又搞砸了"、"我是不是不行"。理性上我知道这只是正常的反馈，但感性上我会把"纠正"放大成"否定"。这种敏感让我经常处于紧绷状态。
 
 ---
 
-## 天赋的阴影面
+## 敏感的来源
 
-天赋不是纯粹的优点，它都有阴影面。
+这种过度敏感，是有原因的。
 
-### 我的阴影
+在学生时代的某个阶段，我曾经非常优秀。那时候我的自我价值感很稳定："我就是优秀的"。但环境变化后，我见到了很多更优秀的同龄人，突然发现自己引以为傲的优势，在这里不值一提。
 
-**阴影一：思维敏捷，但爱打断别人**
+在竞争中逐渐落后，我开始变得敏感、自卑。我的"价值焦虑"，从那时开始了。
 
-别人还在说，我已经想到了更好的方案，于是脱口而出。
+这解释了为什么我至今对"被否定"如此敏感——那不是单纯的职业问题，而是触发了学生时代埋下的不安全感。
 
-老板："你能不能听别人说完？我说了多少次。"
+但我最近意识到一件事：我的天赋并没有因为自卑而消失。
 
-这不是"没礼貌"，这是**思维太快了**。我的大脑在说："别浪费时间了，我知道更好的办法。"
-
-**阴影二：做了不追踪结果**
-
-| 做了 | 没追踪 |
-|------|--------|
-| 产品上线 | 没关注数据指标 |
-| 搬MV | 后来停更了 |
-| 魔兽开荒 | 攻克完就不打了 |
-| 摆家具 | 改完就改完了 |
-
-**我喜欢"做/改/攻克"的过程，但不擅长"维持"和"追踪结果"。**
-
-这不是"没闭环"，这是我的行为模式：做完一件事，兴趣就转移到下一件。
-
-**阴影三：过度敏感**
-
-老板说："这里改一下"、"那个不对"、"数据指标呢？"
-
-我辗转难眠："我又搞砸了"、"对不起老板"、"我又没做好"。
-
-**我会把"纠正"放大成"搞砸"**。
+16岁时的优化冲动、思维敏捷、高标准，这些特质一直都在。它们只是被自卑遮住了，让我无法正常使用它们。
 
 ---
 
-## 学生时代的创伤：价值感的崩塌
-
-这个"过度敏感"，是有原因的。
-
-### 曾经：我是最优秀的
-
-在学生时代的某个阶段，我曾经非常优秀，是同龄人中的佼佼者。
-
-那时候我的自我价值感很稳定：**"我就是优秀的"**。
-
-### 后来：一切都变了
-
-环境变化后，我见到了很多更优秀的同龄人。
-
-我突然发现：我引以为傲的优势，在这里不值一提。
-
-在竞争中逐渐落后，我变得敏感、自卑。
-
-**我的"价值焦虑"，从那时开始了。**
-
-### 至今的影响
-
-| 天赋（生来就会） | 创伤（形成后）|
-|----------------|------------------|
-| 16岁的优化冲动 | 怕被否定 |
-| 思维敏捷 | 价值感脆弱 |
-| 学习能力 | 自卑 |
-| 高标准 | 完美主义 |
-
-**天赋一直在那里，只是被自卑遮住了。**
-
----
-
-## 如果没有生存压力...
+## 如果没有生存压力
 
 有人问我：如果有足够的钱，不会饿死，没人评判你，你想干什么？
 
-我的回答：回老家把农村房子的庭院设计一下。
+我的回答是：回老家把农村房子的庭院设计一下。
 
-不是随便盖一下，而是：
-- 补全居住能力
-- 保温隔热
-- 隔音门窗
-- 庭院围墙隐私问题
-- 通风布局
-- 风水优化
+不是随便修一下，而是系统地想：补全居住能力、保温隔热、隔音门窗、庭院围墙隐私问题、通风布局、甚至风水优化。
 
-注意这个思维方式：
-- **系统性思考**：不是单一维度，而是整体
-- **关注实际体验**：保温、隔音、隐私、通风
-- **不是"看起来好看"，而是"住起来舒服"**
+注意这个思维方式：它不是"看起来好看"，而是"住起来舒服"。它关注的是实际体验，而不是表面效果。
 
-这跟16岁摆家具一脉相承。
+这跟我16岁摆家具一脉相承。
 
 ---
 
 ## 我到底是谁
 
-把所有线索串起来：
+把所有线索串起来，我的核心天赋是**"做-体验-改"的循环者**——无论面对的是物理空间、信息空间、还是思维空间。
 
-### 我的核心天赋
+我的优势是：思维敏捷、系统思考、有优化冲动和高标准。我能快速看到"不对"的地方，知道怎么让它变好。
 
-**"做-体验-改"的循环者 + 空间构建者**
+我的阴影是：不爱追踪结果、容易打断别人、过度敏感、害怕被否定。
 
-- 无论是物理空间（家具、房子）、信息空间（MV）、思维空间（文章）
-- 我都在做同一件事：构建 → 体验 → 改进 → 再体验
-
-### 我的优势
-
-| 优势 | 表现 |
-|------|------|
-| 思维敏捷 | 能快速想到更好的方案 |
-| 系统思考 | 能看到全局和关联 |
-| 优化冲动 | 看到"不对"就想改 |
-| 高标准 | 反复改进，追求"更好" |
-| 审美判断 | 能识别什么是值得的、够用的 |
-
-### 我的阴影
-
-| 阴影 | 影响 |
-|------|------|
-| 不做闭环 | 做完没追踪结果 |
-| 爱打断别人 | 急于表达更好的想法 |
-| 过度敏感 | 把纠正放大成搞砸 |
-| 价值焦虑 | 害怕被否定 |
-
-### 我的创伤
-
-- 学生时代的自卑，价值感崩塌
-- 至今仍然在影响我
+我的创伤是：在竞争中落后后形成的价值焦虑，至今仍在影响我。
 
 ---
 
-## 接下来的方向
+## 接下来怎么办
 
-我还不知道我的职业最终会是什么。
+我还不知道我的职业最终会是什么。但至少我明白了一点：我不适合纯粹的创作（从0创造）、也不适合细节修补（找bug）、更不适合维持型的工作（追踪、维护）。
 
-但至少我明白了：
+我可能适合的是：系统的优化、空间的构建、体验的改进。关键是找到能让我持续"做-体验-改"的工作。
 
-### 我不是
+天赋发掘不是一个下午能完成的。但至少我开始看到了自己的模式——优势在那里，阴影也在那里。创伤影响了我的自我价值感，但没有消灭我的天赋。
 
-- 纯粹的创作者（从0创造）
-- 细节的优化者（找bug、修补）
-- 维持型的工作者（追踪、维护）
-
-### 我可能是
-
-- 系统的优化者（让东西变好）
-- 空间的构建者（物理/信息/思维）
-- 体验的改进者（关注实际感受）
-
-**关键是：找到能让我"做-体验-改"的工作。**
-
----
-
-## 未完待续
-
-天赋发掘不是一个下午能完成的。
-
-但至少，我开始看到了自己的模式。
-
-**我的优势在那里，阴影也在那里。**
-
-**创伤影响了我的自我价值感，但没有消灭我的天赋。**
-
-接下来，我会继续探索——如何让天赋在工作中真正发挥作用。
+接下来，我会继续探索如何让天赋在工作中真正发挥作用。
 
 如果你也在寻找自己的路，或许我们可以一起探索。
-
----
-
-*这是自我探索系列的第二篇文章。如果你有类似的经历或思考，欢迎交流。*
 `,contentPreviewEn:`# Self-Discovery Part 2: The Shadow Side of Talent
 
-After writing the first talent exploration article, I continued digging deeper.
-
-This time I discovered something more essential: my talent isn't just "space builder" - there's an even more core pattern - **the "do-experience-improve" cycler**.
-
-But talents have shadow sides. I also saw how student era trauma has affected me until now.
+After writing the first talent exploration article, I continued digging deeper. This time I discovered something more essential.
 
 ---
 
-## Back to Age 16: Deeper Details
+## The Restless Repetition
 
-Continuing to recall age 16, I discovered more details:
+As a child, what I loved most was building mazes.
 
-### What Did I Build? - Mazes
+Not simple houses, but mazes—because they could be constantly changed. Every time I built one, I didn't follow a blueprint. I built while changing, adjusting whenever something felt wrong. After building, I would crawl inside and walk through it myself.
 
-Not simple houses, but **mazes**.
+Looking back, this behavior hid a pattern that would run through my entire life:
 
-**Why mazes?**
+**Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve**
 
-- Because mazes can be constantly changed
-- Because mazes have challenges
-- Because houses are too simple
+Whether organizing notes in school, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
 
-This choice already revealed my core trait: **I don't like "simply completed," I like "can be continuously optimized."**
-
-### How Did I Build? - Improving While Building
-
-Not building by blueprint, not building randomly, but **building while improving, changing whenever something felt wrong**.
-
-### After Building? - Crawling In to Experience Myself
-
-Not for others to see, not to admire from outside, but **crawling in myself, walking through**.
-
-This detail is crucial.
+But this pattern has its shadow side.
 
 ---
 
-## Core Pattern: Do-Experience-Improve
+## The Backside of Talent
 
-I realized a pattern that runs through my life:
+First is the cost of thinking too fast.
 
-\`\`\`
-Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve
-\`\`\`
+Others are still speaking, I've already thought of a better solution, so I blurt it out. The result is constantly being reminded: "Can you let others finish?" I'm not intentionally rude; my brain is just saying: "Don't waste time, I know a better way." This thinking agility makes me seem impatient in communication.`,contentPreviewZh:`# 自我探索之二：天赋的阴影面
 
-| Age 16 | College | Work | Now |
-|--------|--------|------|-----|
-| Build mazes | Curate MVs | Repeatedly revise resume | API design debate |
-| Crawl in to experience | Raise standards | WoW raiding | |`,contentPreviewZh:`# 自我探索之二：天赋的阴影面
-
-在写完第一篇天赋探索文章后，我继续深挖。
-
-这次发现了一些更本质的东西：我的天赋不仅是"空间构建者"，还有一个更核心的模式——**"做-体验-改"的循环者**。
-
-但天赋都有阴影面。我也看到了学生时代的创伤如何影响了我至今。
+写完第一篇天赋探索后，我继续深挖。这次发现了一些更本质的东西。
 
 ---
 
-## 回到16岁：更深层的细节
+## 不知疲倦的重复
 
-继续回忆16岁，我发现了更多细节：
+小时候我最喜欢做的事，是搭迷宫。
 
-### 我搭的是什么？——迷宫
+不是简单的房子，而是迷宫——因为可以不断改。每次搭的时候，我都不是按图纸来，而是边搭边改，觉得不对就改。搭完之后，我自己会钻进去，走一遍。
 
-不是简单的房子，而是**迷宫**。
+现在回想起来，这个行为藏着一个贯穿我人生的模式：
 
-**为什么是迷宫？**
+**做 → 体验 → 觉得不对 → 改 → 再体验 → 再改**
 
-- 因为迷宫可以不断改
-- 因为迷宫有挑战性
-- 因为房子太简单
+无论是学生时代整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
 
-这个选择已经暴露了我的核心特质：**我不喜欢"简单完成的"，我喜欢"可以不断优化的"。**
-
-### 我怎么搭？——边搭边改
-
-不是按图纸搭，不是随便搭，而是**边搭边改，觉得不对就改**。
-
-### 搭完之后？——自己钻进去体验
-
-不是给别人看，不是摆在那里欣赏，而是**自己钻进去，走一遍**。
-
-这个细节太关键了。
+但这套模式也有它的阴影面。
 
 ---
 
-## 核心模式：做-体验-改
+## 天赋的背面
 
-我意识到了一个贯穿我人生的模式：
+首先是思维太快的代价。
 
-\`\`\`
-做 → 体验 → 觉得不对 → 改 → 再体验 → 再改
-\`\`\`
-
-| 16岁 | 大学 | 工作 | 现在 |
-|------|------|------|------|
-| 搭迷宫 | 搬MV | 简历反复改 | API设计争论 |
-| 钻进去体验 | 提高标准 | 魔兽开荒 | |`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent","Psychology"],readTime:8,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
+别人还在说话，我已经想到了更好的方案，于是脱口而出。结果就是常被人提醒："你能不能听别人说完？" 我不是故意没礼貌，只是大脑在说："别浪费时间了，我知道更好的办法。" 这种思维敏捷，让我在沟通中显得急躁。`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent","Psychology"],readTime:8,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
 
 With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive comparison of mainstream AI API services from multiple dimensions including pricing, capabilities, and use cases.
 
@@ -3680,4 +3362,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
-//# sourceMappingURL=articles-H2t2TfJ7.js.map
+//# sourceMappingURL=articles-BkezIubt.js.map
