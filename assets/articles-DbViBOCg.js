@@ -904,7 +904,7 @@ Others are still speaking, I've already thought of a better solution, so I blurt
 
 首先是思维太快的代价。
 
-别人还在说话，我已经想到了更好的方案，于是脱口而出。结果就是常被人提醒："你能不能听别人说完？" 我不是故意没礼貌，只是大脑在说："别浪费时间了，我知道更好的办法。" 这种思维敏捷，让我在沟通中显得急躁。`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent","Psychology"],readTime:8,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
+别人还在说话，我已经想到了更好的方案，于是脱口而出。结果就是常被人提醒："你能不能听别人说完？" 我不是故意没礼貌，只是大脑在说："别浪费时间了，我知道更好的办法。" 这种思维敏捷，让我在沟通中显得急躁。`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent"],readTime:6,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
 
 With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive comparison of mainstream AI API services from multiple dimensions including pricing, capabilities, and use cases.
 
@@ -3362,4 +3362,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
-//# sourceMappingURL=articles-BkezIubt.js.map
+//# sourceMappingURL=articles-DbViBOCg.js.map
