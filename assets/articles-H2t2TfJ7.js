@@ -676,7 +676,7 @@ After writing the first talent exploration article, I continued digging deeper.
 
 This time I discovered something more essential: my talent isn't just "space builder" - there's an even more core pattern - **the "do-experience-improve" cycler**.
 
-But talents have shadow sides. I also saw how high school trauma has affected me until now.
+But talents have shadow sides. I also saw how student era trauma has affected me until now.
 
 ---
 
@@ -765,30 +765,30 @@ I toss and turn: "I messed up again," "Sorry boss," "I didn't do well again."
 
 ---
 
-## High School Trauma: The Collapse of Self-Worth
+## Student Era Trauma: The Collapse of Self-Worth
 
 This "oversensitivity" has a reason.
 
-### Middle School: I Was Excellent
+### Once: I Was Excellent
 
-First in grade, among the best of 200+ students.
+At one stage in my student days, I was excellent, among the best of my peers.
 
 Back then my self-worth was stable: **"I am excellent."**
 
-### High School: Everything Changed
+### Later: Everything Changed
 
-Went to urban high school, met many wealthy classmates.
+After the environment changed, I met many even better peers.
 
-I suddenly discovered: the "good grades" I was proud of counted for nothing here.
+I suddenly discovered: the advantages I was proud of counted for nothing here.
 
-Couldn't keep up with studies, gradually became sensitive, inferior.
+Gradually falling behind in competition, I became sensitive and inferior.
 
-**My "value anxiety" began in high school.**
+**My "value anxiety" began from that time.**
 
 ### Impact Until Now
 
-| Talent (innate) | Trauma (formed after high school) |
-|----------------|----------------------------------|
+| Talent (innate) | Trauma (formed later) |
+|----------------|----------------------|
 | 16-year-old optimization impulse | Fear of negation |
 | Fast thinking | Fragile self-worth |
 | Learning ability | Inferiority |
@@ -853,7 +853,7 @@ Connecting all the clues:
 
 ### My Trauma
 
-- High school inferiority, collapse of self-worth
+- Student era inferiority, collapse of self-worth
 - Still affecting me until now
 
 ---
@@ -903,7 +903,7 @@ If you're also searching for your own path, perhaps we can explore together.
 
 这次发现了一些更本质的东西：我的天赋不仅是"空间构建者"，还有一个更核心的模式——**"做-体验-改"的循环者**。
 
-但天赋都有阴影面。我也看到了高中创伤如何影响了我至今。
+但天赋都有阴影面。我也看到了学生时代的创伤如何影响了我至今。
 
 ---
 
@@ -992,29 +992,29 @@ If you're also searching for your own path, perhaps we can explore together.
 
 ---
 
-## 高中创伤：价值感的崩塌
+## 学生时代的创伤：价值感的崩塌
 
 这个"过度敏感"，是有原因的。
 
-### 初中：我是最优秀的
+### 曾经：我是最优秀的
 
-年级第一，200多人中的佼佼者。
+在学生时代的某个阶段，我曾经非常优秀，是同龄人中的佼佼者。
 
 那时候我的自我价值感很稳定：**"我就是优秀的"**。
 
-### 高中：一切都变了
+### 后来：一切都变了
 
-去市区读高中，见到了很多家庭富裕的同学。
+环境变化后，我见到了很多更优秀的同龄人。
 
-我突然发现：我引以为傲的"成绩好"，在这里不值一提。
+我突然发现：我引以为傲的优势，在这里不值一提。
 
-学习跟不上，逐渐变得敏感、自卑。
+在竞争中逐渐落后，我变得敏感、自卑。
 
-**我的"价值焦虑"，从高中开始了。**
+**我的"价值焦虑"，从那时开始了。**
 
 ### 至今的影响
 
-| 天赋（生来就会） | 创伤（高中后形成）|
+| 天赋（生来就会） | 创伤（形成后）|
 |----------------|------------------|
 | 16岁的优化冲动 | 怕被否定 |
 | 思维敏捷 | 价值感脆弱 |
@@ -1080,7 +1080,7 @@ If you're also searching for your own path, perhaps we can explore together.
 
 ### 我的创伤
 
-- 高中自卑，价值感崩塌
+- 学生时代的自卑，价值感崩塌
 - 至今仍然在影响我
 
 ---
@@ -1130,7 +1130,7 @@ After writing the first talent exploration article, I continued digging deeper.
 
 This time I discovered something more essential: my talent isn't just "space builder" - there's an even more core pattern - **the "do-experience-improve" cycler**.
 
-But talents have shadow sides. I also saw how high school trauma has affected me until now.
+But talents have shadow sides. I also saw how student era trauma has affected me until now.
 
 ---
 
@@ -1179,7 +1179,7 @@ Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve
 
 这次发现了一些更本质的东西：我的天赋不仅是"空间构建者"，还有一个更核心的模式——**"做-体验-改"的循环者**。
 
-但天赋都有阴影面。我也看到了高中创伤如何影响了我至今。
+但天赋都有阴影面。我也看到了学生时代的创伤如何影响了我至今。
 
 ---
 
@@ -3680,4 +3680,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
-//# sourceMappingURL=articles-BLlXOBZk.js.map
+//# sourceMappingURL=articles-H2t2TfJ7.js.map
