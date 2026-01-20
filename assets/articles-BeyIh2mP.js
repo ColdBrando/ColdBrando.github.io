@@ -686,7 +686,7 @@ Looking back, this behavior hid a pattern that would run through my entire life:
 
 **Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve**
 
-Whether organizing notes while growing up, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
+This "improve while doing" habit ran through my growing up years. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
 
 But this pattern has its shadow side.
 
@@ -773,7 +773,7 @@ If you're also searching for your own path, perhaps we can explore together.
 
 **做 → 体验 → 觉得不对 → 改 → 再体验 → 再改**
 
-无论是成长过程中整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
+这种"边做边改"的习惯，贯穿了我的成长。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
 
 但这套模式也有它的阴影面。
 
@@ -860,7 +860,7 @@ Looking back, this behavior hid a pattern that would run through my entire life:
 
 **Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve**
 
-Whether organizing notes while growing up, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
+This "improve while doing" habit ran through my growing up years. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
 
 But this pattern has its shadow side.
 
@@ -885,7 +885,7 @@ First is the cost of thinking too fast.
 
 **做 → 体验 → 觉得不对 → 改 → 再体验 → 再改**
 
-无论是成长过程中整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
+这种"边做边改"的习惯，贯穿了我的成长。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
 
 但这套模式也有它的阴影面。
 
@@ -3352,4 +3352,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
-//# sourceMappingURL=articles-BxStC_xy.js.map
+//# sourceMappingURL=articles-BeyIh2mP.js.map
