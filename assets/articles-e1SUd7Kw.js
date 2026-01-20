@@ -1,4 +1,488 @@
-const n=[{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
+const e=[{id:"ai-era-containers",title:{en:"The Fate of Container Technology in the AI Era: A Paradigm Shift from Traffic Platforms to Infrastructure",zh:"AI时代容器技术的命运：从流量平台到基础设施的范式转移"},excerpt:{en:'> The rise of AI Agents is reshaping the internet ecosystem. When "order coffee with one sentence" becomes reality, how much value remains in traditio...',zh:'> AI Agent的崛起正在重塑互联网生态。当"一句话点咖啡"成为现实，传统的App容器技术还剩下多少价值？...'},contentEn:`# The Fate of Container Technology in the AI Era: A Paradigm Shift from Traffic Platforms to Infrastructure
+
+> The rise of AI Agents is reshaping the internet ecosystem. When "order coffee with one sentence" becomes reality, how much value remains in traditional app container technologies?
+
+## A Profound Discussion
+
+Recently, I had an interesting discussion with a friend about whether cross-platform container technologies like React Native and Flutter will gradually be eliminated in the AI era, as development costs drop dramatically.
+
+Initially, my view was relatively conservative, thinking that container technology still holds value. But my friend raised a point that made me rethink—**this is not a technical issue, but a business ecosystem issue.**
+
+![AI Agent Concept](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop)
+
+## Traditional Perspective: The Value of Containers
+
+In traditional understanding, the core value of cross-platform container technologies lies in:
+
+1. **Cross-platform capability** - One codebase runs on multiple platforms
+2. **Rapid iteration** - Hot update capability, bypassing app store review
+3. **Lower development costs** - No need to maintain iOS, Android, and Web codebases separately
+
+These values do exist. But the problem is, these values are built on the premise that **"users need to open apps and interact with graphical interfaces."**
+
+## Paradigm Shift: From "User Finds Service" to "Service Finds User"
+
+My friend's point is sharp:
+
+**Current App Architecture = Navigation Tree + UI Layer**
+- Open App → Find Entry → Browse → Select → Pay
+- Essentially **user actively seeks functionality**
+- Users need to spend 30+ seconds to complete an order
+
+**AI Agent Era = Intent → Execution**
+- "Help me order a Starbucks latte, near my office, lukewarm"
+- Essentially **service finds user**
+- Users only need 3 seconds
+
+![Interaction Paradigm Comparison](https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=600&fit=crop)
+
+This comparison reveals an essential question: **If interaction becomes natural language conversation, how much necessity remains for traditional UI layers?**
+
+## Alibaba's Dimensional Strike
+
+My friend gave a very realistic example:
+
+**Alibaba can integrate all life services through Qwen (Tongyi Qianwen)**
+- Taobao Instant Shopping (Flash Shopping) grabs market share through continuous subsidies
+- Integrates "order takeout with one sentence" capability into Qwen Agent
+- Users can complete all life services through Qwen: takeout, e-commerce, payment, bill payment, etc.
+
+**This is a dimensional strike against platforms like Meituan**
+- What is Meituan's moat? Traffic entry + fulfillment capability (rider network)
+- If the entry is captured by Qwen, what's left of Meituan?
+- Only delivery fulfillment capability remains, forced to downgrade to a "backend service provider"
+
+![Platform Competition Landscape](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop)
+
+This could indeed happen, and possibly faster than we imagine.
+
+## How Can Meituan Defend? (Life or Death)
+
+If I were Meituan, I would have only a few paths:
+
+### Path 1: Also Build an Agent (But This is a Dead End)
+
+Meituan launches its own "Meituan Agent":
+- **Problem**: How many Agents are users willing to install?
+- PC era: many apps → Mobile era: only a few super apps → **Agent era: maybe only 1-2**
+- If you have Qwen installed, will you also install Meituan Agent? Probably not
+
+### Path 2: Access Others' Agents (Become a Backend Service Provider)
+
+Access ByteDance (Doubao), Tencent (Hunyuan), or even Qwen:
+- **Essence**: Downgrade from "traffic platform" to "delivery fulfillment capability"
+- **Problems**:
+  - Lose user relationships and data
+  - Get commoditized, profits squeezed
+  - But at least can survive
+
+### Path 3: Hold Core Barriers (Rider Network, Merchant Relationships)
+
+Even if the entry is elsewhere, fulfillment efficiency is my advantage:
+- **Problem**: This is defense, not victory
+
+## Once User Habits Migrate, There's No Turning Back
+
+**Current**:
+\`\`\`
+Open Meituan App → Select Takeout → Select Store → Select Meal → Confirm Address → Pay
+(30+ seconds)
+\`\`\`
+
+**Future**:
+\`\`\`
+"Help me order a Luckin Coffee, lukewarm, deliver to office"
+(3 seconds)
+\`\`\`
+
+**Who would want to go back to 30 seconds? No one.**
+
+![User Habit Evolution](https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=600&fit=crop)
+
+## But There Are Several Variables
+
+### 1. Antitrust
+
+If Alibaba Qwen really integrates all life services, forming a "super entry":
+- Regulation may force openness
+- Require access to Meituan's API
+- But the question is, after access, what can Meituan still get?
+
+### 2. ByteDance and Tencent Won't Sit Idly By
+
+- ByteDance has Doubao + Douyin local life
+- Tencent has Hunyuan + WeChat
+- **It will be an "Agent War"**, not Alibaba alone dominating
+
+### 3. Final Pattern Might Be:
+
+- 2-3 mainstream Agents (Qwen, Doubao, Hunyuan)
+- All life services access these Agents
+- **Independent app value greatly diluted**
+
+## Container Value in This Scenario
+
+If users mainly interact through Agents:
+- No need to open Meituan App
+- App's own "container" value goes to zero
+- Might only need a minimalist "order details page" or "address selection page"
+- **Even these can be dynamically generated by Agents**
+
+![Container Technology Evolution](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop)
+
+## Timeline Prediction
+
+**Within 3-5 years, this trend may accelerate:**
+
+- **2024-2025**: Major tech companies launch Agents, integrate their own services
+- **2025-2026**: Price war + experience war, user habits begin to migrate
+- **2026-2028**: Independent app traffic drops significantly, becomes "supporting role"
+
+**The most miserable are pure "traffic-type" platforms:**
+- No fulfillment capability (no riders, no supply chain)
+- Just a "middleman"
+- These platforms will be the first batch to be eliminated
+
+## My New Judgment
+
+My friend is right, **if users mainly interact through Agents**, container technology might not be needed.
+
+But I think it will be layered:
+
+| Scenario | Main Solution | Reason |
+|----------|---------------|--------|
+| Simple tools/MVP | AI + Native | AI generates native code fast and well enough |
+| Medium to large business apps | Containers (RN/Flutter) | Unified maintenance advantage |
+| Performance-sensitive modules | Native | Experience first |
+| **C-end life services** | **Agent + Minimalist UI** | **Entry in Agent, App only has function** |
+
+## Root Cause
+
+Containers solve **maintenance cost** and **team collaboration** issues, not one-time development cost issues.
+
+AI writes code fast, but bug fixes still need to be done in three places. **This value still exists in B-end applications.**
+
+But in C-end, if the entry is captured by Agent:
+- Users no longer open the App
+- Container technology loses its carrier
+- App only has "backend service" value
+
+## Conclusion
+
+The core of this transformation is not "whether container technology will be eliminated," but:
+
+1. **Entry Battle** - Agent becomes the new traffic entry
+2. **Platform Disintermediation** - Pure traffic platforms are the first to be eliminated
+3. **App Value Redefinition** - From "entry + function" to "function + service"
+
+**Container technology won't disappear, but application scenarios will shrink:**
+- B-end applications: Still valuable
+- C-end applications: If entry battle is lost, container technology is powerless
+
+This is not a technical issue, it's a business ecosystem issue. Technology can reduce development costs, but cannot change business logic.
+
+**The most critical question is: In the Agent era, what is your moat?**
+
+---
+
+## Further Reading
+
+- [Comprehensive Guide to AI API Services](/blog/domestic-ai-api)
+- [Building a Personal Website with Claude Code](/blog/building-with-claude)
+
+**Share your thoughts in the comments**: How do you think container technology will fare in the Agent era?
+`,contentZh:`# AI时代容器技术的命运：从流量平台到基础设施的范式转移
+
+> AI Agent的崛起正在重塑互联网生态。当"一句话点咖啡"成为现实，传统的App容器技术还剩下多少价值？
+
+## 一场深刻的讨论
+
+最近和朋友讨论了一个有趣的话题：在AI时代，随着开发成本的急剧降低，像React Native、Flutter这样的跨平台容器技术，是否会被逐渐淘汰？
+
+最初我的观点比较保守，认为容器技术仍有价值。但朋友提出了一个让我重新思考的观点——**这不是技术问题，而是商业生态问题**。
+
+![AI Agent概念图](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop)
+
+## 传统视角：容器的价值
+
+在传统认知中，跨平台容器技术的核心价值在于：
+
+1. **跨平台能力** - 一套代码多端运行
+2. **快速迭代** - 热更新能力，绕过应用商店审核
+3. **降低开发成本** - 不需要维护iOS、Android、Web三套代码
+
+这些价值确实存在。但问题在于，这些价值是建立在**"用户需要打开App并在图形界面中操作"**这个前提下的。
+
+## 范式转移：从"人找服务"到"服务找人"
+
+朋友提出的观点很犀利：
+
+**现在的App架构 = 导航树 + UI层**
+- 打开App → 找入口 → 浏览 → 选择 → 支付
+- 本质是**人主动找功能**
+- 用户需要花费30秒甚至更多时间完成一次下单
+
+**AI Agent时代 = 意图 → 执行**
+- "帮我点一杯星巴克拿铁，公司楼下的，常温"
+- 本质是**服务找人**
+- 用户只需3秒钟
+
+![交互范式对比](https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=600&fit=crop)
+
+这个对比揭示了一个本质问题：**如果交互方式变成了自然语言对话，传统的UI层还有多少必要？**
+
+## 阿里的降维打击
+
+朋友举了一个非常现实的例子：
+
+**阿里可以通过千问整合所有生活服务**
+- 淘宝闪购通过持续补贴拿下外卖市场份额
+- 将"一句话点外卖"的能力整合到千问Agent
+- 用户通过千问就能完成：外卖、电商、支付、缴费等所有生活服务
+
+**这对某团这样的平台是降维打击**
+- 某团的护城河是什么？流量入口 + 履约能力（骑手网络）
+- 如果入口被千问夺走，某团还剩下什么？
+- 只剩下配送履约能力，被迫降级为"后端服务商"
+
+![平台竞争格局](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop)
+
+这确实可能发生，而且速度可能比我们想象的快。
+
+## 某团如何防守？（生死局）
+
+如果我是某团，我能做的只有几条路：
+
+### 路径1：也做Agent（但这是死局）
+
+某团推出自己的"某团Agent"：
+- **问题**：用户愿意装几个Agent？
+- PC时代装很多软件 → 移动时代只留几个超级App → **Agent时代可能只有1-2个**
+- 你装了千问，还要装某团Agent吗？大概率不会
+
+### 路径2：接入别人的Agent（成为后端服务商）
+
+接入字节（豆包）、腾讯（混元）、甚至千问：
+- **本质**：从"流量平台"降级成"配送履约能力"
+- **问题**：
+  - 失去用户关系和数据
+  - 被 commoditize（商品化），利润被挤压
+  - 但至少能活着
+
+### 路径3：守住核心壁垒（骑手网络、商家关系）
+
+即使入口在别人那里，履约效率我有优势：
+- **问题**：这是防守，不是胜利
+
+## 用户习惯一旦迁移，不可逆
+
+**现在**：
+\`\`\`
+打开某团App → 选外卖 → 选店 → 选餐 → 确认地址 → 结账
+（30秒+）
+\`\`\`
+
+**未来**：
+\`\`\`
+"帮我点杯瑞幸，常温的，送到公司"
+（3秒）
+\`\`\`
+
+**谁愿意回30秒？没人会**
+
+![用户习惯变迁](https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=600&fit=crop)
+
+## 但还有几个变量
+
+### 1. 反垄断
+
+如果阿里千问真的整合了所有生活服务，形成"超级入口"：
+- 监管可能会强制开放
+- 要求接入某团的API
+- 但问题是，接入后某团还能拿到什么？
+
+### 2. 字节、腾讯不会坐视不管
+
+- 字节有豆包 + 抖音本地生活
+- 腾讯有混元 + 微信
+- **会是"Agent大战"**，不是阿里一家独大
+
+### 3. 最终格局可能是：
+
+- 2-3个主流Agent（千问、豆包、混元）
+- 所有生活服务都接入这些Agent
+- **独立App的价值被极大稀释**
+
+## 容器在这个场景下的价值
+
+如果用户主要通过Agent交互：
+- 不需要打开某团App
+- App本身的"容器"价值归零
+- 可能只需要一个极简的"订单详情页"或"地址选择页"
+- **甚至这些都可以由Agent动态生成**
+
+![容器技术演进](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop)
+
+## 时间线预测
+
+**3-5年内，这个趋势可能加速：**
+
+- **2024-2025**：各大厂推出Agent，整合自家服务
+- **2025-2026**：价格战+体验战，用户习惯开始迁移
+- **2026-2028**：独立App流量大幅下滑，成为"配角"
+
+**最惨的是纯"流量型"平台：**
+- 没有履约能力（没有骑手、没有供应链）
+- 只是个"中介"
+- 这种平台会第一批被淘汰
+
+## 我的新判断
+
+朋友说得对，**如果用户主要通过Agent交互**，容器技术可能不需要了。
+
+但我认为会分层：
+
+| 场景 | 主流方案 | 原因 |
+|------|---------|------|
+| 简单工具/MVP | AI + 原生 | AI生成原生代码够快够好 |
+| 中大型业务应用 | 容器（RN/Flutter）| 统一维护优势 |
+| 性能敏感模块 | 原生 | 体验优先 |
+| **C端生活服务** | **Agent + 极简UI** | **入口在Agent，App只剩功能** |
+
+## 根本原因
+
+容器解决的是**维护成本**和**团队协作**问题，不是一次性开发成本问题。
+
+AI写代码快，但改bug时还是要改三处。**这个价值在B端应用中仍然存在。**
+
+但在C端，如果入口被Agent夺走：
+- 用户不再打开App
+- 容器技术失去载体
+- App只剩下"后端服务"的价值
+
+## 结论
+
+这场变革的核心不是"容器技术是否会被淘汰"，而是：
+
+1. **入口争夺战** - Agent成为新的流量入口
+2. **平台去中介化** - 纯流量平台第一批被淘汰
+3. **App价值重新定义** - 从"入口+功能"变成"功能+服务"
+
+**容器技术不会消失，但应用场景会收缩：**
+- B端应用：仍然有价值
+- C端应用：如果失去入口争夺，容器技术也无力回天
+
+这不是技术问题，是商业生态问题。技术可以降低开发成本，但改变不了商业逻辑。
+
+**最关键的问题是：在Agent时代，你的护城河是什么？**
+
+---
+
+## 参考阅读
+
+- [AI API商用全景指南](/blog/domestic-ai-api)
+- [与Claude Code共建个人网站](/blog/building-with-claude)
+
+**欢迎在评论区分享你的观点**：你认为Agent时代，容器技术的命运会如何？
+`,contentPreviewEn:`# The Fate of Container Technology in the AI Era: A Paradigm Shift from Traffic Platforms to Infrastructure
+
+> The rise of AI Agents is reshaping the internet ecosystem. When "order coffee with one sentence" becomes reality, how much value remains in traditional app container technologies?
+
+## A Profound Discussion
+
+Recently, I had an interesting discussion with a friend about whether cross-platform container technologies like React Native and Flutter will gradually be eliminated in the AI era, as development costs drop dramatically.
+
+Initially, my view was relatively conservative, thinking that container technology still holds value. But my friend raised a point that made me rethink—**this is not a technical issue, but a business ecosystem issue.**
+
+![AI Agent Concept](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop)
+
+## Traditional Perspective: The Value of Containers
+
+In traditional understanding, the core value of cross-platform container technologies lies in:
+
+1. **Cross-platform capability** - One codebase runs on multiple platforms
+2. **Rapid iteration** - Hot update capability, bypassing app store review
+3. **Lower development costs** - No need to maintain iOS, Android, and Web codebases separately
+
+These values do exist. But the problem is, these values are built on the premise that **"users need to open apps and interact with graphical interfaces."**
+
+## Paradigm Shift: From "User Finds Service" to "Service Finds User"
+
+My friend's point is sharp:
+
+**Current App Architecture = Navigation Tree + UI Layer**
+- Open App → Find Entry → Browse → Select → Pay
+- Essentially **user actively seeks functionality**
+- Users need to spend 30+ seconds to complete an order
+
+**AI Agent Era = Intent → Execution**
+- "Help me order a Starbucks latte, near my office, lukewarm"
+- Essentially **service finds user**
+- Users only need 3 seconds
+
+![Interaction Paradigm Comparison](https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=600&fit=crop)
+
+This comparison reveals an essential question: **If interaction becomes natural language conversation, how much necessity remains for traditional UI layers?**
+
+## Alibaba's Dimensional Strike
+
+My friend gave a very realistic example:
+
+**Alibaba can integrate all life services through Qwen (Tongyi Qianwen)**
+- Taobao Instant Shopping (Flash Shopping) grabs market share through continuous subsidies
+- Integrates "order takeout with one sentence" capability into Qwen Agent
+- Users can complete all life services through Qwen: takeout, e-commerce, payment, bill payment, etc.
+
+**This is a dimensional strike against platforms like Meituan**`,contentPreviewZh:`# AI时代容器技术的命运：从流量平台到基础设施的范式转移
+
+> AI Agent的崛起正在重塑互联网生态。当"一句话点咖啡"成为现实，传统的App容器技术还剩下多少价值？
+
+## 一场深刻的讨论
+
+最近和朋友讨论了一个有趣的话题：在AI时代，随着开发成本的急剧降低，像React Native、Flutter这样的跨平台容器技术，是否会被逐渐淘汰？
+
+最初我的观点比较保守，认为容器技术仍有价值。但朋友提出了一个让我重新思考的观点——**这不是技术问题，而是商业生态问题**。
+
+![AI Agent概念图](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop)
+
+## 传统视角：容器的价值
+
+在传统认知中，跨平台容器技术的核心价值在于：
+
+1. **跨平台能力** - 一套代码多端运行
+2. **快速迭代** - 热更新能力，绕过应用商店审核
+3. **降低开发成本** - 不需要维护iOS、Android、Web三套代码
+
+这些价值确实存在。但问题在于，这些价值是建立在**"用户需要打开App并在图形界面中操作"**这个前提下的。
+
+## 范式转移：从"人找服务"到"服务找人"
+
+朋友提出的观点很犀利：
+
+**现在的App架构 = 导航树 + UI层**
+- 打开App → 找入口 → 浏览 → 选择 → 支付
+- 本质是**人主动找功能**
+- 用户需要花费30秒甚至更多时间完成一次下单
+
+**AI Agent时代 = 意图 → 执行**
+- "帮我点一杯星巴克拿铁，公司楼下的，常温"
+- 本质是**服务找人**
+- 用户只需3秒钟
+
+![交互范式对比](https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=600&fit=crop)
+
+这个对比揭示了一个本质问题：**如果交互方式变成了自然语言对话，传统的UI层还有多少必要？**
+
+## 阿里的降维打击
+
+朋友举了一个非常现实的例子：
+
+**阿里可以通过千问整合所有生活服务**
+- 淘宝闪购通过持续补贴拿下外卖市场份额
+- 将"一句话点外卖"的能力整合到千问Agent
+- 用户通过千问就能完成：外卖、电商、支付、缴费等所有生活服务
+
+**这对某团这样的平台是降维打击**`,date:"2026-01-20",tags:["AI","Agent","Container","Future","Paradigm Shift"],readTime:10,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
 
 With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive comparison of mainstream AI API services from multiple dimensions including pricing, capabilities, and use cases.
 
@@ -2455,5 +2939,5 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **扩展性差**：订单量增长时，无法通过增加POS来提升性能
 - **硬件依赖**：必须配备性能足够的服务器设备
 
-### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function Q(A,C){return A[C]||A.en}const i=n;export{i as a,Q as g};
-//# sourceMappingURL=articles-Czc1jCNF.js.map
+### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function C(A,n){return A[n]||A.en}const i=e;export{i as a,C as g};
+//# sourceMappingURL=articles-e1SUd7Kw.js.map
