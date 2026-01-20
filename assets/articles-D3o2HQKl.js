@@ -482,7 +482,195 @@ My friend gave a very realistic example:
 - 将"一句话点外卖"的能力整合到千问Agent
 - 用户通过千问就能完成：外卖、电商、支付、缴费等所有生活服务
 
-**这对某团这样的平台是降维打击**`,date:"2026-01-20",tags:["AI","Agent","Container","Future","Paradigm Shift"],readTime:10,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
+**这对某团这样的平台是降维打击**`,date:"2026-01-20",tags:["AI","Agent","Container","Future","Paradigm Shift"],readTime:10,isPaid:!1},{id:"self-discovery-01",title:{en:"Self-Discovery Part 1: Finding Talent, Starting from Age 16",zh:"自我探索之一：天赋发掘，从16岁的那个午后开始"},excerpt:{en:'Someone once told me: "What you loved doing at age 16 is often the clue to your talent."...',zh:"有人告诉我，16岁那个年龄最喜欢做的事，往往就是天赋的线索。..."},contentEn:`# Self-Discovery Part 1: Finding Talent, Starting from Age 16
+
+Someone once told me: "What you loved doing at age 16 is often the clue to your talent."
+
+When I heard this, I thought back for a long time. What did I love most at 16? It turned out to be—**rearranging furniture at home.**
+
+Not professional interior design, not artistic creation. I just simply enjoyed moving furniture around, figuring out how to make it look better, feel more comfortable. Sometimes I would gather various cardboard boxes, build them into "spaces," then crawl in and out of them, never getting bored.
+
+Looking back now, that behavior seems childish. But what was the driving force behind it?
+
+## Not Safety, But the Joy of "Building"
+
+At that time, I wasn't seeking safety. I just saw something "uncomfortable" and wanted to change it. After changing it, I wouldn't stare at it—I just enjoyed the feeling that "the space has become better."
+
+This pattern would repeat throughout my life.
+
+## College Era: Content Curation
+
+In college, I maintained a social media account focused on curating overseas music videos. Not creating, just "discovering-filtering-sharing."
+
+At its peak, this account had over 8,000 followers. But eventually I stopped posting. Not because of lack of traffic, but because—**I felt the content quality wasn't good enough.**
+
+Some songs weren't good, weren't worth sharing. I had my own taste standards—I wouldn't share just anything.
+
+This experience taught me: I'm not a "creator" but a "curator." My pleasure comes from **discovering valuable things and passing them on to those who need them.**
+
+## Writing: Building "Spaces" for Thought
+
+After starting work, I began writing some reflective articles. It's great if people read them, but even if no one reads them, as long as they're my own thoughts, I still want to write.
+
+But there's a contradiction: **some reflections are too personal, I want to share them but don't want to make them completely public.**
+
+What's behind this? Perhaps what I crave isn't an "audience" but "conversation partners." I don't need likes and comments—I need people who can truly receive and engage with these ideas.
+
+## The Clue to Talent: Space Builder
+
+Connecting these experiences, I see a common trait:
+
+| Age 16 | College | Now |
+|--------|---------|-----|
+| Rearranging furniture | Curating music videos | Writing reflections |
+| Building physical spaces | Building information spaces | Building mental spaces |
+
+**I am a "space builder."**
+
+Whether physical, informational, or mental spaces, I'm always doing the same thing: **seeing chaos → restructuring → making the experience better.**
+
+This isn't "creating from zero" but "optimizing and restructuring."
+
+## Key Realizations
+
+In this process, I also discovered several key traits:
+
+1. **Optimization impulse**: Seeing something uncomfortable and wanting to change it, pursuing "better environments"
+2. **Aesthetic judgment**: Being able to recognize what's worth sharing and what has poor experience
+3. **Need for feedback**: Pure creation isn't sustainable—I need connection and interaction
+4. **Emotion-driven**: Sharing desire depends on mood, not thematic focus
+
+These traits point to a possible direction—**technical product manager**. But I'm still hesitating: what if I try it and discover I don't like it?
+
+## To Be Continued
+
+Talent isn't "ability dropped from heaven" but "things you naturally do."
+
+That afternoon at age 16, rearranging furniture, perhaps planted a seed. Now, I'm just slowly digging it out.
+
+This article is the first in the "Self-Discovery" series. In the future, I'll continue recording this process—about talent, career choices, and how to find that direction that "both leverages my strengths and sustains my engagement."
+
+If you're also searching for your own path, perhaps we can explore together.
+
+---
+
+*This is the first article in the self-discovery series. If you have similar experiences or thoughts, welcome to connect.*
+`,contentZh:`# 自我探索之一：天赋发掘，从16岁的那个午后开始
+
+有人告诉我，16岁那个年龄最喜欢做的事，往往就是天赋的线索。
+
+听到这句话时，我回想了很久。16岁的我，最喜欢的竟然是——**摆弄家里的家具**。
+
+不是专业的室内设计，也不是什么艺术创作。我只是单纯地喜欢把家具的位置换来换去，怎么摆更漂亮、更舒服。有时候还会找来各种纸盒箱子，搭成一个个"空间"，然后钻来钻去，乐此不疲。
+
+现在回想起来，那个行为很幼稚，但背后的驱动力是什么？
+
+## 不是安全感，是"构建"的快感
+
+当时我并不是在追求安全感，而是看到"不舒服"就想改。改完之后，我不会盯着看，而是享受那种"空间变得更好了"的感觉。
+
+这个模式，后来在我的人生中反复出现。
+
+## 大学时代的"内容策展"
+
+大学期间，我维护了一个社交媒体账号，主要内容是搬运海外的音乐视频。不是创作，只是"发现-筛选-分享"。
+
+最高峰时，这个账号有8000多粉丝。但后来我停更了，不是因为没流量，而是因为——**我觉得内容质量不行了**。
+
+有些歌不好听，不值得分享。我有自己的品味标准，不是什么都愿意搬。
+
+这个经历告诉我：我不是"原创者"，而是"策展人"。我的快感来自于**发现有价值的东西，然后传递给需要的人**。
+
+## 写作：构建思维的"空间"
+
+工作后，我开始写一些感悟文章。有人读当然好，但即使没人读，只要是自己的思考，我还是会想写。
+
+但有一个矛盾：**有些感悟过于个人化，我想分享，又不想完全公开。**
+
+这背后是什么？或许我渴望的不是"观众"，而是"对话者"。我需要的不是点赞和评论，而是真正能接住这些内容的人。
+
+## 天赋的线索：空间构建者
+
+把这些经历串起来，我看到了一个共同的特质：
+
+| 16岁 | 大学 | 现在 |
+|------|------|------|
+| 摆家具布局 | 搬运海外MV | 写感悟文章 |
+| 构建物理空间 | 构建信息空间 | 构建思维空间 |
+
+**我是一个"空间构建者"。**
+
+无论是物理的、信息的、还是思维的空间，我都在做同一件事：**看到混乱 → 重组结构 → 让体验更好。**
+
+这不是"从零创造"，而是"优化重构"。
+
+## 关键的觉察
+
+在这个过程中，我还发现了几个关键特质：
+
+1. **优化冲动**：看到不舒服就想改，追求"更好的环境"
+2. **审美判断**：能识别什么是值得分享的，什么是体验差的
+3. **需要反馈**：纯创作无法持续，我需要连接感和互动
+4. **情绪驱动**：分享欲看心情，不是主题驱动
+
+这些特质，指向了一个可能的方向——**技术产品经理**。但我还在犹豫：万一做了发现不喜欢怎么办？
+
+## 未完待续
+
+天赋不是"天上掉下来的能力"，而是"自然而然会做的事"。
+
+16岁摆家具的那个午后，也许已经埋下了种子。现在，我只是在慢慢把它挖出来。
+
+这篇文章是"自我探索"系列的第一篇。未来，我会继续记录这个过程——关于天赋、职业选择、以及如何找到那个"既能发挥优势、又能持续投入"的方向。
+
+如果你也在寻找自己的路，或许我们可以一起探索。
+
+---
+
+*这是自我探索系列的第一篇文章。如果你有类似的经历或思考，欢迎交流。*
+`,contentPreviewEn:`# Self-Discovery Part 1: Finding Talent, Starting from Age 16
+
+Someone once told me: "What you loved doing at age 16 is often the clue to your talent."
+
+When I heard this, I thought back for a long time. What did I love most at 16? It turned out to be—**rearranging furniture at home.**
+
+Not professional interior design, not artistic creation. I just simply enjoyed moving furniture around, figuring out how to make it look better, feel more comfortable. Sometimes I would gather various cardboard boxes, build them into "spaces," then crawl in and out of them, never getting bored.
+
+Looking back now, that behavior seems childish. But what was the driving force behind it?
+
+## Not Safety, But the Joy of "Building"
+
+At that time, I wasn't seeking safety. I just saw something "uncomfortable" and wanted to change it. After changing it, I wouldn't stare at it—I just enjoyed the feeling that "the space has become better."
+
+This pattern would repeat throughout my life.
+
+## College Era: Content Curation
+
+In college, I maintained a social media account focused on curating overseas music videos. Not creating, just "discovering-filtering-sharing."
+
+At its peak, this account had over 8,000 followers. But eventually I stopped posting. Not because of lack of traffic, but because—**I felt the content quality wasn't good enough.**
+`,contentPreviewZh:`# 自我探索之一：天赋发掘，从16岁的那个午后开始
+
+有人告诉我，16岁那个年龄最喜欢做的事，往往就是天赋的线索。
+
+听到这句话时，我回想了很久。16岁的我，最喜欢的竟然是——**摆弄家里的家具**。
+
+不是专业的室内设计，也不是什么艺术创作。我只是单纯地喜欢把家具的位置换来换去，怎么摆更漂亮、更舒服。有时候还会找来各种纸盒箱子，搭成一个个"空间"，然后钻来钻去，乐此不疲。
+
+现在回想起来，那个行为很幼稚，但背后的驱动力是什么？
+
+## 不是安全感，是"构建"的快感
+
+当时我并不是在追求安全感，而是看到"不舒服"就想改。改完之后，我不会盯着看，而是享受那种"空间变得更好了"的感觉。
+
+这个模式，后来在我的人生中反复出现。
+
+## 大学时代的"内容策展"
+
+大学期间，我维护了一个社交媒体账号，主要内容是搬运海外的音乐视频。不是创作，只是"发现-筛选-分享"。
+
+最高峰时，这个账号有8000多粉丝。但后来我停更了，不是因为没流量，而是因为——**我觉得内容质量不行了**。
+`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent"],readTime:6,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
 
 With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive comparison of mainstream AI API services from multiple dimensions including pricing, capabilities, and use cases.
 
@@ -2939,5 +3127,5 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **扩展性差**：订单量增长时，无法通过增加POS来提升性能
 - **硬件依赖**：必须配备性能足够的服务器设备
 
-### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function C(A,n){return A[n]||A.en}const i=e;export{i as a,C as g};
-//# sourceMappingURL=articles-e1SUd7Kw.js.map
+### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
+//# sourceMappingURL=articles-D3o2HQKl.js.map
