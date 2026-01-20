@@ -686,7 +686,7 @@ Looking back, this behavior hid a pattern that would run through my entire life:
 
 **Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve**
 
-Whether organizing notes in school, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
+Whether organizing notes while growing up, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
 
 But this pattern has its shadow side.
 
@@ -698,10 +698,6 @@ First is the cost of thinking too fast.
 
 Others are still speaking, I've already thought of a better solution, so I blurt it out. The result is constantly being reminded: "Can you let others finish?" I'm not intentionally rude; my brain is just saying: "Don't waste time, I know a better way." This thinking agility makes me seem impatient in communication.
 
-Second is not tracking results.
-
-I love the "do, improve, conquer" process, but I'm not good at "maintaining" and "tracking". For products I launch, I'm too lazy to check the data; for half-written articles, once my interest fades, I stop; for problems I've solved, once conquered, I lose interest. This isn't irresponsibility—my interest point is always in "how to make it better," not "keep it running."
-
 Most serious is oversensitivity.
 
 When problems are pointed out at work, I toss and turn, my mind looping: "I messed up again," "Am I not good enough?" Rationally I know this is normal feedback, but emotionally I amplify "correction" into "rejection." This sensitivity keeps me constantly on edge.
@@ -712,11 +708,11 @@ When problems are pointed out at work, I toss and turn, my mind looping: "I mess
 
 This oversensitivity has a reason.
 
-At one stage in my student days, I was excellent. My self-worth was stable: "I am excellent." But after the environment changed, I met many even better peers, and suddenly discovered that the advantages I was proud of counted for nothing here.
+At one stage in my growing up years, I was excellent. My self-worth was stable: "I am excellent." But after the environment changed, I met many even better peers, and suddenly discovered that the advantages I was proud of counted for nothing here.
 
 Gradually falling behind in competition, I became sensitive and inferior. My "value anxiety" began from that time.
 
-This explains why I'm still so sensitive to "being negated"—it's not just a professional issue, but triggers the insecurity buried in my student days.
+This explains why I'm still so sensitive to "being negated"—it's not just a professional issue, but triggers the insecurity buried in my growth process.
 
 But I recently realized something: my talents haven't disappeared because of inferiority.
 
@@ -728,9 +724,9 @@ The optimization impulse from age 16, fast thinking, high standards—these trai
 
 Someone asked me: if you had enough money, wouldn't starve, no one would judge you, what would you want to do?
 
-My answer: go back to my hometown and design the courtyard of my rural house.
+My answer: do courtyard design.
 
-Not just simple repairs, but systematic thinking: complete living capabilities, heat insulation, soundproof doors and windows, courtyard wall privacy issues, ventilation layout, even feng shui optimization.
+Not just simple repairs, but systematically learning architectural aesthetic design, from complete living capabilities, heat insulation, soundproof doors and windows, courtyard wall privacy issues, ventilation layout, even feng shui optimization, to learn and practice systematically.
 
 Notice this thinking pattern: it's not "looking good," but "feeling good to live in." It focuses on actual experience, not surface effect.
 
@@ -744,7 +740,7 @@ Connecting all the clues, my core talent is **the "do-experience-improve" cycler
 
 My strengths are: fast thinking, systematic thinking, optimization impulse, and high standards. I can quickly see what's "wrong" and know how to make it better.
 
-My shadows are: not tracking results, interrupting others, oversensitivity, fear of negation.
+My shadows are: interrupting others, oversensitivity, fear of negation.
 
 My trauma is: the value anxiety formed after falling behind in competition, still affecting me now.
 
@@ -777,7 +773,7 @@ If you're also searching for your own path, perhaps we can explore together.
 
 **做 → 体验 → 觉得不对 → 改 → 再体验 → 再改**
 
-无论是学生时代整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
+无论是成长过程中整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
 
 但这套模式也有它的阴影面。
 
@@ -789,11 +785,7 @@ If you're also searching for your own path, perhaps we can explore together.
 
 别人还在说话，我已经想到了更好的方案，于是脱口而出。结果就是常被人提醒："你能不能听别人说完？" 我不是故意没礼貌，只是大脑在说："别浪费时间了，我知道更好的办法。" 这种思维敏捷，让我在沟通中显得急躁。
 
-其次是不爱追踪结果。
-
-我喜欢"做、改、攻克"的过程，但不擅长"维持"和"追踪"。上线的产品，我懒得看数据；写到一半的文章，兴致过了就停了；攻克过的难题，解决完就失去了兴趣。这不是没责任心，而是我的兴趣点永远在"怎么让它变好"，而不是"维持它的运转"。
-
-最严重的是过度敏感。
+其次是过度敏感。
 
 工作中被指出问题，我会辗转难眠，脑子里循环播放："我又搞砸了"、"我是不是不行"。理性上我知道这只是正常的反馈，但感性上我会把"纠正"放大成"否定"。这种敏感让我经常处于紧绷状态。
 
@@ -803,11 +795,11 @@ If you're also searching for your own path, perhaps we can explore together.
 
 这种过度敏感，是有原因的。
 
-在学生时代的某个阶段，我曾经非常优秀。那时候我的自我价值感很稳定："我就是优秀的"。但环境变化后，我见到了很多更优秀的同龄人，突然发现自己引以为傲的优势，在这里不值一提。
+在成长经历的某个阶段，我曾经非常优秀。那时候我的自我价值感很稳定："我就是优秀的"。但环境变化后，我见到了很多更优秀的同龄人，突然发现自己引以为傲的优势，在这里不值一提。
 
 在竞争中逐渐落后，我开始变得敏感、自卑。我的"价值焦虑"，从那时开始了。
 
-这解释了为什么我至今对"被否定"如此敏感——那不是单纯的职业问题，而是触发了学生时代埋下的不安全感。
+这解释了为什么我至今对"被否定"如此敏感——那不是单纯的职业问题，而是触发了成长过程中埋下的不安全感。
 
 但我最近意识到一件事：我的天赋并没有因为自卑而消失。
 
@@ -819,9 +811,9 @@ If you're also searching for your own path, perhaps we can explore together.
 
 有人问我：如果有足够的钱，不会饿死，没人评判你，你想干什么？
 
-我的回答是：回老家把农村房子的庭院设计一下。
+我的回答是：做庭院设计。
 
-不是随便修一下，而是系统地想：补全居住能力、保温隔热、隔音门窗、庭院围墙隐私问题、通风布局、甚至风水优化。
+不是随便修一下，而是系统地学习建筑美学设计，从补全居住能力、保温隔热、隔音门窗、庭院围墙隐私问题、通风布局、甚至风水优化，系统性地学习和实践。
 
 注意这个思维方式：它不是"看起来好看"，而是"住起来舒服"。它关注的是实际体验，而不是表面效果。
 
@@ -835,7 +827,7 @@ If you're also searching for your own path, perhaps we can explore together.
 
 我的优势是：思维敏捷、系统思考、有优化冲动和高标准。我能快速看到"不对"的地方，知道怎么让它变好。
 
-我的阴影是：不爱追踪结果、容易打断别人、过度敏感、害怕被否定。
+我的阴影是：容易打断别人、过度敏感、害怕被否定。
 
 我的创伤是：在竞争中落后后形成的价值焦虑，至今仍在影响我。
 
@@ -868,7 +860,7 @@ Looking back, this behavior hid a pattern that would run through my entire life:
 
 **Do → Experience → Feel Wrong → Improve → Re-experience → Re-improve**
 
-Whether organizing notes in school, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
+Whether organizing notes while growing up, repeatedly revising my resume after starting work, or optimizing technical solutions, I've always repeated this cycle. I'm not a "create from zero" person; I'm an "optimizer." What I enjoy isn't the moment of completion, but the process of making things better.
 
 But this pattern has its shadow side.
 
@@ -877,8 +869,7 @@ But this pattern has its shadow side.
 ## The Backside of Talent
 
 First is the cost of thinking too fast.
-
-Others are still speaking, I've already thought of a better solution, so I blurt it out. The result is constantly being reminded: "Can you let others finish?" I'm not intentionally rude; my brain is just saying: "Don't waste time, I know a better way." This thinking agility makes me seem impatient in communication.`,contentPreviewZh:`# 自我探索之二：天赋的阴影面
+`,contentPreviewZh:`# 自我探索之二：天赋的阴影面
 
 写完第一篇天赋探索后，我继续深挖。这次发现了一些更本质的东西。
 
@@ -894,7 +885,7 @@ Others are still speaking, I've already thought of a better solution, so I blurt
 
 **做 → 体验 → 觉得不对 → 改 → 再体验 → 再改**
 
-无论是学生时代整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
+无论是成长过程中整理笔记、工作后反复改简历、还是优化某个技术方案，我都在重复这个循环。我不是那种"从0创造"的人，我是"优化者"。我享受的不是完成的时刻，而是让东西变好的过程。
 
 但这套模式也有它的阴影面。
 
@@ -903,8 +894,7 @@ Others are still speaking, I've already thought of a better solution, so I blurt
 ## 天赋的背面
 
 首先是思维太快的代价。
-
-别人还在说话，我已经想到了更好的方案，于是脱口而出。结果就是常被人提醒："你能不能听别人说完？" 我不是故意没礼貌，只是大脑在说："别浪费时间了，我知道更好的办法。" 这种思维敏捷，让我在沟通中显得急躁。`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent"],readTime:6,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
+`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent"],readTime:6,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
 
 With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive comparison of mainstream AI API services from multiple dimensions including pricing, capabilities, and use cases.
 
@@ -3362,4 +3352,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
-//# sourceMappingURL=articles-DbViBOCg.js.map
+//# sourceMappingURL=articles-BxStC_xy.js.map
