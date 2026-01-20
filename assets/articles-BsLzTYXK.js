@@ -1,4 +1,374 @@
-const e=[{id:"ai-era-containers",title:{en:"The Fate of Container Technology in the AI Era: A Paradigm Shift from Traffic Platforms to Infrastructure",zh:"AI时代容器技术的命运：从流量平台到基础设施的范式转移"},excerpt:{en:'> The rise of AI Agents is reshaping the internet ecosystem. When "order coffee with one sentence" becomes reality, how much value remains in traditio...',zh:'> AI Agent的崛起正在重塑互联网生态。当"一句话点咖啡"成为现实，传统的App容器技术还剩下多少价值？...'},contentEn:`# The Fate of Container Technology in the AI Era: A Paradigm Shift from Traffic Platforms to Infrastructure
+const e=[{id:"talent-reflection",title:{en:'A Deep Reflection on "Talent Discovery"',zh:'关于"天赋发现"的一次深度思考'},excerpt:{en:'> After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article....',zh:'> 和AI聊了很久的"天赋发现"话题，最后得到的结论和那篇文章不太一样。...'},contentEn:`# A Deep Reflection on "Talent Discovery"
+
+> After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article.
+
+## It Started with an Article
+
+Recently I saw someone on X sharing a method to discover talent through chatting with AI. Original article: https://mp.weixin.qq.com/s/m--AfLbn1kUUhmgEP1xyLQ
+
+The article had a vivid example:
+
+> When a horse spooks during riding, someone else can instantly take control—like a gene or DNA activating taming ability.
+
+![Real stable life](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=500&fit=crop)
+
+This metaphor is good: **Some abilities are deep-seated, almost instinctual, and get "activated" in specific situations.**
+
+But after chatting about it, I found our conclusion different from the original article.
+
+## Core Perspectives Comparison
+
+### Original Article's View
+
+The core of the original article: **Things you did obsessively at 16 are your talent direction.**
+
+The methodology:
+- Chat with AI to review past experiences
+- Find things you "enjoyed"
+- Discover "shadows of talent" and "shadow sides"
+
+### Our Conclusion
+
+After chatting for a long time, I wrote two self-exploration articles, but then deleted both. Because I discovered:
+
+**1. The sign of talent: doing something effortlessly**
+
+Not "obsessively doing it," but "effortlessly doing what others can't."
+
+Like the horse taming example—it's not that he loves taming horses, but **in that moment when he controlled the horse, he barely thought about it.**
+
+![Focus moment at work](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+**2. Enjoyment ≠ Talent**
+
+This is the biggest misconception.
+
+The original article seems to imply: find what you enjoy, and you've found your talent.
+
+But reality is:
+- Someone who easily tames horses doesn't necessarily love taming horses
+- He might just discover he's good at it, so he chooses this career
+- **The reason for choosing is "this makes life easier," not "passion"**
+
+**3. Career choice logic: pragmatic, not romantic**
+
+Not because of "passion," but because:
+- I do this easily
+- Others struggle with this
+- So I choose this career, high cost-performance ratio
+
+It's that simple.
+
+**4. Methodology limitations**
+
+The methodology of "discovering talent" through chatting is essentially a **labeling tool**:
+
+- ❌ Easily over-labels
+- ❌ Mistakes habits for talent
+- ❌ Mistakes professional skills for talent
+- ❌ Quick conclusions without verification
+
+For example, the habit of "iterating while doing" might be developed from work—what does that have to do with talent?
+
+![Real messy workspace](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=500&fit=crop)
+
+## What's the Value of That Article?
+
+Although the methodology has problems, the article's value lies in:
+
+**Providing a thinking framework.**
+
+Not making you believe AI's labels, but making you:
+- Review the past
+- Observe yourself
+- Ask the question "what am I good at"
+
+That's enough.
+
+## Pragmatic Perspective
+
+Back to reality, we don't need to obsess over the word "talent."
+
+Focus on two things:
+
+**1. Comfort zone**
+- What things do you do easily, without effort
+- What things exhaust you, low efficiency
+
+**2. Survival needs**
+- What things can make money, have market value
+- What things can only be hobbies
+
+**Find the intersection: what's both easy and solves survival problems.**
+
+![Real contemplation moment](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=500&fit=crop)
+
+## Action Suggestions
+
+Don't rush to "discover talent," and don't rush to label.
+
+**1. Record and observe**
+
+First record your feelings when doing various things:
+- What things make you think "this is easy"
+- What things make you think "how are others so fast"
+- What things exhaust you
+
+**2. Small-scale trial and error**
+
+Try different directions, focus on "ease" not "passion":
+- Easy ≠ Happy
+- Easy = Fast, good quality, without effort
+
+**3. Long-termism**
+
+Talent isn't "discovered" through a few chats, it requires:
+- Long-term observation
+- Repeated verification
+- Allow yourself to revise your judgment
+
+## Final Conclusion
+
+This attempt at "talent discovery" ultimately concluded:
+
+**Talent definition is fuzzy, but "doing it easily" is a relatively clear marker.**
+
+Instead of obsessing over "what is my talent," better to ask:
+- What do I do easily?
+- What can solve my survival problems?
+- Where is the intersection of these two questions?
+
+Don't be superstitious about methodologies, don't rush to label.
+
+**Keep observing, keep trying, stay open.**
+`,contentZh:`# 关于"天赋发现"的一次深度思考
+
+> 和AI聊了很久的"天赋发现"话题，最后得到的结论和那篇文章不太一样。
+
+## 一切始于一篇文章
+
+最近在X上看到有人分享通过跟AI聊天来判断天赋点的方法，原文链接：https://mp.weixin.qq.com/s/m--AfLbn1kUUhmgEP1xyLQ
+
+文章里有个很生动的例子：
+
+> 在骑马时遇到意外，另一个人瞬间就能将马控制住——就像基因或者DNA激活了驯马的能力。
+
+![真实的马场日常](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=500&fit=crop)
+
+这个比喻很好：**有些能力是深层次的、近乎本能的，在特定情境下会被"激活"。**
+
+但聊完之后，我发现我们的结论和原文不太一样。
+
+## 核心观点对比
+
+### 原文的观点
+
+原文的核心是：**16岁废寝忘食去做的事情，就是天赋方向。**
+
+方法论是：
+- 通过AI聊天回顾过去的经历
+- 找到那些"乐在其中"的事情
+- 发现"天赋的影子"和"阴影面"
+
+### 我们的结论
+
+聊了很久，最后写了两篇自我探索文章，但又都删了。因为发现：
+
+**1. 天赋的标志：做某事很轻松**
+
+不是"废寝忘食"，而是"轻轻松松就能做到别人做不到的事"。
+
+比如驯马的例子——不是他爱驯马，而是他**控制住马的那一瞬间，几乎没有思考**。
+
+![工作中的专注时刻](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+**2. 乐在其中 ≠ 天赋**
+
+这是最大的误区。
+
+原文似乎暗示：找到让你乐在其中的事，就是找到天赋。
+
+但现实是：
+- 轻松驯服马匹的人，不一定爱驯马
+- 他可能只是发现自己擅长，所以选择这个职业
+- **选择的原因是"这会让生活更轻松"，不是"热爱"**
+
+**3. 职业选择逻辑：务实而非浪漫**
+
+不是因为"热爱"，而是因为：
+- 我做这个很轻松
+- 别人做这个很费劲
+- 所以我选这个职业，性价比高
+
+就这么简单。
+
+**4. 方法论的局限性**
+
+通过聊天"发现天赋"的方法论，本质上是个**贴标签工具**：
+
+- ❌ 容易过度标签化
+- ❌ 容易把习惯当成天赋
+- ❌ 容易把职业素养当成天赋
+- ❌ 快速下结论，缺乏验证
+
+比如"边做边改"的习惯，可能是工作养成的，跟天赋有什么关系？
+
+![真实的混乱工作台](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=500&fit=crop)
+
+## 那个文章的价值在哪？
+
+虽然方法论有问题，但文章的价值在于：
+
+**提供了一个思考框架。**
+
+不是让你相信AI的标签，而是让你：
+- 回顾过去
+- 观察自己
+- 提出"我擅长什么"这个问题
+
+这就够了。
+
+## 务实的视角
+
+回到现实，其实不需要纠结"天赋"这个词。
+
+关注两点：
+
+**1. 舒适区**
+- 哪些事做起来轻松、不费力气
+- 哪些事做起来很累、效率低
+
+**2. 生存需求**
+- 哪些事能赚钱、有市场价值
+- 哪些事只能当爱好
+
+**找到交集：既轻松又能解决生存问题。**
+
+![真实的思考时刻](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=500&fit=crop)
+
+## 行动建议
+
+不要急着"发现天赋"，更不要急着贴标签。
+
+**1. 记录观察**
+
+先记录自己做各类事情的感受：
+- 哪些事"这有什么难的"
+- 哪些事"为什么别人这么快"
+- 哪些事做完特别累
+
+**2. 小规模试错**
+
+尝试不同方向，关注"轻松感"而非"热爱"：
+- 轻松 ≠ 开心
+- 轻松 = 做得快、做得好、不费力气
+
+**3. 长期主义**
+
+天赋不是通过几次聊天就能"发现"的，需要：
+- 长期观察
+- 反复验证
+- 允许修正判断
+
+## 最终结论
+
+这次"天赋发现"的尝试，最后得出的结论是：
+
+**天赋定义是模糊的，但"干得很轻松"是相对清晰的标志。**
+
+与其纠结"我的天赋是什么"，不如问：
+- 哪些事我做起来很轻松？
+- 哪些事能解决我的生存问题？
+- 这两个问题的交集在哪里？
+
+不要迷信方法论，不要急着贴标签。
+
+**保持观察，保持试错，保持开放。**
+`,contentPreviewEn:`# A Deep Reflection on "Talent Discovery"
+
+> After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article.
+
+## It Started with an Article
+
+Recently I saw someone on X sharing a method to discover talent through chatting with AI. Original article: https://mp.weixin.qq.com/s/m--AfLbn1kUUhmgEP1xyLQ
+
+The article had a vivid example:
+
+> When a horse spooks during riding, someone else can instantly take control—like a gene or DNA activating taming ability.
+
+![Real stable life](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=500&fit=crop)
+
+This metaphor is good: **Some abilities are deep-seated, almost instinctual, and get "activated" in specific situations.**
+
+But after chatting about it, I found our conclusion different from the original article.
+
+## Core Perspectives Comparison
+
+### Original Article's View
+
+The core of the original article: **Things you did obsessively at 16 are your talent direction.**
+
+The methodology:
+- Chat with AI to review past experiences
+- Find things you "enjoyed"
+- Discover "shadows of talent" and "shadow sides"
+
+### Our Conclusion
+
+After chatting for a long time, I wrote two self-exploration articles, but then deleted both. Because I discovered:
+
+**1. The sign of talent: doing something effortlessly**
+
+Not "obsessively doing it," but "effortlessly doing what others can't."
+
+Like the horse taming example—it's not that he loves taming horses, but **in that moment when he controlled the horse, he barely thought about it.**
+
+![Focus moment at work](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+**2. Enjoyment ≠ Talent**
+`,contentPreviewZh:`# 关于"天赋发现"的一次深度思考
+
+> 和AI聊了很久的"天赋发现"话题，最后得到的结论和那篇文章不太一样。
+
+## 一切始于一篇文章
+
+最近在X上看到有人分享通过跟AI聊天来判断天赋点的方法，原文链接：https://mp.weixin.qq.com/s/m--AfLbn1kUUhmgEP1xyLQ
+
+文章里有个很生动的例子：
+
+> 在骑马时遇到意外，另一个人瞬间就能将马控制住——就像基因或者DNA激活了驯马的能力。
+
+![真实的马场日常](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=500&fit=crop)
+
+这个比喻很好：**有些能力是深层次的、近乎本能的，在特定情境下会被"激活"。**
+
+但聊完之后，我发现我们的结论和原文不太一样。
+
+## 核心观点对比
+
+### 原文的观点
+
+原文的核心是：**16岁废寝忘食去做的事情，就是天赋方向。**
+
+方法论是：
+- 通过AI聊天回顾过去的经历
+- 找到那些"乐在其中"的事情
+- 发现"天赋的影子"和"阴影面"
+
+### 我们的结论
+
+聊了很久，最后写了两篇自我探索文章，但又都删了。因为发现：
+
+**1. 天赋的标志：做某事很轻松**
+
+不是"废寝忘食"，而是"轻轻松松就能做到别人做不到的事"。
+
+比如驯马的例子——不是他爱驯马，而是他**控制住马的那一瞬间，几乎没有思考**。
+
+![工作中的专注时刻](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+**2. 乐在其中 ≠ 天赋**
+`,date:"2026-01-21",tags:["Talent","Self-Discovery","Career","Growth"],readTime:8,isPaid:!1},{id:"ai-era-containers",title:{en:"The Fate of Container Technology in the AI Era: A Paradigm Shift from Traffic Platforms to Infrastructure",zh:"AI时代容器技术的命运：从流量平台到基础设施的范式转移"},excerpt:{en:'> The rise of AI Agents is reshaping the internet ecosystem. When "order coffee with one sentence" becomes reality, how much value remains in traditio...',zh:'> AI Agent的崛起正在重塑互联网生态。当"一句话点咖啡"成为现实，传统的App容器技术还剩下多少价值？...'},contentEn:`# The Fate of Container Technology in the AI Era: A Paradigm Shift from Traffic Platforms to Infrastructure
 
 > The rise of AI Agents is reshaping the internet ecosystem. When "order coffee with one sentence" becomes reality, how much value remains in traditional app container technologies?
 
@@ -482,195 +852,7 @@ My friend gave a very realistic example:
 - 将"一句话点外卖"的能力整合到千问Agent
 - 用户通过千问就能完成：外卖、电商、支付、缴费等所有生活服务
 
-**这对某团这样的平台是降维打击**`,date:"2026-01-20",tags:["AI","Agent","Container","Future","Paradigm Shift"],readTime:10,isPaid:!1},{id:"self-discovery-01",title:{en:"Self-Discovery Part 1: Finding Talent, Starting from Age 16",zh:"自我探索之一：天赋发掘，从16岁的那个午后开始"},excerpt:{en:'Someone once told me: "What you loved doing at age 16 is often the clue to your talent."...',zh:"有人告诉我，16岁那个年龄最喜欢做的事，往往就是天赋的线索。..."},contentEn:`# Self-Discovery Part 1: Finding Talent, Starting from Age 16
-
-Someone once told me: "What you loved doing at age 16 is often the clue to your talent."
-
-When I heard this, I thought back for a long time. What did I love most at 16? It turned out to be—**rearranging furniture at home.**
-
-Not professional interior design, not artistic creation. I just simply enjoyed moving furniture around, figuring out how to make it look better, feel more comfortable. Sometimes I would gather various cardboard boxes, build them into "spaces," then crawl in and out of them, never getting bored.
-
-Looking back now, that behavior seems childish. But what was the driving force behind it?
-
-## Not Safety, But the Joy of "Building"
-
-At that time, I wasn't seeking safety. I just saw something "uncomfortable" and wanted to change it. After changing it, I wouldn't stare at it—I just enjoyed the feeling that "the space has become better."
-
-This pattern would repeat throughout my life.
-
-## College Era: Content Curation
-
-In college, I maintained a social media account focused on curating overseas music videos. Not creating, just "discovering-filtering-sharing."
-
-At its peak, this account had over 8,000 followers. But eventually I stopped posting. Not because of lack of traffic, but because—**I felt the content quality wasn't good enough.**
-
-Some songs weren't good, weren't worth sharing. I had my own taste standards—I wouldn't share just anything.
-
-This experience taught me: I'm not a "creator" but a "curator." My pleasure comes from **discovering valuable things and passing them on to those who need them.**
-
-## Writing: Building "Spaces" for Thought
-
-After starting work, I began writing some reflective articles. It's great if people read them, but even if no one reads them, as long as they're my own thoughts, I still want to write.
-
-But there's a contradiction: **some reflections are too personal, I want to share them but don't want to make them completely public.**
-
-What's behind this? Perhaps what I crave isn't an "audience" but "conversation partners." I don't need likes and comments—I need people who can truly receive and engage with these ideas.
-
-## The Clue to Talent: Space Builder
-
-Connecting these experiences, I see a common trait:
-
-| Age 16 | College | Now |
-|--------|---------|-----|
-| Rearranging furniture | Curating music videos | Writing reflections |
-| Building physical spaces | Building information spaces | Building mental spaces |
-
-**I am a "space builder."**
-
-Whether physical, informational, or mental spaces, I'm always doing the same thing: **seeing chaos → restructuring → making the experience better.**
-
-This isn't "creating from zero" but "optimizing and restructuring."
-
-## Key Realizations
-
-In this process, I also discovered several key traits:
-
-1. **Optimization impulse**: Seeing something uncomfortable and wanting to change it, pursuing "better environments"
-2. **Aesthetic judgment**: Being able to recognize what's worth sharing and what has poor experience
-3. **Need for feedback**: Pure creation isn't sustainable—I need connection and interaction
-4. **Emotion-driven**: Sharing desire depends on mood, not thematic focus
-
-These traits point to a possible direction—**technical product manager**. But I'm still hesitating: what if I try it and discover I don't like it?
-
-## To Be Continued
-
-Talent isn't "ability dropped from heaven" but "things you naturally do."
-
-That afternoon at age 16, rearranging furniture, perhaps planted a seed. Now, I'm just slowly digging it out.
-
-This article is the first in the "Self-Discovery" series. In the future, I'll continue recording this process—about talent, career choices, and how to find that direction that "both leverages my strengths and sustains my engagement."
-
-If you're also searching for your own path, perhaps we can explore together.
-
----
-
-*This is the first article in the self-discovery series. If you have similar experiences or thoughts, welcome to connect.*
-`,contentZh:`# 自我探索之一：天赋发掘，从16岁的那个午后开始
-
-有人告诉我，16岁那个年龄最喜欢做的事，往往就是天赋的线索。
-
-听到这句话时，我回想了很久。16岁的我，最喜欢的竟然是——**摆弄家里的家具**。
-
-不是专业的室内设计，也不是什么艺术创作。我只是单纯地喜欢把家具的位置换来换去，怎么摆更漂亮、更舒服。有时候还会找来各种纸盒箱子，搭成一个个"空间"，然后钻来钻去，乐此不疲。
-
-现在回想起来，那个行为很幼稚，但背后的驱动力是什么？
-
-## 不是安全感，是"构建"的快感
-
-当时我并不是在追求安全感，而是看到"不舒服"就想改。改完之后，我不会盯着看，而是享受那种"空间变得更好了"的感觉。
-
-这个模式，后来在我的人生中反复出现。
-
-## 大学时代的"内容策展"
-
-大学期间，我维护了一个社交媒体账号，主要内容是搬运海外的音乐视频。不是创作，只是"发现-筛选-分享"。
-
-最高峰时，这个账号有8000多粉丝。但后来我停更了，不是因为没流量，而是因为——**我觉得内容质量不行了**。
-
-有些歌不好听，不值得分享。我有自己的品味标准，不是什么都愿意搬。
-
-这个经历告诉我：我不是"原创者"，而是"策展人"。我的快感来自于**发现有价值的东西，然后传递给需要的人**。
-
-## 写作：构建思维的"空间"
-
-工作后，我开始写一些感悟文章。有人读当然好，但即使没人读，只要是自己的思考，我还是会想写。
-
-但有一个矛盾：**有些感悟过于个人化，我想分享，又不想完全公开。**
-
-这背后是什么？或许我渴望的不是"观众"，而是"对话者"。我需要的不是点赞和评论，而是真正能接住这些内容的人。
-
-## 天赋的线索：空间构建者
-
-把这些经历串起来，我看到了一个共同的特质：
-
-| 16岁 | 大学 | 现在 |
-|------|------|------|
-| 摆家具布局 | 搬运海外MV | 写感悟文章 |
-| 构建物理空间 | 构建信息空间 | 构建思维空间 |
-
-**我是一个"空间构建者"。**
-
-无论是物理的、信息的、还是思维的空间，我都在做同一件事：**看到混乱 → 重组结构 → 让体验更好。**
-
-这不是"从零创造"，而是"优化重构"。
-
-## 关键的觉察
-
-在这个过程中，我还发现了几个关键特质：
-
-1. **优化冲动**：看到不舒服就想改，追求"更好的环境"
-2. **审美判断**：能识别什么是值得分享的，什么是体验差的
-3. **需要反馈**：纯创作无法持续，我需要连接感和互动
-4. **情绪驱动**：分享欲看心情，不是主题驱动
-
-这些特质，指向了一个可能的方向——**技术产品经理**。但我还在犹豫：万一做了发现不喜欢怎么办？
-
-## 未完待续
-
-天赋不是"天上掉下来的能力"，而是"自然而然会做的事"。
-
-16岁摆家具的那个午后，也许已经埋下了种子。现在，我只是在慢慢把它挖出来。
-
-这篇文章是"自我探索"系列的第一篇。未来，我会继续记录这个过程——关于天赋、职业选择、以及如何找到那个"既能发挥优势、又能持续投入"的方向。
-
-如果你也在寻找自己的路，或许我们可以一起探索。
-
----
-
-*这是自我探索系列的第一篇文章。如果你有类似的经历或思考，欢迎交流。*
-`,contentPreviewEn:`# Self-Discovery Part 1: Finding Talent, Starting from Age 16
-
-Someone once told me: "What you loved doing at age 16 is often the clue to your talent."
-
-When I heard this, I thought back for a long time. What did I love most at 16? It turned out to be—**rearranging furniture at home.**
-
-Not professional interior design, not artistic creation. I just simply enjoyed moving furniture around, figuring out how to make it look better, feel more comfortable. Sometimes I would gather various cardboard boxes, build them into "spaces," then crawl in and out of them, never getting bored.
-
-Looking back now, that behavior seems childish. But what was the driving force behind it?
-
-## Not Safety, But the Joy of "Building"
-
-At that time, I wasn't seeking safety. I just saw something "uncomfortable" and wanted to change it. After changing it, I wouldn't stare at it—I just enjoyed the feeling that "the space has become better."
-
-This pattern would repeat throughout my life.
-
-## College Era: Content Curation
-
-In college, I maintained a social media account focused on curating overseas music videos. Not creating, just "discovering-filtering-sharing."
-
-At its peak, this account had over 8,000 followers. But eventually I stopped posting. Not because of lack of traffic, but because—**I felt the content quality wasn't good enough.**
-`,contentPreviewZh:`# 自我探索之一：天赋发掘，从16岁的那个午后开始
-
-有人告诉我，16岁那个年龄最喜欢做的事，往往就是天赋的线索。
-
-听到这句话时，我回想了很久。16岁的我，最喜欢的竟然是——**摆弄家里的家具**。
-
-不是专业的室内设计，也不是什么艺术创作。我只是单纯地喜欢把家具的位置换来换去，怎么摆更漂亮、更舒服。有时候还会找来各种纸盒箱子，搭成一个个"空间"，然后钻来钻去，乐此不疲。
-
-现在回想起来，那个行为很幼稚，但背后的驱动力是什么？
-
-## 不是安全感，是"构建"的快感
-
-当时我并不是在追求安全感，而是看到"不舒服"就想改。改完之后，我不会盯着看，而是享受那种"空间变得更好了"的感觉。
-
-这个模式，后来在我的人生中反复出现。
-
-## 大学时代的"内容策展"
-
-大学期间，我维护了一个社交媒体账号，主要内容是搬运海外的音乐视频。不是创作，只是"发现-筛选-分享"。
-
-最高峰时，这个账号有8000多粉丝。但后来我停更了，不是因为没流量，而是因为——**我觉得内容质量不行了**。
-`,date:"2026-01-20",tags:["Self-Discovery","Career","Growth","Talent"],readTime:6,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
+**这对某团这样的平台是降维打击**`,date:"2026-01-20",tags:["AI","Agent","Container","Future","Paradigm Shift"],readTime:10,isPaid:!1},{id:"domestic-ai-api",title:{en:"Comprehensive Guide to AI API Services: Domestic & International",zh:"AI API商用全景指南：国内外选型完全手册"},excerpt:{en:"With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive compar...",zh:"随着大模型技术的成熟，AI API市场已进入白热化阶段。作为开发者，如何在众多服务中选择合适的AI API？本文将从价格、能力、场景等多个维度，全面对比国内外主流AI API服务，为开发者提供选型参考。..."},contentEn:`# Comprehensive Guide to AI API Services: Domestic & International
 
 With the maturation of large language model technology, the AI API market has entered fierce competition. This article provides a comprehensive comparison of mainstream AI API services from multiple dimensions including pricing, capabilities, and use cases.
 
@@ -3128,4 +3310,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
-//# sourceMappingURL=articles-D3o2HQKl.js.map
+//# sourceMappingURL=articles-BsLzTYXK.js.map
