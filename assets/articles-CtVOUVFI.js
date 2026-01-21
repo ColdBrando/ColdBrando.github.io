@@ -1,4 +1,1098 @@
-const e=[{id:"talent-reflection",title:{en:'A Deep Reflection on "Talent Discovery"',zh:'关于"天赋发现"的一次深度思考'},excerpt:{en:'> After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article....',zh:'> 和AI聊了很久的"天赋发现"话题，最后得到的结论和那篇文章不太一样。...'},contentEn:`# A Deep Reflection on "Talent Discovery"
+const e=[{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
+
+> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and implementation approach.
+
+---
+
+## Background
+
+As an Android developer with 10+ years of experience, I recently discovered a pain point while preparing for interviews:
+
+**Interview preparation is too time-consuming**
+
+- Too many technologies to review: Java, Kotlin, Android Framework, Compose, performance optimization...
+- Project experience needs deep diving: every project could be technically questioned in detail
+- Different companies focus differently: ByteDance asks algorithms, Meituan asks architecture, Alibaba asks depth...
+
+Traditional review methods:
+1. Search for "Android interview questions collection" online → Too generic, no personalization
+2. Read technical documentation → Too scattered, not systematic
+3. Organize yourself → Time-consuming, error-prone
+
+**Can we automate this?**
+
+What if we give the resume to AI and let it automatically generate targeted review materials based on my tech stack and project experience?
+
+## Core Approach
+
+### Design Principles
+
+1. **Structured Input**: Resume information organized in YAML format for easy parsing
+2. **Intelligent Processing**: Automatically adjust depth based on tech stack, years of experience, and position
+3. **Dual Output**:
+   - Tech stack review (shareable): Pure knowledge points, no privacy concerns
+   - Interview guide (private): Project experience, personal planning
+
+### Tech Stack Layering Method
+
+This is the core! Each technology point is divided into 4 layers:
+
+\`\`\`yaml
+Tech Stack Layering:
+  Basic Layer: "What is it" "How to use"
+  Principle Layer: "Why this design" "How it's implemented underneath"
+  Practice Layer: "Best practices" "Lessons learned" "Toolchain"
+  Interview Layer: "High-frequency questions" "Scenario questions" "Open topics"
+\`\`\`
+
+**Example: HashMap**
+
+\`\`\`markdown
+### Basic Layer
+- HashMap's data structure: Array + Linked List + Red-Black Tree
+- Basic APIs: put, get, remove
+
+### Principle Layer
+- Why is capacity a power of 2?
+- Why did JDK 1.8 switch to tail insertion?
+- How to optimize rehashing during expansion?
+
+### Practice Layer
+- ArrayMap, SparseArray in Android
+- Memory optimization: Avoid boxing/unboxing
+- Thread safety: ConcurrentHashMap
+
+### Interview Layer
+- "Have you used HashMap in projects? What problems did you encounter?"
+- "How to choose between HashMap and SparseArray?"
+\`\`\`
+
+## Complete Design
+
+### Input Format Design
+
+\`\`\`yaml
+# Basic Information
+Name: Zhang San
+Target Position: Android Developer
+Years of Experience: 5 years
+
+# Tech Stack (with proficiency level)
+Programming Languages:
+  - [Java: Proficient]
+  - [Kotlin: Expert]
+
+# Project Experience (STAR template)
+Project 1:
+  Name: E-commerce App
+  Tech Stack: [Kotlin, MVVM, Retrofit]
+  Highlight: 30% performance improvement
+\`\`\`
+
+**Why YAML?**
+- Structured, easy to parse
+- Supports nesting, clear hierarchy
+- Comment-friendly
+
+### Position-Specific Configuration
+
+Different positions have completely different interview focuses:
+
+| Dimension | Android | Backend | Frontend | Algorithm |
+|-----------|---------|---------|----------|-----------|
+| **Technical Depth** | Source Code Level | Architecture Level | Framework Level | Design Level |
+| **Knowledge Breadth** | Wide (many & diverse) | Deep (specialized & focused) | Medium (frontend & backend) | Specialized (algorithm + business) |
+| **Interview Focus** | Framework + Performance | Concurrency + Design | Framework + Optimization | Programming + Modeling |
+| **Project Focus** | Technical difficulty, architecture | High concurrency, availability | User experience, performance | Algorithm ability, influence |
+
+**Implementation**: Predefined weight templates for different positions in configuration files
+
+### Keys to Personalization
+
+#### 1. Tech Stack → Predict Interview Questions
+
+\`\`\`python
+# Pseudo-code example
+def predict_interview_questions(tech_stack, projects):
+    questions = []
+
+    # Basic rules
+    if "Kotlin" in tech_stack and "Expert" in tech_stack["Kotlin"]:
+        questions.append("Kotlin coroutine dispatching principle")
+        questions.append("Coroutines vs threads difference")
+
+    # Project-driven
+    for project in projects:
+        if "Compose" in project.tech_stack:
+            questions.append(f"Have you used Compose in {project.name}? Any recomposition performance issues?")
+
+    return questions
+\`\`\`
+
+#### 2. Project Experience → Deep Dive Questions
+
+\`\`\`yaml
+Project: E-commerce App Screen Optimization
+Tech Stack: [Kotlin, Compose, Coil]
+
+Generated Deep Dive Questions:
+- "You optimized from 5.2s to 2.1s, how exactly?"
+- "Application optimization or Activity optimization? How much time for each?"
+- "How did you optimize Compose recomposition? What techniques?"
+- "If you continue optimizing, how much can you reduce?"
+\`\`\`
+
+#### 3. Years of Experience → Adjust Depth
+
+\`\`\`yaml
+Experience to Depth Mapping:
+  1-3 years: Basic Layer + Some Principle Layer
+  3-5 years: All Principle Layer + Practice Layer
+  5-10 years: All + Architecture Design + Technical Vision
+\`\`\`
+
+## Practical Results
+
+### Generated Content Preview
+
+#### Tech Stack Review (Example: Kotlin Coroutines)
+
+\`\`\`markdown
+## Kotlin Coroutines (5 Years Experience Focus)
+
+### Principle Layer: Coroutine Dispatching Mechanism
+
+**Q: How does Dispatchers.Main work?**
+
+Answer:
+
+Dispatchers.Main underlying implementation:
+- Actually Handler.getMainLooper() + Handler.post()
+- Main thread's Looper already started in ActivityThread.main()
+- dispatch { } → Wrap Runnable → post to main thread Handler
+
+Interview bonus:
+"In my project, I refactored RxJava network layer with coroutines,
+reduced code by 40%. But encountered a pitfall:
+Dispatchers.IO's thread pool reuse strategy caused connection pool exhaustion,
+solution was limiting concurrency + using custom ThreadPool."
+\`\`\`
+
+#### Project Deep Dive (Example: Screen Optimization)
+
+\`\`\`markdown
+## Project Deep Dive: E-commerce App Screen Optimization
+
+**Q: You said you optimized from 5.2s to 2.1s, how exactly?**
+
+Answer:
+
+Problem localization (Systrace analysis):
+\`\`\`
+Application.onCreate: 1.2s
+Activity.onCreate: 2.8s
+First screen render: 1.2s
+\`\`\`
+
+Optimization measures:
+
+1. Application async initialization:
+\`\`\`kotlin
+// SDK1.init() took 800ms → async
+GlobalScope.launch(Dispatchers.IO) {
+    SDK1.asyncInit()
+}
+\`\`\`
+
+2. Simplify layout:
+\`\`\`kotlin
+// Original layout: 600ms → Simplified: 200ms
+setContentView(R.layout.activity_main_slim)
+\`\`\`
+
+3. Preload:
+\`\`\`kotlin
+// Preload homepage data in advance
+lifecycleScope.launch {
+    delay(100)
+    preloadHomeData()
+}
+\`\`\`
+
+Results:
+- Application: 1.2s → 0.3s
+- Activity: 2.8s → 1.5s
+- Render: 1.2s → 0.3s
+- Total: 5.2s → 2.1s
+
+Follow-up: "If you continue optimizing, how much can you reduce?"
+Answer: "Through lazy loading non-critical modules, pre-compiling layouts, data prefetching,
+can optimize to under 1.5s. But need to consider development cost."
+\`\`\`
+
+### Comparison with Generic Materials
+
+| Dimension | Generic Online Materials | AI-Generated Materials |
+|-----------|-------------------------|------------------------|
+| **Targeting** | Generic, ignores resume | Based on your tech stack + projects |
+| **Depth** | Standard answers | Source code level + practical experience |
+| **Predictability** | Don't know what interviewer asks | Predict 85%+ of questions |
+| **Differentiation** | Everyone answers the same | Combines your project uniqueness |
+
+## Technical Details
+
+### File Structure Design
+
+\`\`\`
+interview-prep-generator/
+├── core/
+│   ├── parser.py          # Resume parsing
+│   ├── tech_analyzer.py   # Tech stack analysis
+│   ├── question_gen.py    # Question generation
+│   └── generator.py       # Document generation
+├── templates/
+│   ├── android.yml       # Android position config
+│   ├── backend.yml        # Backend position config
+│   └── frontend.yml       # Frontend position config
+├── output/
+│   └── {name}-tech-stack.md
+└── config.yaml           # Global config
+\`\`\`
+
+### Core Algorithms
+
+#### 1. Tech Stack Importance Scoring
+
+\`\`\`python
+def calculate_tech_importance(tech_stack, job_position):
+    """
+    Score tech stack importance based on position
+    Returns: {tech: importance_score}
+    """
+    # Android position example
+    weights = {
+        "Kotlin": 10,      # Core language, highest
+        "Compose": 9,       # New tech, bonus
+        "Java": 8,          # Foundation, must-test
+        "RxJava": 6,        # Phasing out
+        "Flutter": 2        # Just mentioned
+    }
+    return weights.get(tech, 3)  # Default weight
+\`\`\`
+
+#### 2. Knowledge Coverage Calculation
+
+\`\`\`python
+def calculate_coverage(generated_content, job_requirements):
+    """
+    Calculate coverage of generated content to position requirements
+    """
+    required_skills = job_requirements['skills']
+    covered_skills = extract_skills(generated_content)
+
+    coverage = len(covered_skills & required_skills) / len(required_skills)
+    return coverage
+\`\`\`
+
+#### 3. Personalized Question Generation
+
+\`\`\`python
+def generate_personalized_questions(project, tech_stack):
+    """
+    Generate personalized questions based on project and tech stack
+    """
+    questions = []
+
+    # Project-driven questions
+    if "Performance Optimization" in project.tags:
+        questions.append(f"In {project.name}, you mentioned 30% performance improvement,
+                       how exactly?")
+
+    # Tech selection questions
+    if tech_stack["Kotlin"] == "Expert":
+        questions.append("Kotlin coroutines used heavily in your project,
+                       any performance issues?")
+
+    return questions
+\`\`\`
+
+## Usage
+
+### Step 1: Fill Resume Information
+
+\`\`\`yaml
+Name: Zhang San
+Target Position: Android Developer
+Years of Experience: 5 years
+
+Tech Stack:
+  Programming Languages:
+    - [Java: Proficient]
+    - [Kotlin: Expert]
+
+Project 1:
+  Name: E-commerce App
+  Period: 2021.06 - 2023.12
+  Tech: [Kotlin, Compose, MVVM]
+  Highlight: Screen 5.2s→2.1s
+\`\`\`
+
+### Step 2: Run Generator
+
+\`\`\`bash
+# CLI method
+python generator.py --resume resume.yaml --job android
+
+# Or interactive
+python generator.py
+> Enter resume path: resume.md
+> Detected position: Android Developer
+> Adjust default config? [y/N]
+\`\`\`
+
+### Step 3: Get Review Materials
+
+Automatically generate two files:
+- \`android-tech-stack.md\` - Tech stack review
+- \`android-interview-guide.md\` - Interview guide
+
+## Design Highlights
+
+### 1. Extensibility
+
+\`\`\`yaml
+Support Multiple Positions:
+  - Android/iOS/Frontend/Backend/Algorithm/Test/DevOps/Product Manager
+  - Each position has independent config file
+  - Can easily add new positions
+\`\`\`
+
+### 2. Customizability
+
+\`\`\`yaml
+Custom Config:
+  Include Topics:
+    - Algorithms: [LeetCode Hot 100]
+    - System Design: [High Concurrency, High Availability]
+  Exclude Topics:
+    - Don't want to review algorithms: exclude: ["Algorithms"]
+  Custom Questions:
+    - Targeted prep: ["Your resume mentions Compose practice"]
+\`\`\`
+
+### 3. Smart Prediction
+
+\`\`\`python
+Interview Question Prediction Dimensions:
+  Tech Stack Depth:
+    - Expert → Must ask principles
+    - Proficient → Ask practice
+
+  Project Complexity:
+    - Lead design → Must ask architecture decisions
+    - Participate in dev → Ask specific implementation
+
+  Years of Experience:
+    - 3+ years → Must ask optimization experience
+    - 5+ years → Must ask architecture design
+\`\`\`
+
+## Value Summary
+
+### For Job Seekers
+
+**Time Savings**:
+- ❌ Traditional: Organizing materials takes 2-3 days
+- ✅ AI Generated: Fill resume 30min + adjust 1hr = 1.5 hours
+
+**Efficiency Boost**:
+- Focus on core: Don't review irrelevant content
+- Targeted: Predict questions, prepare in advance
+- Confidence boost: Every answer backed by practice
+
+### Reusability
+
+**Scenario 1: Job Change**
+\`\`\`
+Update resume → Regenerate → New tech stack + new project experience
+\`\`\`
+
+**Scenario 2: Multiple Target Companies**
+\`\`\`
+ByteDance (algorithms) → Emphasize algorithms, system design
+Meituan (architecture) → Emphasize distributed, engineering ability
+Alibaba (depth) → Emphasize underlying principles, source code understanding
+\`\`\`
+
+**Scenario 3: Different Positions**
+\`\`\`
+Android → Android tech stack review
+Backend → Backend tech stack review
+Role switch (Android → Full Stack) → Hybrid tech stack review
+\`\`\`
+
+## Future Optimization Directions
+
+### Short-term (within 1 month)
+
+- [ ] Support more positions: Test, DevOps, Product Manager
+- [ ] Integrate LeetCode question bank: Recommend algorithm questions based on project type
+- [ ] Generate mock interview questions: Based on predicted questions
+- [ ] Export Anki cards: Facilitate fragmented review
+
+### Mid-term (within 3 months)
+
+- [ ] Web tool: Online fill, online generate, online download
+- [ ] Benchmark target companies: Alibaba P7, ByteDance 2-1 interview questions
+- [ ] Learning path: Generate study plan based on review materials
+- [ ] Interview review: Record interview questions, optimize knowledge base
+
+### Long-term (continuous iteration)
+
+- [ ] Knowledge graph: Associations between tech points
+- [ ] Capability radar: Visualize ability gaps
+- [ ] Salary negotiation: Adjust based on market conditions
+- [ ] Career planning: Advice based on tech trends
+
+## Summary
+
+This tool's core value is:
+
+**Let AI do repetitive work, let you focus on deep thinking.**
+
+- ✅ Fast generation: Done in 30 minutes
+- ✅ Targeted: Based on your resume
+- ✅ Continuous iteration: Just update resume when changing jobs
+
+Spend time on:
+- Understanding principles deeply
+- Preparing project stories
+- Thinking about architecture design
+- Solving LeetCode problems
+
+Instead of:
+- Searching for materials
+- Organizing documents
+- Guessing question banks
+- Aimless reviewing
+
+**Efficiency boost, focus on depth. That's the value of tools.**
+`,contentZh:`# 面试复习资料自动生成器：从简历到针对性复习资料的AI实践
+
+> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。
+
+---
+
+## 背景
+
+作为一名有10年+经验的Android开发者，最近在准备面试时发现了一个痛点：
+
+**面试复习太耗时了**
+
+- 要看的技术栈多而杂：Java、Kotlin、Android Framework、Compose、性能优化...
+- 项目经验要深度挖掘：每个项目都可能被深挖技术细节
+- 不同公司侧重点不同：字节问算法，美团问架构，阿里问深度...
+
+传统的复习方式：
+1. 网上找"Android面试题汇总" → 太通用，没有针对性
+2. 看技术文档 → 太零散，不成体系
+3. 自己整理 → 耗时耗力，容易遗漏
+
+**能不能自动化？**
+
+如果把简历给AI，让它根据我的技术栈和项目经验，自动生成一份针对性的复习资料呢？
+
+## 核心思路
+
+### 设计原则
+
+1. **输入结构化**：简历信息用YAML格式组织，便于解析
+2. **处理智能化**：根据技术栈、工作年限、岗位自动调整深度
+3. **输出双文件**：
+   - 技术栈复习（可分享）：纯知识点，不涉及隐私
+   - 面试攻略（私密）：项目经验、个人规划
+
+### 技术栈分层方法
+
+这是核心！每个技术点分4层：
+
+\`\`\`yaml
+技术栈分层:
+  基础层: "是什么" "怎么用"
+  原理层: "为什么这样设计" "底层怎么实现"
+  实战层: "最佳实践" "踩坑经验" "工具链"
+  面试层: "高频问题" "情景题" "开放性话题"
+\`\`\`
+
+**举例：HashMap**
+
+\`\`\`markdown
+### 基础层
+- HashMap的数据结构：数组+链表+红黑树
+- 基本API：put、get、remove
+
+### 原理层
+- 为什么容量是2的幂？
+- 为什么JDK 1.8改用尾插？
+- 扩容时如何优化rehash？
+
+### 实战层
+- Android中的ArrayMap、SparseArray
+- 内存优化：避免装箱拆箱
+- 线程安全：ConcurrentHashMap
+
+### 面试层
+- "你在项目中用过HashMap吗？遇到了什么问题？"
+- "HashMap和SparseArray怎么选？"
+\`\`\`
+
+## 完整设计
+
+### 输入格式设计
+
+\`\`\`yaml
+# 基本信息
+姓名: 张三
+求职岗位: Android开发工程师
+工作年限: 5年
+
+# 技术栈（带熟练度）
+编程语言:
+  - [Java: 熟练]
+  - [Kotlin: 精通]
+
+# 项目经验（STAR模板）
+项目1:
+  名称: 电商APP
+  技术: [Kotlin, MVVM, Retrofit]
+  亮点: 性能优化30%
+\`\`\`
+
+**为什么用YAML？**
+- 结构化，易于解析
+- 支持嵌套，层次清晰
+- 注释友好
+
+### 岗位差异化配置
+
+不同岗位的面试重点完全不同：
+
+| 维度 | Android | 后端 | 前端 | 算法 |
+|------|---------|------|------|------|
+| **技术深度** | 源码级 | 架构级 | 框架级 | 设计级 |
+| **知识广度** | 广（多而杂） | 深（专而精） | 中（前后兼顾） | 专（算法+业务） |
+| **面试重点** | Framework+性能 | 并发+设计 | 框架+优化 | 编程+建模 |
+| **项目侧重** | 技术难度、架构 | 高并发、可用性 | 用户体验、性能 | 算法能力、影响力 |
+
+**实现方式**：配置文件中预定义不同岗位的权重模板
+
+### 个性化生成的关键
+
+#### 1. 技术栈 → 预测面试问题
+
+\`\`\`python
+# 伪代码示例
+def predict_interview_questions(tech_stack, projects):
+    questions = []
+
+    # 基础规则
+    if "Kotlin" in tech_stack and "精通" in tech_stack["Kotlin"]:
+        questions.append("Kotlin协程调度原理")
+        questions.append("协程 vs 线程的区别")
+
+    # 项目驱动
+    for project in projects:
+        if "Compose" in project.tech_stack:
+            questions.append(f"在{project.name}中用过Compose吗？遇到过重组性能问题吗？")
+
+    return questions
+\`\`\`
+
+#### 2. 项目经验 → 深挖问题
+
+\`\`\`yaml
+项目: 电商APP首屏优化
+技术栈: [Kotlin, Compose, Coil]
+
+生成的深挖问题:
+- "你说首屏从5.2s优化到2.1s，具体怎么做到的？"
+- "是Application优化还是Activity优化？各占多少时间？"
+- "Compose的重组优化是怎么做的？用了哪些技术？"
+- "如果让你继续优化，还能降多少？"
+\`\`\`
+
+#### 3. 工作年限 → 调整深度
+
+\`\`\`yaml
+工作年限对应深度:
+  1-3年: 基础层 + 部分原理层
+  3-5年: 全部原理层 + 实战层
+  5-10年: 全部 + 架构设计 + 技术视野
+\`\`\`
+
+## 实战效果
+
+### 生成内容预览
+
+#### 技术栈复习（示例：Kotlin协程）
+
+\`\`\`markdown
+## Kotlin协程（5年经验重点）
+
+### 原理层：协程调度机制
+
+**Q: Dispatchers.Main是如何工作的？**
+
+答：
+
+Dispatchers.Main底层实现：
+- 实际上是Handler.getMainLooper() + Handler.post()
+- 主线程的Looper在ActivityThread.main()中已经启动
+- dispatch { } → 封装Runnable → post到主线程Handler
+
+面试加分：
+"在项目中，我用协程重构了RxJava的网络层，
+代码量减少40%。但遇到一个坑：
+Dispatchers.IO的线程池复用策略导致连接池耗尽，
+解决方案是限制并发数 + 使用自定义ThreadPool。"
+\`\`\`
+
+#### 项目深挖（示例：首屏优化）
+
+\`\`\`markdown
+## 项目深挖：电商APP首屏优化
+
+**Q: 你说首屏从5.2s优化到2.1s，具体怎么做到的？**
+
+答：
+
+问题定位（Systrace分析）：
+\`\`\`
+Application.onCreate: 1.2s
+Activity.onCreate: 2.8s
+首屏渲染: 1.2s
+\`\`\`
+
+优化措施：
+
+1. Application异步初始化：
+\`\`\`kotlin
+// SDK1.init() 耗时800ms → 异步
+GlobalScope.launch(Dispatchers.IO) {
+    SDK1.asyncInit()
+}
+\`\`\`
+
+2. 精简布局：
+\`\`\`kotlin
+// 原布局：600ms → 精简后：200ms
+setContentView(R.layout.activity_main_slim)
+\`\`\`
+
+3. 预加载：
+\`\`\`kotlin
+// 提前加载首页数据
+lifecycleScope.launch {
+    delay(100)
+    preloadHomeData()
+}
+\`\`\`
+
+结果：
+- Application: 1.2s → 0.3s
+- Activity: 2.8s → 1.5s
+- 渲染: 1.2s → 0.3s
+- 总计: 5.2s → 2.1s
+
+追问："如果让你继续优化，还能降多少？"
+答："可以通过懒加载非关键模块、预编译布局、预取数据，
+预计可以再优化到1.5s以内。但需要考虑开发成本。"
+\`\`\`
+
+### 与通用资料的对比
+
+| 维度 | 网上通用资料 | AI生成资料 |
+|------|-------------|-----------|
+| **针对性** | 通用，不看简历 | 基于你的技术栈+项目 |
+| **深度** | 标准答案 | 源码级+实战经验 |
+| **预测性** | 不知道面试官问什么 | 预测85%+的问题 |
+| **差异化** | 大家都答一样 | 结合你的项目独特性 |
+
+## 技术细节
+
+### 文件结构设计
+
+\`\`\`
+interview-prep-generator/
+├── core/
+│   ├── parser.py          # 简历解析
+│   ├── tech_analyzer.py   # 技术栈分析
+│   ├── question_gen.py    # 问题生成
+│   └── generator.py       # 文档生成
+├── templates/
+│   ├── android.yml       # Android岗位配置
+│   ├── backend.yml        # 后端岗位配置
+│   └── frontend.yml       # 前端岗位配置
+├── output/
+│   └── {name}-tech-stack.md
+└── config.yaml           # 全局配置
+\`\`\`
+
+### 核心算法
+
+#### 1. 技术栈重要性评分
+
+\`\`\`python
+def calculate_tech_importance(tech_stack, job_position):
+    """
+    根据岗位评分技术栈重要性
+    返回：{技术: 重要性分数}
+    """
+    # Android岗位示例
+    weights = {
+        "Kotlin": 10,      # 核心语言，最高
+        "Compose": 9,       # 新技术，加分项
+        "Java": 8,          # 基础，必考
+        "RxJava": 6,        # 渐过时用的技术
+        "Flutter": 2         # 提到而已
+    }
+    return weights.get(tech, 3)  # 默认权重
+\`\`\`
+
+#### 2. 知识点覆盖率计算
+
+\`\`\`python
+def calculate_coverage(generated_content, job_requirements):
+    """
+    计算生成内容对岗位要求的覆盖率
+    """
+    required_skills = job_requirements['skills']
+    covered_skills = extract_skills(generated_content)
+
+    coverage = len(covered_skills & required_skills) / len(required_skills)
+    return coverage
+\`\`\`
+
+#### 3. 个性化问题生成
+
+\`\`\`python
+def generate_personalized_questions(project, tech_stack):
+    """
+    基于项目和技术栈生成个性化问题
+    """
+    questions = []
+
+    # 项目驱动问题
+    if "性能优化" in project.tags:
+        questions.append(f"在{project.name}中，你说性能提升了30%，
+                       具体是怎么做到的？")
+
+    # 技术选型问题
+    if tech_stack["Kotlin"] == "精通":
+        questions.append("Kotlin协程在你项目中大量使用，
+                       有遇到过什么性能问题吗？")
+
+    return questions
+\`\`\`
+
+## 使用方法
+
+### Step 1: 填写简历信息
+
+\`\`\`yaml
+姓名: 张三
+求职岗位: Android开发
+工作年限: 5年
+
+技术栈:
+  编程语言:
+    - [Java: 熟练]
+    - [Kotlin: 精通]
+
+项目1:
+  名称: 电商APP
+  周期: 2021.06 - 2023.12
+  技术: [Kotlin, Compose, MVVM]
+  亮点: 首屏5.2s→2.1s
+\`\`\`
+
+### Step 2: 运行生成器
+
+\`\`\`bash
+# CLI方式
+python generator.py --resume resume.yaml --job android
+
+# 或者交互式
+python generator.py
+> 请输入简历路径：resume.md
+> 检测到岗位：Android开发工程师
+> 是否调整默认配置？[y/N]
+\`\`\`
+
+### Step 3: 获得复习资料
+
+自动生成两个文件：
+- \`android-tech-stack.md\` - 技术栈复习
+- \`android-interview-guide.md\` - 面试攻略
+
+## 设计亮点
+
+### 1. 可扩展性
+
+\`\`\`yaml
+支持多种岗位:
+  - Android/iOS/前端/后端/算法/测试/运维/产品经理
+  - 每个岗位有独立的配置文件
+  - 可以轻松添加新岗位
+\`\`\`
+
+### 2. 可定制化
+
+\`\`\`yaml
+定制化配置:
+  包含主题:
+    - 算法题: [LeetCode Hot 100]
+    - 系统设计: [高并发、高可用]
+  排除主题:
+    - 不想复习算法: exclude: ["算法题"]
+  定制问题:
+    - 针对性准备: ["你简历里提到了Compose实战"]
+\`\`\`
+
+### 3. 智能预测
+
+\`\`\`python
+预测面试问题的维度:
+  技术栈深度:
+    - 精通 → 必问原理
+    - 熟悉 → 问实战
+
+  项目复杂度:
+    - 主导设计 → 必问架构决策
+    - 参与开发 → 问具体实现
+
+  工作年限:
+    - 3年+ → 必问优化经验
+    - 5年+ → 必问架构设计
+\`\`\`
+
+## 实战案例对比
+
+### 案例1：Android 5年经验
+
+**输入简历**：
+- 主导过电商APP重构
+- 使用Kotlin + Compose
+- 首屏优化：5.2s → 2.1s
+
+**生成内容特点**：
+- Kotlin协程：源码级深度
+- Compose重组：实战踩坑经验
+- 性能优化：系统化方法论
+- 项目深挖：重构思路、权衡决策
+
+**预测问题**：
+1. "为什么选择从MVP重构为MVI？"
+2. "Compose的重组优化具体怎么做的？"
+3. "首屏优化2.1s后还能继续优化吗？"
+
+### 案例2：后端 3年经验
+
+**输入简历**：
+- 参与过电商订单系统
+- 使用Java + Spring Boot + MySQL
+- 处理过双11大促
+
+**生成内容特点**：
+- 并发编程：基础扎实，原理适度
+- 数据库：索引优化、事务隔离
+- 分布式：基础概念，应用场景
+- 系统设计：高并发、高可用思路
+
+**预测问题**：
+1. "MySQL索引什么时候会失效？"
+2. "Redis缓存和数据库一致性怎么保证？"
+3. "如何设计一个秒杀系统？"
+
+## 价值总结
+
+### 对求职者
+
+**时间节省**：
+- ❌ 传统方式：整理资料需要2-3天
+- ✅ AI生成：填写简历30分钟 + 调整1小时 = 1.5小时
+
+**效率提升**：
+- 聚焦核心：不复习不相关内容
+- 针对性强：预测问题，提前准备
+- 自信倍增：每个答案都有实战支撑
+
+### 可复用性
+
+**场景1：换工作了**
+\`\`\`
+更新简历 → 重新生成 → 新技术栈 + 新项目经验
+\`\`\`
+
+**场景2：多个目标公司**
+\`\`\`
+字节（重算法） → 生成时强调算法、系统设计
+美团（重架构） → 生成时强调分布式、工程能力
+阿里（重深度） → 生成时强调底层原理、源码理解
+\`\`\`
+
+**场景3：不同岗位**
+\`\`\`
+Android → Android技术栈复习
+后端 → 后端技术栈复习
+转岗（如Android → 全栈）→ 混合技术栈复习
+\`\`\`
+
+## 后续优化方向
+
+### 短期（1个月内）
+
+- [ ] 支持更多岗位：测试、运维、产品经理
+- [ ] 接入LeetCode题库：根据项目类型推荐算法题
+- [ ] 生成模拟面试题库：基于预测的问题
+- [ ] 导出Anki卡片：便于碎片化复习
+
+### 中期（3个月内）
+
+- [ ] Web工具：在线填写、在线生成、在线下载
+- [ ] 对标目标公司：阿里P7、字节2-1的面试题库
+- [ ] 学习路径：根据复习资料生成学习计划
+- [ ] 面试复盘：记录面试问题，优化知识库
+
+### 长期（持续迭代）
+
+- [ ] 知识图谱：技术点之间的关联
+- [ ] 能力雷达：可视化展示能力短板
+- [ ] 薪资谈判：根据市场行情动态调整
+- [ ] 职业规划：结合技术趋势给出建议
+
+## 总结
+
+这个工具的核心价值是：
+
+**让AI帮你做重复工作，让你专注于深度思考。**
+
+- ✅ 快速生成：30分钟搞定
+- ✅ 针对性强：基于你的简历
+- ✅ 持续迭代：换工作只需更新简历
+
+把时间花在：
+- 深入理解原理
+- 准备项目故事
+- 思考架构设计
+- 刷LeetCode题
+
+而不是：
+- 查找资料
+- 整理文档
+- 猜题库
+- 无目的复习
+
+**效率提升，专注深度。这就是工具的价值。**
+`,contentPreviewEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
+
+> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and implementation approach.
+
+---
+
+## Background
+
+As an Android developer with 10+ years of experience, I recently discovered a pain point while preparing for interviews:
+
+**Interview preparation is too time-consuming**
+
+- Too many technologies to review: Java, Kotlin, Android Framework, Compose, performance optimization...
+- Project experience needs deep diving: every project could be technically questioned in detail
+- Different companies focus differently: ByteDance asks algorithms, Meituan asks architecture, Alibaba asks depth...
+
+Traditional review methods:
+1. Search for "Android interview questions collection" online → Too generic, no personalization
+2. Read technical documentation → Too scattered, not systematic
+3. Organize yourself → Time-consuming, error-prone
+
+**Can we automate this?**
+
+What if we give the resume to AI and let it automatically generate targeted review materials based on my tech stack and project experience?
+
+## Core Approach
+
+### Design Principles
+
+1. **Structured Input**: Resume information organized in YAML format for easy parsing
+2. **Intelligent Processing**: Automatically adjust depth based on tech stack, years of experience, and position
+3. **Dual Output**:
+   - Tech stack review (shareable): Pure knowledge points, no privacy concerns
+   - Interview guide (private): Project experience, personal planning
+
+### Tech Stack Layering Method
+
+This is the core! Each technology point is divided into 4 layers:
+
+\`\`\`yaml
+Tech Stack Layering:
+  Basic Layer: "What is it" "How to use"
+  Principle Layer: "Why this design" "How it's implemented underneath"
+  Practice Layer: "Best practices" "Lessons learned" "Toolchain"
+  Interview Layer: "High-frequency questions" "Scenario questions" "Open topics"
+\`\`\`
+
+**Example: HashMap**
+
+\`\`\`markdown`,contentPreviewZh:`# 面试复习资料自动生成器：从简历到针对性复习资料的AI实践
+
+> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。
+
+---
+
+## 背景
+
+作为一名有10年+经验的Android开发者，最近在准备面试时发现了一个痛点：
+
+**面试复习太耗时了**
+
+- 要看的技术栈多而杂：Java、Kotlin、Android Framework、Compose、性能优化...
+- 项目经验要深度挖掘：每个项目都可能被深挖技术细节
+- 不同公司侧重点不同：字节问算法，美团问架构，阿里问深度...
+
+传统的复习方式：
+1. 网上找"Android面试题汇总" → 太通用，没有针对性
+2. 看技术文档 → 太零散，不成体系
+3. 自己整理 → 耗时耗力，容易遗漏
+
+**能不能自动化？**
+
+如果把简历给AI，让它根据我的技术栈和项目经验，自动生成一份针对性的复习资料呢？
+
+## 核心思路
+
+### 设计原则
+
+1. **输入结构化**：简历信息用YAML格式组织，便于解析
+2. **处理智能化**：根据技术栈、工作年限、岗位自动调整深度
+3. **输出双文件**：
+   - 技术栈复习（可分享）：纯知识点，不涉及隐私
+   - 面试攻略（私密）：项目经验、个人规划
+
+### 技术栈分层方法
+
+这是核心！每个技术点分4层：
+
+\`\`\`yaml
+技术栈分层:
+  基础层: "是什么" "怎么用"
+  原理层: "为什么这样设计" "底层怎么实现"
+  实战层: "最佳实践" "踩坑经验" "工具链"
+  面试层: "高频问题" "情景题" "开放性话题"
+\`\`\`
+
+**举例：HashMap**
+
+\`\`\`markdown`,date:"2026-01-21",tags:["General"],readTime:5,isPaid:!1},{id:"talent-reflection",title:{en:'A Deep Reflection on "Talent Discovery"',zh:'关于"天赋发现"的一次深度思考'},excerpt:{en:'> After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article....',zh:'> 和AI聊了很久的"天赋发现"话题，最后得到的结论和那篇文章不太一样。...'},contentEn:`# A Deep Reflection on "Talent Discovery"
 
 > After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article.
 
@@ -3309,5 +4403,5 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **扩展性差**：订单量增长时，无法通过增加POS来提升性能
 - **硬件依赖**：必须配备性能足够的服务器设备
 
-### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(A,n){return A[n]||A.en}const C=e;export{C as a,i as g};
-//# sourceMappingURL=articles-BsLzTYXK.js.map
+### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,A){return n[A]||n.en}const o=e;export{o as a,i as g};
+//# sourceMappingURL=articles-CtVOUVFI.js.map
