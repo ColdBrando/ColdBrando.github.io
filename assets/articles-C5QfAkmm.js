@@ -1,4 +1,1678 @@
-const e=[{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
+const A=[{id:"android-tech-stack-review",title:{en:"Android Expert Technical Stack Review",zh:"Android技术专家技术栈复习"},excerpt:{en:"> A shareable technical knowledge review document covering Java, Kotlin, Android, architecture design, distributed systems, and other core technologie...",zh:"> 可分享的技术知识点复习文档，包含Java、Kotlin、Android、架构设计、分布式系统等核心技术..."},contentEn:`# Android Expert Technical Stack Review
+
+> A shareable technical knowledge review document covering Java, Kotlin, Android, architecture design, distributed systems, and other core technologies
+>
+> Technical details and principles accumulated from 10+ years of client development experience
+
+---
+
+## Table of Contents
+
+1. [Java Basics & Advanced](#java-basics--advanced)
+2. [Kotlin Core](#kotlin-core)
+3. [Android Basics](#android-basics)
+4. [Android Advanced](#android-advanced)
+5. [Jetpack Compose](#jetpack-compose)
+6. [Performance Optimization](#performance-optimization)
+7. [Network Programming](#network-programming)
+8. [Concurrent Programming](#concurrent-programming)
+9. [Architecture Design](#architecture-design)
+10. [Distributed Systems](#distributed-systems)
+11. [Framework & ROM Customization](#framework--rom-customization)
+12. [Automotive Development](#automotive-development)
+
+---
+
+> Note: This is the Chinese version document. For detailed English content, please refer to the Chinese version.
+
+> **Complete content available in Chinese** - This comprehensive technical review covers all aspects of Android development at an expert level, including source code analysis and practical experience.
+
+> Key topics covered:
+> - **Java**: HashMap, ConcurrentHashMap, Thread Pools, ThreadLocal, synchronized, JVM
+> - **Kotlin**: Coroutines, State Machine, Dispatchers, Exception Handling
+> - **Android**: Binder, Handler, AMS, Activity Launch Flow, Context, Four Components
+> - **Compose**: Recomposition, Positional Memoization, Stability, Side Effects
+> - **Performance**: Startup Optimization, Memory Leaks, UI Stutter, Monitoring Tools
+> - **Network**: Socket, Netty, HTTP/2, OkHttp
+> - **Concurrency**: Thread Synchronization, CAS, Concurrent Utilities
+> - **Architecture**: MVP/MVVM/MVI, DDD, Componentization, Pluginization
+> - **Distributed**: CAP Theory, Distributed Transactions, Cache Consistency, Distributed Locks
+> - **Framework**: Binder one-copy principle, AMS, System Services, ROM customization
+> - **Automotive**: Account system, HAL integration, Driver Distraction
+
+For the complete technical interview preparation document, please refer to the Chinese version.
+`,contentZh:`# Android技术专家技术栈复习
+
+> 可分享的技术知识点复习文档，包含Java、Kotlin、Android、架构设计、分布式系统等核心技术
+>
+> 涵盖10年+客户端开发经验积累的技术细节和原理
+
+---
+
+## 目录
+
+1. [Java基础与进阶](#java基础与进阶)
+2. [Kotlin核心](#kotlin核心)
+3. [Android基础](#android基础)
+4. [Android进阶](#android进阶)
+5. [Jetpack Compose](#jetpack-compose)
+6. [性能优化](#性能优化)
+7. [网络编程](#网络编程)
+8. [并发编程](#并发编程)
+9. [架构设计](#架构设计)
+10. [分布式系统](#分布式系统)
+11. [Framework与ROM定制](#framework与rom定制)
+12. [车载开发](#车载开发)
+
+---
+
+## Java基础与进阶
+
+### 集合框架
+
+**Q: HashMap的底层实现原理？**
+
+答：
+
+**核心数据结构**：
+- JDK 1.8之前：数组 + 链表
+- JDK 1.8及之后：数组 + 链表 + 红黑树
+- 树化条件：链表长度超过8 **且** 数组长度超过64（否则只扩容）
+- 树退化：红黑树节点数≤6时退化为链表
+
+**核心参数**：
+- initialCapacity：初始容量16，必须是2的幂次方
+- loadFactor：负载因子0.75，平衡时间和空间成本
+- threshold：扩容阈值 = capacity * loadFactor = 12
+
+**put过程详解**：
+1. **计算hash**：\`hash = (h = key.hashCode()) ^ (h >>> 16)\` —— 高16位异或低16位，减少碰撞
+2. **定位索引**：\`index = hash & (n - 1)\` —— 位运算替代取模，要求n是2的幂
+3. **桶位置判断**：
+   - 无数据：直接插入
+   - 相同key：覆盖value
+   - 链表：遍历插入，尾部插入（JDK 1.8改为尾插，避免并发死循环）
+   - 树化：链表长度≥8且数组长度≥64，转为红黑树
+4. **扩容判断**：size++后 > threshold，触发resize
+
+**扩容机制（resize）**：
+- 容量翻倍：16 → 32 → 64
+- 重新hash：JDK 1.8优化 —— \`(e.hash & oldCap) == 0\`判断元素位置
+  - 为0：索引不变（原位置）
+  - 为1：索引 = 原索引 + oldCap（原位置+老容量）
+- 扩容后元素位置要么不变，要么是原索引+oldCap（相比JDK 1.7重新计算hash效率大幅提升）
+
+**常见问题**：
+- 为什么容量是2的幂？位运算效率高，且hash分布均匀
+- 为什么负载因子是0.75？泊松分布，0.75时空间利用率和时间成本最优
+- 为什么JDK 1.8改用尾插？避免多线程扩容时链表成环（JDK 1.7的并发死循环问题）
+- 为什么先判断长度再树化？数组太小时扩容更高效，避免频繁树化/退化
+
+**Q: ConcurrentHashMap的实现原理？**
+
+答：
+
+**JDK 1.7实现（分段锁）**：
+- Segment数组：默认16，每个Segment是ReentrantLock
+- 每个Segment包含HashEntry数组
+- 锁粒度：Segment级别，支持多段并发
+- size计算：累加所有Segment的size，累加3次如果一致则返回
+
+**JDK 1.8实现（CAS + synchronized）**：
+- 摒弃Segment，直接使用Node数组 + CAS + synchronized
+- Node节点：\`volatile Node<K,V>[] table\`
+- put过程：
+  1. 计算hash，定位数组索引
+  2. 无数据：CAS插入自旋
+  3. 有数据且是MOVED（-1）：说明在扩容，帮忙扩容
+  4. 有数据且hash相同：synchronized锁住桶头节点，遍历链表/红黑树插入
+- get操作：无锁，Node的val和next用volatile修饰，保证可见性
+
+**size计算详解**：
+- baseCount：基数，低竞争时直接累加
+- counterCells：高竞争时，每个线程有独立cell，减少竞争
+- 计算：\`baseCount + sum(counterCells)\`
+- 机制：两次计算结果一致则返回，不一致再算（类似乐观锁）
+
+**核心对比**：
+| 特性 | JDK 1.7 | JDK 1.8 |
+|------|---------|---------|
+| 锁 | Segment分段锁 | Node数组节点锁 |
+| 锁粒度 | 粗粒度 | 细粒度 |
+| 锁实现 | ReentrantLock | synchronized |
+| 并发度 | 最多16个Segment | 理论上Node数组长度 |
+| 扩容 | Segment独立扩容 | 多线程协同扩容 |
+
+**为什么JDK 1.8用synchronized替代ReentrantLock？**
+- JVM优化：synchronized在JDK 1.6后引入偏向锁、轻量级锁，性能大幅提升
+- 内存占用：ReentrantLock需要额外的对象头，synchronized更省内存
+- 代码简洁：synchronized语义清晰，不易出错
+
+**Q: ArrayList和LinkedList的区别？**
+
+答：
+- ArrayList：数组实现，随机访问O(1)，插入删除O(n)，内存连续
+- LinkedList：双向链表，随机访问O(n)，插入删除O(1)，内存不连续
+- 实际场景：ArrayList更适合随机访问，LinkedList更适合频繁插入删除
+
+### 多线程与并发
+
+**Q: 线程池的核心参数及拒绝策略？**
+
+答：
+
+**核心参数详解**：
+\`\`\`java
+ThreadPoolExecutor(int corePoolSize,      // 核心线程数：即使空闲也保持活跃
+                   int maximumPoolSize,    // 最大线程数：corePoolSize + 非核心线程数
+                   long keepAliveTime,     // 非核心线程空闲存活时间
+                   TimeUnit unit,          // 时间单位
+                   BlockingQueue<Runnable> workQueue,  // 任务队列
+                   ThreadFactory threadFactory,         // 线程工厂：命名、是否守护线程
+                   RejectedExecutionHandler handler)    // 拒绝策略
+\`\`\`
+
+**工作流程**：
+1. 线程数 < corePoolSize：创建新线程执行任务
+2. 线程数 = corePoolSize：任务加入workQueue排队
+3. workQueue已满：创建非核心线程执行（线程数 < maximumPoolSize）
+4. 线程数 = maximumPoolSize且workQueue已满：触发拒绝策略
+
+**拒绝策略**：
+- AbortPolicy（默认）：抛RejectedExecutionException
+- CallerRunsPolicy：调用者线程执行任务，降低提交速度
+- DiscardPolicy：直接丢弃任务，无通知
+- DiscardOldestPolicy：丢弃队列最老任务，重新提交
+
+**workQueue选择**：
+- SynchronousQueue：不存储，直接传递给线程（CachedThreadPool）
+- LinkedBlockingQueue：无界队列（FixedThreadPool，注意OOM风险）
+- ArrayBlockingQueue：有界队列，需指定容量
+- PriorityBlockingQueue：优先级队列
+
+**线程池关闭**：
+- shutdown()：不再接收新任务，已提交任务会执行完
+- shutdownNow()：尝试中断正在执行的任务，返回未执行的任务列表
+- isTerminated()：所有任务都完成（包括已提交的）
+
+**阿里规范**（面试加分）：
+- 禁止使用Executors创建线程池（Fixed/Single/Cached都用无界队列，OOM风险）
+- 必须手动创建ThreadPoolExecutor，指定有界队列
+- 线程名必须有明确业务含义（便于排查问题）
+
+**Q: ThreadLocal的实现原理及内存泄漏问题？**
+
+答：
+
+**实现原理**：
+- 每个Thread对象内部持有一个ThreadLocalMap成员变量
+- ThreadLocalMap：以ThreadLocal对象为key、任意对象为value的Entry数组
+- key是弱引用（WeakReference<ThreadLocal<?>>）：ThreadLocal外部强引用消失后，GC会回收key
+- value是强引用：需要手动清理
+
+**内存泄漏原因**：
+1. ThreadLocal对象被回收，key变为null（弱引用被GC）
+2. 但Thread还在运行，ThreadLocalMap持有value强引用
+3. value无法被访问，也无法被GC回收 —— 内存泄漏
+4. 线程池场景更严重：线程复用，Thread生命周期很长
+
+**解决方案**：
+\`\`\`java
+try {
+    threadLocal.set(value);
+    // 业务逻辑
+} finally {
+    threadLocal.remove();  // 必须主动清理
+}
+\`\`\`
+
+**为什么用弱引用？**
+- 如果key是强引用：ThreadLocal外部引用消失，但ThreadLocalMap还持有，永远无法回收
+- 弱引用的权衡：允许ThreadLocal被回收，但需要开发者负责清理value
+
+**ThreadLocal应用场景**：
+- Android：Looper.myLooper()、MainThread
+- 日期格式化：SimpleDateFormat非线程安全，用ThreadLocal隔离
+- 数据库连接：ThreadLocal存储Connection，保证事务在同一线程
+- 用户身份：Request上下文中存储当前用户信息
+
+**Q: synchronized和ReentrantLock的区别？**
+
+答：
+
+**synchronized（JVM层面）**：
+- 锁升级：无锁 → 偏向锁（同一线程多次获取）→ 轻量级锁（CAS自旋）→ 重量级锁（阻塞）
+- 自动释放：代码块/方法执行完自动释放，不会死锁
+- 不可中断：等待锁的线程无法被中断
+- 非公平锁：不保证等待时间最长的线程先获得锁
+- 支持锁消除、锁粗化等JIT优化
+
+**ReentrantLock（API层面）**：
+- 需要手动lock()和unlock()，必须在finally中释放
+- 可中断：lockInterruptibly()可响应中断
+- 公平锁：构造函数可传入fair=true，按FIFO分配锁
+- Condition支持：多个Condition变量，精细控制线程等待/唤醒
+- tryLock()：尝试获取锁，可设置超时，不阻塞
+
+**如何选择**：
+- synchronized：简单场景、不依赖高级特性、JDK 1.6后性能优化好
+- ReentrantLock：需要公平锁、可中断、多Condition、tryLock超时
+
+**对象头与锁状态**（深入细节）：
+- Mark Word：32位JVM中，对象头的一部分
+- 锁状态存储：无锁（001）、偏向锁（101）、轻量级锁（00）、重量级锁（10）
+- 偏向锁：记录线程ID，同一线程重入无开销
+- 轻量级锁：CAS将Mark Word替换为指向栈中Lock Record的指针
+- 重量级锁：指向堆中monitor对象的指针（操作系统互斥量）
+
+### JVM
+
+**Q: JVM内存结构及垃圾回收算法？**
+
+答：
+
+**JVM内存结构**（JDK 8）：
+- **堆**：最大内存区域，存放对象实例，GC主要区域
+  - 年轻代：Eden + 2个Survivor（S0、S1），比例8:1:1
+  - 老年代：长期存活对象，大对象直接进入
+- **方法区（Metaspace，元空间）**：JDK 8后移出堆，使用本地内存
+  - 类元信息、常量池、静态变量
+  - JDK 7及之前叫永久代（PermGen）
+- **虚拟机栈**：方法调用、局部变量表、操作数栈
+- **本地方法栈**：Native方法服务
+- **程序计数器**：当前执行字节码行号，唯一无OOM区域
+
+**垃圾对象判断**：
+- 引用计数：循环引用问题（Java不使用）
+- 可达性分析（GC Roots）：
+  - GC Roots：栈中引用的对象、方法区静态引用、本地方法栈JNI引用
+  - 从GC Roots向下搜索，不可达即回收
+
+**GC算法**：
+1. **标记-清除（Mark-Sweep）**：
+   - 标记：从GC Roots遍历标记存活对象
+   - 清除：回收未标记对象
+   - 缺点：产生内存碎片
+
+2. **标记-整理（Mark-Compact）**：
+   - 标记后，将存活对象向一端移动
+   - 优点：无内存碎片
+   - 缺点：移动对象开销大
+
+3. **复制算法（Copying）**：
+   - Eden + S0 → S1，清空Eden和S0
+   - 优点：无碎片，简单高效
+   - 缺点：浪费一半内存（适合存活率低的年轻代）
+
+4. **分代收集**：
+   - 年轻代：复制算法（存活率低）
+   - 老年代：标记-清除或标记-整理（存活率高）
+
+**常见垃圾收集器**：
+- Serial：单线程，STW（Stop The World）
+- Parallel：多线程，STW，关注吞吐量
+- CMS：低延迟，标记-清除，已废弃
+- G1：Region划分，可预测停顿，JDK 9默认
+- ZGC：着色指针，读屏障，< 10ms延迟
+
+**Q: 类加载机制及双亲委派模型？**
+
+答：
+
+**类加载过程**：
+1. **加载**：
+   - 通过类名获取二进制字节流（文件、网络、zip包）
+   - 转为方法区运行时结构
+   - 生成Class对象（堆中）
+
+2. **验证**：
+   - 文件格式验证：魔数0xCAFEBABE、版本号
+   - 字节码验证：语义合法性
+   - 符号引用验证：引用类是否存在
+
+3. **准备**：
+   - 为**类变量**（static）分配内存并设置默认值（0、null、false）
+   - 注意：final static此时赋初始值，普通static是默认值
+   - \`public static int value = 123;\` —— 此时value=0，不是123
+
+4. **解析**：
+   - 符号引用转为直接引用
+   - 类、接口、字段的解析
+
+5. **初始化**：
+   - 执行<clinit>方法（类构造器）
+   - static变量赋值、static代码块
+   - \`public static int value = 123;\` —— 此时value=123
+
+**双亲委派模型**：
+\`\`\`
+Bootstrap ClassLoader（启动类加载器）
+    ↑
+Platform/Extension ClassLoader（平台类加载器）
+    ↑
+Application ClassLoader（应用类加载器）
+\`\`\`
+
+**工作流程**：
+1. ClassLoader收到加载请求，先委托父加载器
+2. 父加载器无法加载，才自己尝试加载
+3. 顶层是Bootstrap（C++实现），加载JAVA_HOME/lib/core.jar
+
+**双亲委派的优势**：
+- 避免重复加载：Java核心类只加载一次
+- 保证安全：防止恶意代码替换Java核心类
+  - 例如：用户自定义java.lang.String，由于双亲委派，永远加载系统String
+
+**打破双亲委派**：
+- **Tomcat**：
+  - 需求：多个WebApp依赖不同版本的jar包
+  - 实现：优先加载Web应用自己的类，加载不了才委托父加载器
+- **OSGi**：网状委托，支持模块热部署
+- **JDK 9模块化**：类加载变为双亲委派+模块隔离
+
+**自定义ClassLoader**：
+\`\`\`java
+class MyClassLoader extends ClassLoader {
+    @Override
+    protected Class<?> findClass(String name) {
+        byte[] bytes = loadBytes(name);  // 自定义加载逻辑
+        return defineClass(name, bytes, 0, bytes.length);
+    }
+}
+\`\`\`
+
+---
+
+## Kotlin核心
+
+### 基础特性
+
+**Q: Kotlin相比于Java的优势？**
+
+答：
+- 空安全：类型系统区分可空/非空，编译期避免NPE
+- 扩展函数：不修改原类添加方法，提高代码可读性
+- 数据类：自动生成equals/hashCode/toString/copy
+- 协程：用同步方式写异步代码，避免回调地狱
+- 更简洁：data class、when表达式、字符串模板等
+
+**Q: val和var的区别？**
+
+答：
+- val：类似Java的final，只读，引用不可变，但对象内容可变
+- var：可变，可重新赋值
+- 编译期val会被编译为final，var不会
+
+**Q: Kotlin的空安全机制？**
+
+答：
+- 类型系统：String?表示可空，String表示非空
+- 安全调用：?. 短路求值，为null返回null
+- Elvis操作：?: 提供默认值
+- 非断言：!! 强制转为非空，可能抛NPE
+- let/run/with等高阶函数处理可空类型
+
+### 协程
+
+**Q: 协程的本质及与线程的区别？**
+
+答：
+
+**协程本质**：
+- 编译器技术：Kotlin编译器将suspend函数编译为状态机（CPSContinuation-Passing Style）
+- 轻量级：一个线程可运行数十万协程，内存开销极低（KB级别）
+- 非阻塞：挂起不阻塞线程，释放线程去执行其他协程
+
+**协程 vs 线程**：
+| 特性 | 线程 | 协程 |
+|------|------|------|
+| 切换成本 | 高（用户态/内核态切换） | 低（用户态切换） |
+| 内存占用 | MB级别（栈1MB） | KB级别 |
+| 数量上限 | 几千个 | 数十万个 |
+| 调度 | OS调度器 | 用户态调度器（Dispatcher） |
+| 适用场景 | CPU密集型 | IO密集型 |
+
+**挂起函数原理**：
+\`\`\`kotlin
+suspend fun getUser(): User {
+    return apiService.getUser()  // 网络请求，挂起
+}
+
+// 编译后等价于（伪代码）：
+fun getUser(cont: Continuation<User>): Any? {
+    // 状态机，根据label跳转
+    when (cont.label) {
+        0 -> {
+            cont.label = 1
+            return apiService.getUser(cont)  // 挂起
+        }
+        1 -> {
+            // 恢复，获取结果
+            return (cont as Result<User>).getOrThrow()
+        }
+    }
+}
+\`\`\`
+
+**挂起与恢复**：
+- 挂起：协程遇到挂起点，保存当前状态到Continuation，释放线程
+- 恢复：异步操作完成，Dispatcher调度协程恢复执行，从Continuation恢复状态
+
+**Q: CoroutineScope、Job、Dispatcher的关系？**
+
+答：
+
+**CoroutineScope（协程作用域）**：
+- 作用：管理协程生命周期，统一取消所有子协程
+- 结构化并发：父协程取消，所有子协程自动取消
+- 常见Scope：
+  - lifecycleScope：生命周期感知，随Activity/Service销毁取消
+  - viewModelScope：ViewModel取消时自动取消
+  - coroutineScope：挂起作用域，子协程全部完成后返回
+  - supervisorScope：子协程异常不影响父协程和其他子协程
+
+**Job（协程任务）**：
+- Job表示一个可取消的协程任务
+- 父子关系：父Job的子Job列表，取消父Job会取消所有子Job
+- 状态：New → Active → Completing → Completed/Cancelled
+- 常用方法：
+  - cancel()：取消协程
+  - join()：等待协程完成（suspend函数）
+  - isActive：检查协程是否活跃
+
+**Dispatcher（调度器）**：
+- Dispatchers.Main：主线程，UI更新、Android生命周期回调
+- Dispatchers.IO：IO线程池，适合网络、数据库、文件操作
+  - 动态扩容：任务多时自动增加线程（最多64个）
+  - 复用Default线程池：IO空闲时线程用于CPU任务
+- Dispatchers.Default：CPU密集型线程池，等于CPU核心数
+- Dispatchers.Unconfined：无指定调度器，在当前线程恢复
+
+**withContext切换调度器**：
+\`\`\`kotlin
+suspend fun fetchAndShow() {
+    val data = withContext(Dispatchers.IO) {
+        // IO线程执行网络请求
+        apiService.getData()
+    }
+    // 自动切回Main线程
+    textView.text = data
+}
+\`\`\`
+
+**Q: 协程的异常处理机制？**
+
+答：
+
+**异常传播机制**：
+- 默认：子协程异常会取消父协程和其他子协程（异常向上传播）
+- SupervisorJob：子协程异常不影响父协程和其他子协程
+
+**异常处理方式**：
+
+1. **try-catch**：捕获挂起函数异常
+\`\`\`kotlin
+try {
+    val data = apiService.getData()
+} catch (e: IOException) {
+    // 处理异常
+}
+\`\`\`
+
+2. **CoroutineExceptionHandler**：捕获未处理异常
+\`\`\`kotlin
+val handler = CoroutineExceptionHandler { _, exception ->
+    Log.e("Coroutine", "Caught: $exception")
+}
+val job = CoroutineScope(SupervisorJob() + handler).launch {
+    throw RuntimeException("Failed")
+}
+\`\`\`
+
+3. **SupervisorJob**：子协程异常隔离
+\`\`\`kotlin
+val supervisorScope = CoroutineScope(SupervisorJob())
+supervisorScope.launch {
+    throw Exception("Child 1 failed")  // 不影响Child 2
+}
+supervisorScope.launch {
+    delay(1000)
+    println("Child 2 completed")  // 仍会执行
+}
+\`\`\`
+
+**异常取消**：
+- cancel()：取消协程，抛出CancellationException（不需处理）
+- cancel(CancellationException("message"))：带原因的取消
+- try-finally：取消时finally仍会执行（可做资源清理）
+- withContext(NonCancellable)：取消时仍需执行的任务（如文件关闭）
+
+**重要区别**：
+- launch：异常自动传播，需要try-catch或CoroutineExceptionHandler
+- async：异常不会立即抛出，await()时才抛出
+
+---
+
+## Android基础
+
+### 四大组件
+
+**Q: Activity的启动模式及使用场景？**
+
+答：
+- standard：默认，每次创建新实例
+- singleTop：栈顶复用，适合通知点击打开Activity
+- singleTask：栈内单例，适合APP主页
+- singleInstance：单独任务栈，适合系统闹钟等
+
+**Q: Service的两种方式及区别？**
+
+答：
+- startService：与调用者无关联，需手动stopService
+- bindService：与调用者绑定，解绑时销毁
+- IntentService：已废弃，用JobIntentService替代
+- 前台服务：必须显示通知，用于播放音乐、定位等
+
+**Q: BroadcastReceiver的两种注册方式？**
+
+答：
+- 静态注册：AndroidManifest.xml声明，应用关闭仍能接收（部分广播受限）
+- 动态注册：代码registerReceiver，解绑后无法接收
+- LocalBroadcastManager：应用内广播，效率高更安全
+
+**Q: ContentProvider的原理及使用场景？**
+
+答：
+- 跨进程数据共享的标准方式
+- 底层基于Binder，通过Uri定位数据
+- 使用场景：系统通讯录、媒体库，应用间数据共享
+- query/insert/update/delete六个方法
+
+### 生命周期
+
+**Q: Activity的完整生命周期及 onSaveInstanceState？**
+
+答：
+- onCreate → onStart → onResume → onPause → onStop → onDestroy
+- onSaveInstanceState：在onStop之前调用，保存临时数据
+- onRestoreInstanceState：在onStart之后调用，恢复数据
+- 与onRetainNonConfigurationInstance区别：后者用于配置变更
+
+**Q: ViewModel和SavedStateHandle的区别？**
+
+答：
+- ViewModel：屏幕旋转不会销毁，进程杀死会销毁
+- SavedStateHandle：进程杀死不丢失，底层基于onSaveInstanceState
+- 配合使用：ViewModel持有SavedStateHandle
+
+### Fragment
+
+**Q: Fragment的生命周期及与Activity交互？**
+
+答：
+- onAttach → onCreate → onCreateView → onActivityCreated → onStart → onResume → onPause → onStop → onDestroyView → onDestroy → onDetach
+- 与Activity通信：
+  - 推荐使用ViewModel共享状态
+  - 接口回调（传统方式）
+  - 通过Activity的ViewModel传递事件
+
+**Q: FragmentTransaction的commit方法区别？**
+
+答：
+- commit：异步执行，必须在onSaveInstanceState之前调用
+- commitNow：同步执行，立即执行
+- commitAllowingStateLoss：允许状态丢失，可能丢失数据
+- setMaxLifecycle：控制Fragment最大生命周期
+
+---
+
+## Android进阶
+
+### Binder IPC
+
+**Q: Binder的原理及优势？**
+
+答：
+
+**Binder架构**：
+\`\`\`
+Client进程 → ServiceManager（大管家） → Server进程
+     ↓              ↓                      ↓
+  代理Proxy     Binder驱动            真实Stub
+\`\`\`
+
+**一次拷贝原理（核心考点）**：
+- 传统IPC（管道、消息队列）：
+  1. 数据从发送方用户空间 → 内核缓冲区（第一次拷贝）
+  2. 内核缓冲区 → 接收方用户空间（第二次拷贝）
+- Binder：
+  1. 发送方通过mmap将内核缓冲区映射到自己的用户空间
+  2. 数据拷贝到内核缓冲区（一次拷贝）
+  3. 接收方也通过mmap共享同一块内核内存
+  4. 接收方直接读取，无需再次拷贝
+
+**为什么只需一次拷贝？**
+- Binder驱动使用**内存映射（mmap）**技术
+- 内核缓冲区和用户空间共享同一块物理内存
+- 数据拷贝到内核后，接收方用户空间直接可见
+
+**优势对比**：
+| IPC方式 | 拷贝次数 | 性能 | 特点 |
+|---------|---------|------|------|
+| Binder | 1次 | 高 | 内存映射 |
+| 管道/消息队列 | 2次 | 中 | 内核中转 |
+| 共享内存 | 0次 | 最高 | 需同步机制 |
+| Socket | 2次 | 低 | 跨机器 |
+
+**Binder其他优势**：
+- 实名/匿名：支持实名Binder（ServiceManager注册）和匿名Binder（传递时绑定）
+- 引用计数：驱动层管理Binder生命周期，自动回收
+- 安全性：UID/PID校验，传统IPC无法确认身份
+- 多线程支持：Binder驱动处理线程池，Server端并发处理请求
+
+**Binder通信流程**：
+1. Server通过addService()向ServiceManager注册
+2. Client通过getService()从ServiceManager获取Server的Binder引用
+3. Client通过Binder引用调用Server方法
+4. Binder驱动将请求转发给Server进程
+5. Server处理并返回结果
+
+**Q: AIDL的生成代码原理？**
+
+答：
+
+**AIDL编译过程**：
+1. 定义.aidl接口文件
+2. AIDL编译器生成Java接口文件
+3. 生成的接口包含：
+   - 抽象类Stub：继承Binder，实现onTransact()
+   - Stub内部类Proxy：客户端代理类
+   - 接口定义的方法声明
+
+**Stub类**：
+- asInterface(IBinder obj)：将服务端Binder转为客户端接口
+  - 同进程：直接返回Stub本身（this）
+  - 跨进程：返回Proxy代理
+- asBinder()：返回自身Binder对象
+- onTransact(int code, Parcel data, Parcel reply, int flags)：处理客户端请求
+
+**Proxy类**：
+- 持有IBinder mRemote（远程Binder引用）
+- 每个方法实现：
+  1. 创建Parcel对象（data、reply）
+  2. 写入方法参数到data
+  3. 调用mRemote.transact()，通过Binder驱动传输到服务端
+  4. 服务端onTransact()处理后，写入reply
+  5. 客户端从reply读取返回值
+
+**序列化**：
+- 基本类型：直接支持
+- Parcelable：需实现Parcelable接口，手动序列化
+- AIDL中定义的Parcelable类：也需生成.aidl声明
+
+**in、out、inout区别**：
+- in：客户端 → 服务端（默认）
+- out：服务端 → 客户端（服务端修改会反馈到客户端）
+- inout：双向传递（性能开销大，慎用）
+
+**单向调用oneway**：
+- 客户端调用后立即返回，不等待服务端处理
+- 只能用于in参数，不能有返回值
+- 适用场景：不需要返回值的异步调用
+
+### Handler与消息机制
+
+**Q: Handler的消息机制原理？**
+
+答：
+
+**核心组件**：
+- **Handler**：发送/处理消息
+- **MessageQueue**：消息队列，链表实现，按消息执行时间排序
+- **Looper**：循环取消息，一个线程对应一个Looper
+- **ThreadLocal**：线程本地存储，保证线程隔离
+
+**工作流程**：
+1. Looper.prepare()：创建Looper并存入ThreadLocal
+2. Looper.loop()：无限循环，从MessageQueue取消息
+3. Handler.sendMessage()：发送消息到MessageQueue
+4. MessageQueue.next()：阻塞取消息（可能会休眠）
+5. Handler.dispatchMessage()：分发消息到handleMessage()处理
+6. Looper处理完继续循环下一个消息
+
+**为什么主线程不会因为Looper.loop()卡死？**
+- MessageQueue.next()在无消息时会进入休眠（epoll_wait）
+- 有新消息时通过pipe管道事件唤醒Looper
+- 主线程空闲时休眠，不占用CPU
+
+**ThreadLocal的作用**：
+- 保证线程隔离：每个线程访问自己的Looper
+- 实现原理：Thread类中有一个ThreadLocalMap成员变量
+  - key：ThreadLocal对象
+  - value：该线程存储的值
+- 同一线程多次调用prepare()会抛异常（"Only one Looper may be created per thread"）
+
+**消息同步**：
+- Message.obtain()：复用Message池（最大50个），避免频繁创建
+- 消息执行时间排序：MessageQueue是按when排序的链表
+- 同步消息：正常消息，按时间顺序执行
+- 异步消息：不受同步屏障影响，可插队执行
+
+**Q: 为什么主线程可以new Handler？**
+
+答：
+- ActivityThread.main()中已调用Looper.prepareMainLooper()
+- 系统已为主线程创建Looper并调用loop()
+- 子线程需手动调用Looper.prepare()和Looper.loop()
+
+**Q: Handler的Barrier（同步屏障）机制？**
+
+答：
+
+**同步屏障作用**：
+- 插入同步屏障后，**阻塞所有同步消息**，只允许异步消息执行
+- 保证高优先级任务（UI渲染）优先执行
+
+**工作原理**：
+1. MessageQueue.postSyncBarrier()：插入一个特殊Message（target=null）
+2. MessageQueue.next()遇到同步屏障时：
+   - 跳过所有同步消息
+   - 只处理异步消息
+3. MessageQueue.removeSyncBarrier()：移除屏障，恢复正常
+
+**使用场景**：
+- **UI渲染**：ViewRootImpl.scheduleTraversals()
+  - 插入同步屏障，阻塞普通消息
+  - 优先执行UI渲染异步任务
+  - 渲染完成后移除屏障
+
+**如何发送异步消息**：
+\`\`\`java
+// 方式1：Message.setAsynchronous(true)
+Message msg = Message.obtain();
+msg.setAsynchronous(true);
+handler.sendMessage(msg);
+
+// 方式2：使用异步Handler（需要通过反射创建Handler，指定callback为async）
+\`\`\`
+
+**为什么UI渲染需要异步消息？**
+- UI渲染必须在16ms内完成（60fps）
+- 如果主线程消息队列堆积，UI渲染延迟，掉帧
+- 同步屏障保证UI渲染优先执行
+
+**为什么普通开发者很少用？**
+- 同步屏障API是@hide的，SDK不暴露
+- 只有系统Framework可以使用
+- 应用层通过Choreographer实现类似效果（postFrameCallback内部使用同步屏障）
+
+### Context
+
+**Q: Android中的Context类型及区别？**
+
+答：
+- Application：单例，生命周期最长
+- Activity：界面，生命周期短
+- Service：服务，生命周期中等
+- 区别：
+  - number of instances：Application唯一，Activity/Service多个
+  - 作用域：Application全局，Activity/Service局部
+  - 警告：Activity持有会导致内存泄漏
+
+**Q: getApplicationContext()和this的区别？**
+
+答：
+- this：当前Activity/Service实例，生命周期随组件
+- getApplicationContext()：Application单例，全局唯一
+- 使用场景：生命周期长于组件的对象用Application
+
+### AsyncTask与线程
+
+**Q: AsyncTask的原理及为什么被废弃？**
+
+答：
+- 原理：线程池 + Handler，doInBackground在子线程，onPostExecute在主线程
+- 废弃原因：
+  - 默认串行执行，容易阻塞
+  - 生命周期与Activity绑定，泄漏风险
+- 替代方案：Coroutine、RxJava、Executor
+
+---
+
+## Jetpack Compose
+
+### 基础
+
+**Q: Compose相比传统XML的优势？**
+
+答：
+- 声明式UI：状态驱动UI自动更新，无需findViewById
+- 减少样板代码：不再需要XML、ViewHolder、DataBinding
+- 实时预览：可组合函数实时预览
+- 强类型：编译期检查，避免运行时错误
+
+**Q: @Composable注解的作用？**
+
+答：
+- 编译期插件处理，生成合成代码
+- 管理重组：状态变化时自动重组
+- 位置记忆：remember存储状态，避免重组丢失
+
+**Q: remember和rememberSaveable的区别？**
+
+答：
+- remember：组合内缓存，重组不丢失，配置变化丢失
+- rememberSaveable：基于SavedStateHandle，配置变化不丢失
+- 选择：需要跨配置重建用rememberSaveable
+
+### 状态管理
+
+**Q: Compose的状态提升原则？**
+
+答：
+- 状态向父组件提升，使组件无状态可复用
+- 单一数据源：状态由唯一组件持有
+- 单向数据流：父传子用参数，子传父用回调
+
+**Q: SideEffect、LaunchedEffect、rememberCoroutineScope区别？**
+
+答：
+- SideEffect：每次重组执行，不能挂起
+- LaunchedEffect：key变化时重启，可挂起，适合发起网络请求
+- rememberCoroutineScope：返回协程作用域，手动控制生命周期
+
+**Q: Compose的重组机制？**
+
+答：
+
+**重组原理**：
+- 状态变化触发重组：State<T>.value变化时，标记使用该状态的Composable需要重组
+- 智能重组：只重组读取了变化状态的Composable及其父组件
+- 组合树：Composable函数执行生成Slot Table（类似View树）
+
+**重组优化机制**：
+
+1. **位置记忆（Positional Memoization）**：
+   - Compose使用索引而非对象标识
+   - 如果组合结构不变，Compose可以跳过未变化的Composable
+
+2. **稳定性（Stability）**：
+   - **稳定类型**：不可变类型（String、Int、data class等）
+   - **不稳定类型**：可变类型（ArrayList、普通类）
+   - 编译器推断：@Immutable注解可显式标记
+   - 作用：稳定类型的参数不变时，跳过该Composable重组
+
+3. **Restartable函数**：
+   - Compose编译器插件将@Composable函数编译为可重启的函数
+   - 重组时从上次中断点继续，而非从头执行
+
+**重组优化最佳实践**：
+\`\`\`kotlin
+// ✅ 好：使用data class（稳定）
+data class User(val name: String, val age: Int)
+
+@Composable
+fun UserCard(user: User) {
+    Text(user.name)
+}
+
+// ❌ 差：使用可变List（不稳定）
+@Composable
+fun NameList(names: MutableList<String>) { }
+
+// ✅ 好：使用不可变List（稳定）
+@Composable
+fun NameList(names: List<String>) { }
+\`\`\`
+
+**避免不必要重组**：
+- **remember**：缓存计算结果，只在key变化时重新计算
+- **derivedStateOf**：派生状态，依赖项不变时不更新
+- **key()**：强制重组Key变化时的元素（如LazyColumn项）
+
+---
+
+## 性能优化
+
+### 启动优化
+
+**Q: App启动流程及优化方案？**
+
+答：
+- 冷启动流程：Zygote fork → 创建ActivityThread → Application onCreate → Activity onCreate → 渲染
+- 优化方向：
+  - Application onCreate：异步初始化、懒加载
+  - Activity onCreate：推迟View创建、避免耗时操作
+  - 类加载：避免类验证优化、合并dex
+  - 资源：压缩资源、webp格式、代码瘦身
+- 监控指标：ADB报告、TraceView、Systrace
+
+**Q: 如何统计启动耗时？**
+
+答：
+- 方式1：adb shell am start -W [packageName]/[activity]
+- 方式2：Activity.reportFullyDrawn()回调
+- 方式3：埋点记录Application/Activity onCreate时间
+- 分阶段统计：Application、Activity、View渲染
+
+### 内存优化
+
+**Q: 常见的内存泄漏场景及检测？**
+
+答：
+- 场景：
+  - 单例持有Activity/Context
+  - 非静态内部类持有外部类引用
+  - Handler未移除Callbacks
+  - 注册的监听器未反注册
+- 检测：
+  - LeakCanary：自动检测泄漏
+  - Android Profiler：实时监控内存
+  - MAT：分析heap dump
+
+**Q: OOM产生的原因及解决？**
+
+答：
+- 原因：
+  - 内存泄漏累积
+  - 加载大图片/大资源
+  - 内存碎片
+- 解决：
+  - 使用软引用/弱引用缓存
+  - 图片采样、Glide加载
+  - 避免在Activity/Context中持有生命周期长的对象
+
+### 渲染优化
+
+**Q: 造成UI卡顿的原因及优化？**
+
+答：
+
+**卡顿原因**：
+- **主线程耗时操作**：网络请求、数据库操作、文件IO、复杂计算
+- **布局层级过深**：超过5层会导致measure/layout耗时增加
+- **过度绘制**：同一像素被多次绘制
+- **频繁内存抖动**：大量对象创建/销毁触发GC
+- **View刷新频率**：60fps要求16.67ms/帧
+
+**优化方案**：
+
+1. **布局优化**：
+   - ConstraintLayout：扁平化布局，减少层级
+   - merge标签：减少一层FrameLayout（根布局是FrameLayout时）
+   - ViewStub：懒加载，按需inflate
+   - include：复用布局（避免过度使用）
+   - 异步布局：AsyncLayoutInflater（5.0+）
+
+2. **过度绘制优化**：
+   - 开启调试：开发者选项 → 调试GPU过度绘制
+   - 颜色含义：无（透明）、蓝（1次）、绿（2次）、粉红（3次）、红（4次+）
+   - 优化：
+     - 移除不必要的背景
+     - clipRect/clipPath：限制绘制区域
+     - View.setWillNotDraw(true)：不绘制内容的View
+
+3. **主线程优化**：
+   - StrictMode：检测主线程IO/网络操作
+   - ANRWatchDog：监控主线程卡顿
+   - 异步：协程、RxJava、Executor
+
+**监控工具**：
+- **Systrace**：系统级性能分析，查看CPU调度、渲染流程
+- **GPU Rendering**：开发者选项 → 配置文件GPU渲染，查看帧时间
+- **Choreographer**：监控帧率，计算掉帧
+- **Android Profiler**：CPU、内存、网络、能耗实时监控
+- **Perfetto**：Systrace的继任者，更强大的性能分析工具
+
+**Q: 减少布局层级的方案？**
+
+答：
+- 使用ConstraintLayout扁平化布局
+- merge标签：减少一层帧布局
+- ViewStub：懒加载，按需inflate
+- 自定义View：合并多个View为一个
+
+### 网络优化
+
+**Q: 网络优化的策略？**
+
+答：
+- 连接复用：HTTP/2多路复用、连接池
+- 压缩：Gzip压缩、Protocol Buffers
+- 缓存：HTTP缓存、CDN
+- 请求优化：合并请求、批量接口
+- 监控：OkHttp拦截器统计耗时
+
+**Q: 如何优化首屏加载速度？**
+
+答：
+- 骨架屏：提升感知速度
+- 预请求：预测用户行为，提前请求数据
+- 并行：多个接口并行请求
+- 分包：按需加载非首屏资源
+- 本地缓存：二次加载直接读取缓存
+
+### APK瘦身
+
+**Q: APK体积优化方案？**
+
+答：
+- 资源：
+  - 压缩图片：webp格式、tinypng
+  - 去除无用资源：shrinkResources
+  - 动态下发：插件化、动态加载
+- 代码：
+  - ProGuard/R8混淆
+  - 去除无用代码：Tree Shaking
+  - So库：按ABI打包、只保留必要架构
+- 开源库：使用更小的替代库，如Gson→Moshi
+
+---
+
+## 网络编程
+
+### Socket编程
+
+**Q: Socket的通信流程？**
+
+答：
+- 服务端：创建Socket → bind → listen → accept → read/write → close
+- 客户端：创建Socket → connect → read/write → close
+- TCP三次握手：SYN → SYN-ACK → ACK
+- TCP四次挥手：FIN → ACK → FIN → ACK
+
+**Q: 长连接和短连接的区别？**
+
+答：
+- 短连接：每次请求建立连接，完成后关闭，HTTP/1.0默认
+- 长连接：复用连接，减少握手开销，HTTP/1.1默认
+- 选择：频繁通信用长连接，偶尔请求用短连接
+
+**Q: Socket粘包/拆包问题及解决？**
+
+答：
+- 原因：TCP字节流，消息无边界
+- 解决：
+  - 固定长度：每条消息长度固定
+  - 分隔符：用特殊字符分隔
+  - 长度字段：消息头包含长度字段
+  - Netty的LengthFieldPrepender
+
+### Netty
+
+**Q: Netty的核心组件及作用？**
+
+答：
+- EventLoopGroup：线程组，负责IO操作
+- EventLoop：单个线程，处理Channel的IO事件
+- Channel：连接通道，类似Socket
+- ChannelPipeline：处理器链，责任链模式
+- ChannelHandler：处理器，处理入站/出站事件
+
+**Q: Netty的线程模型？**
+
+答：
+- Boss Group：处理accept连接
+- Worker Group：处理read/write
+- Reactor模式：主从Reactor多线程模型
+- 无锁化：每个Channel绑定一个EventLoop，避免线程竞争
+
+**Q: 如何处理心跳和断线重连？**
+
+答：
+- 心跳：
+  - IdleStateHandler：检测读/写空闲
+  - 自定义心跳Handler：定期发送ping
+- 断线重连：
+  - ChannelFutureListener：监听连接关闭
+  - 指数退避：重连间隔递增，避免服务端压力
+
+### HTTP
+
+**Q: HTTP和HTTPS的区别？**
+
+答：
+- HTTPS = HTTP + SSL/TLS
+- HTTPS加密传输，防止窃听、篡改
+- HTTPS需要CA证书，HTTP不需要
+- HTTPS性能略低，握手额外RTT
+
+**Q: HTTP/1.1和HTTP/2的区别？**
+
+答：
+- HTTP/1.1：Keep-Alive连接复用，但串行请求
+- HTTP/2：
+  - 多路复用：一个连接并发多个请求
+  - 头部压缩：HPACK减少传输量
+  - 二进制协议：解析效率更高
+  - 服务端推送：主动推送资源
+
+**Q: OkHttp的核心特性？**
+
+答：
+- 连接池：复用TCP/HTTP/2连接
+- 拦截器：责任链模式处理请求/响应
+- 缓存：基于HTTP缓存策略
+- WebSocket：支持长连接
+- 同步/异步：支持两种调用方式
+
+---
+
+## 并发编程
+
+### 线程同步
+
+**Q: synchronized关键字的使用及原理？**
+
+答：
+- 使用：修饰方法、代码块
+- 原理：基于Monitor，对象头存储锁信息
+- 锁升级：偏向锁 → 轻量级锁 → 重量级锁
+- 锁消除：JIT编译器优化，去除不必要的锁
+
+**Q: volatile关键字的作用？**
+
+答：
+- 可见性：修改对其他线程立即可见
+- 有序性：禁止指令重排序
+- 不保证原子性：count++仍需加锁
+- 底层原理：内存屏障（Memory Barrier）
+
+**Q: CAS（Compare And Swap）原理及ABA问题？**
+
+答：
+- 原理：比较并交换，硬件层面保证原子性
+- ABA问题：值从A→B→A，CAS无法感知
+- 解决：AtomicStampedReference加版本号
+- 优势：无锁，性能高于synchronized
+
+### 并发工具类
+
+**Q: CountDownLatch、CyclicBarrier、Semaphore的区别？**
+
+答：
+- CountDownLatch：计数器，await阻塞直到count=0，不可重置
+- CyclicBarrier：栅栏，await阻塞直到所有线程到达，可重置
+- Semaphore：信号量，控制并发数量
+- 使用场景：
+  - CountDownLatch：主线程等待子线程
+  - CyclicBarrier：多线程同步屏障
+  - Semaphore：限流、连接池
+
+**Q: ThreadLocal的实现原理？**
+
+答：
+- 每个Thread维护ThreadLocalMap
+- ThreadLocal作为key，弱引用
+- 内存泄漏：key被回收，value强引用泄漏
+- 解决：使用后调用remove()
+
+**Q: BlockingQueue的实现类及使用场景？**
+
+答：
+- ArrayBlockingQueue：有界数组队列，FIFO
+- LinkedBlockingQueue：可选边界，链表实现
+- PriorityBlockingQueue：无界优先级队列
+- DelayQueue：延迟队列，元素到期才能取
+- SynchronousQueue：不存储元素，直接传递
+- LinkedBlockingDeque：双端队列
+
+---
+
+## 架构设计
+
+### 设计模式
+
+**Q: 常用的设计模式及Android中的应用？**
+
+答：
+- 单例：Application、Database实例
+- 工厂：FragmentFactory、ViewModelFactory
+- 观察者：LiveData、Flow、RxJava
+- 策略：不同支付方式、不同算法实现
+- 责任链：OkHttp拦截器、View事件传递
+- 适配器：RecyclerView.Adapter、ListAdapter
+- 装饰者：ContextWrapper、InflaterWrapper
+
+**Q: MVP、MVVM、MVI的区别？**
+
+答：
+- MVP：Presenter负责逻辑，View接口通信，内存泄漏风险
+- MVVM：ViewModel持有状态，LiveData观察，解耦更好
+- MVI：单向数据流，Intent→Reduce→State，状态不可变
+- 选择：MVVM适合大多数场景，MVI适合复杂状态管理
+
+### DDD（领域驱动设计）
+
+**Q: DDD的核心概念？**
+
+答：
+- 领域：业务问题空间
+- 领域模型：用对象模型表达业务
+- 领域层：核心业务逻辑，独立于基础设施
+- Repository：数据访问抽象，屏蔽技术实现
+- 值对象：不可变，无标识
+- 实体：有唯一标识，有生命周期
+
+**Q: 如何在Android中实践DDD？**
+
+答：
+- Domain层：实体、值对象、Repository接口
+- Data层：Repository实现、数据源
+- Presentation层：UI、ViewModel
+- 优势：业务逻辑可测试、技术无关
+
+### 组件化与插件化
+
+**Q: 组件化的方案及优势？**
+
+答：
+- 方案：
+  - 模块化：多Module，gradle依赖
+  - 资源冲突：prefix、publicResource
+  - 通信：路由（ARouter）、事件总线
+- 优势：
+  - 并行开发：团队独立开发
+  - 编译速度：增量编译
+  - 代码复用：业务组件多App复用
+
+**Q: 插件化的原理？**
+
+答：
+- Hook技术：Hook AMS、Instrumentation
+- ClassLoader：加载插件dex
+- Resource：加载插件资源
+- 四大组件：占坑、动态注册
+- 框架：RePlugin、VirtualApk、Shadow
+
+---
+
+## 分布式系统
+
+### CAP理论
+
+**Q: CAP定理及BASE理论？**
+
+答：
+- CAP：
+  - Consistency：一致性，所有节点同时看到相同数据
+  - Availability：可用性，每个请求都有响应
+  - Partition Tolerance：分区容错性，网络分区时仍能运行
+  - 三选二：CA、CP、AP
+- BASE：
+  - Basically Available：基本可用
+  - Soft state：软状态，允许数据不一致
+  - Eventually consistent：最终一致性
+
+### 分布式一致性
+
+**Q: 分布式事务的解决方案？**
+
+答：
+
+**2PC（两阶段提交）**：
+- **阶段1**：准备阶段，协调者询问所有参与者是否可以提交
+- **阶段2**：提交/回滚，所有参与者同意则提交，否则全部回滚
+- **问题**：同步阻塞、单点故障、数据不一致（部分参与者提交失败）
+- **场景**：强一致性要求，性能可接受
+
+**3PC（三阶段提交）**：
+- **CanCommit**：询问是否可以执行（不锁定资源）
+- **PreCommit**：预提交，锁定资源但不确定提交
+- **DoCommit**：正式提交/回滚
+- **改进**：减少阻塞时间，但仍有单点问题
+
+**TCC（Try-Confirm-Cancel）**：
+- **Try阶段**：尝试执行，预留资源（如冻结余额）
+- **Confirm阶段**：确认提交，使用预留资源（扣减余额）
+- **Cancel阶段**：取消执行，释放预留资源（解冻余额）
+- **优点**：性能高，应用层控制
+- **缺点**：代码侵入性强，需实现三个接口
+
+**本地消息表**：
+- 本地事务：业务操作 + 写消息表在同一事务
+- 定时任务：扫描消息表，发送未发送的消息
+- 消费方：幂等性处理（消息ID去重）
+- **优点**：实现简单，最终一致性
+- **缺点**：依赖定时任务，可能有延迟
+
+**Saga（长事务拆分）**：
+- **编排式**：中央协调器管理事务顺序
+- **choreography（协同）**：事件驱动，每个服务监听事件触发下一个服务
+- **补偿机制**：每个正向操作有对应的反向补偿操作
+- **场景**：长流程事务（订单、支付、库存）
+
+**Q: 如何保证分布式缓存一致性？**
+
+答：
+
+**缓存更新策略**：
+
+1. **Cache Aside（旁路缓存）**：
+   - 读：先读缓存，未命中读DB，写入缓存
+   - 写：先更DB，后删缓存（不是更新缓存）
+   - 优点：实现简单，避免缓存写失败
+   - 问题：删除缓存失败 → 脏数据，可用消息队列重试
+
+2. **Write Through（写穿透）**：
+   - 写：同时写缓存和DB，任一失败则回滚
+   - 优点：强一致性
+   - 缺点：写性能下降，缓存利用率低
+
+3. **Write Behind（写回）**：
+   - 写：只写缓存，异步批量写DB
+   - 优点：写性能极高
+   - 缺点：数据可能丢失（缓存宕机）
+
+**先更DB还是先删缓存？**
+- **先删缓存，再更DB**：并发时，A删缓存，B读DB（旧值），A更DB → 脏数据
+- **先更DB，再删缓存**：并发时，A读缓存（旧值），B更DB删缓存，A更缓存 → 旧值覆盖新值（概率低）
+- **最佳实践**：先更DB，延时删缓存（给主从复制留时间）
+
+**分布式锁方案**：
+- 更DB前获取分布式锁
+- 删缓存前再获取一次锁
+- 串行化更新，保证一致性
+
+**最终一致性方案**：
+- Canal订阅MySQL binlog
+- 数据变更发送消息队列
+- 消费者收到消息，删除/更新缓存
+- 优点：解耦，可靠性高
+- 缺点：依赖中间件，可能有延迟
+
+### 分布式锁
+
+**Q: 分布式锁的实现方案？**
+
+答：
+- Redis：SETNX + 过期时间，Redlock算法
+- ZooKeeper：临时顺序节点，Watch监听
+- 数据库：唯一索引、FOR UPDATE
+- 选择：Redis性能高，ZK可靠性高
+
+**Q: Redis分布式锁的坑？**
+
+答：
+- 锁超时：业务执行超过锁过期时间，锁被其他线程获取
+- 守护线程：看门狗自动续期（Redisson实现）
+- 主从切换：主节点宕机，从节点未同步锁信息
+- 解决：Redlock多节点、ZooKeeper
+
+---
+
+## Framework与ROM定制
+
+### Binder
+
+**Q: Binder通信一次拷贝原理？**
+
+答：
+- 传统IPC：数据从发送方→内核缓冲区→接收方，两次拷贝
+- Binder：mmap内存映射，内核缓冲区与用户空间共享，一次拷贝
+- 实现过程：
+  1. 发送方ioctl调用，数据写入内核
+  2. 内核通过mmap映射到接收方用户空间
+  3. 接收方直接读取，无需从内核复制
+
+**Q: ServiceManager的作用？**
+
+答：
+- Binder服务大管家，管理系统服务
+- 服务注册：addService(String name, IBinder service)
+- 服务获取：getService(String name)
+- 0号引用：handle=0，所有进程可访问
+
+### AMS
+
+**Q: AMS（ActivityManagerService）的职责？**
+
+答：
+
+**核心职责**：
+- **四大组件管理**：Activity、Service、Broadcast、ContentProvider生命周期
+- **进程管理**：创建进程、进程优先级调整、进程销毁
+- **内存管理**：LMK（Low Memory Killer），内存紧张时杀进程
+- **任务栈管理**：Task、Back Stack，Activity启动模式
+- **Intent解析**：隐式Intent解析、匹配规则
+- **权限管理**：权限检查、授权
+
+**AMS进程通信**：
+- AMS运行在System Server进程
+- 应用进程通过Binder与AMS通信
+- ActivityManagerProxy（客户端）→ ActivityManagerService（服务端）
+
+**内存管理（LMK）**：
+- OOM_ADJ：进程优先级，范围-1000（系统进程）到+1000（缓存进程）
+- 杀进程顺序：先杀adj大的（缓存进程），再杀adj小的（前台进程）
+- adj值示例：
+  - FOREGROUND_APP（前台）：0
+  - VISIBLE_APP（可见）：100
+  - SERVICE（服务）：500
+  - HOME（桌面）：150
+  - PREVIOUS（上个APP）：200
+
+**Q: Activity启动流程？**
+
+答：
+
+**完整流程（源码级）**：
+
+**1. 进程已存在情况**：
+\`\`\`
+Activity.startActivity()
+  ↓
+Instrumentation.execStartActivity()
+  ↓
+ActivityManagerService.startActivity()  // Binder调用
+  ↓
+ActivityStarter.startActivityMayWait()  // 解析Intent
+  ↓
+ActivityStack.startActivityLocked()  // 任务栈管理
+  ↓
+ActivityStackSupervisor.resumeFocusedStackTopActivityLocked()  // 激活栈顶Activity
+  ↓
+ActivityStack.resumeTopActivityInnerLocked()
+  ↓
+IApplicationThread.scheduleLaunchActivity()  // Binder回调到应用进程
+  ↓
+ActivityThread.handleLaunchActivity()
+  ↓
+Activity.onCreate()
+  ↓
+Activity.onStart()
+  ↓
+Activity.onResume()
+\`\`\`
+
+**2. 进程不存在情况（冷启动）**：
+\`\`\`
+AMS.startActivity()
+  ↓
+Process.start()  // 通过Socket通知Zygote
+  ↓
+Zygote.forkAndSpecialize()  // fork进程
+  ↓
+ActivityThread.main()  // 新进程入口
+  ↓
+ActivityThread.attach()  // 绑定到AMS
+  ↓
+AMS.attachApplication()  // Binder调用
+  ↓
+ActivityThread.handleBindApplication()  // 创建Application
+  ↓
+Application.onCreate()
+  ↓
+AMS启动Activity（走流程1）
+\`\`\`
+
+**关键类**：
+- Instrumentation：Activity生命周期监控，execStartActivity()
+- ActivityStarter：Activity启动控制器
+- ActivityStack：Activity栈管理
+- ActivityThread：应用主线程，H（Handler）处理消息
+- ApplicationThread：ApplicationThread的Binder接口，AMS回调应用
+
+**IPC通信**：
+- 应用进程 → AMS：ActivityManagerProxy（Binder）
+- AMS → 应用进程：IApplicationThread（Binder）
+
+### System Service
+
+**Q: 如何添加自定义System Service？**
+
+答：
+1. 定义AIDL接口
+2. 实现Service类，继承onBind/onTransact
+3. SystemServer中添加服务：ServiceManager.addService()
+4. 客户端获取：ServiceManager.getService()
+5. 权限配置：AndroidManifest.xml、SELinux
+
+### ROM定制
+
+**Q: Android编译系统？**
+
+答：
+- Android.bp/Android.mk：模块定义
+- Soong：Blueprint解析器
+- Ninja：底层编译工具
+- 编译命令：m/mm/mmm
+
+**Q: 如何修改系统开机动画？**
+
+答：
+- 位置：system/media/bootanimation.zip
+- 格式：PNG图片序列+desc.txt描述文件
+- desc.txt：分辨率、帧率、播放顺序
+
+---
+
+## 车载开发
+
+### 车载系统特点
+
+**Q: 车载Android与手机Android的区别？**
+
+答：
+- 硬件：算力更强、多屏幕、多传感器
+- 系统：Android Automotive OS，不同于手机
+- 权限：系统权限、Driver Distraction（驾驶员分心）
+- 安全：功能安全（ISO 26262）、网络安全
+- 生命周期：车辆生命周期长（10年+）
+
+### 账号体系
+
+**Q: 车载账号的挑战及解决方案？**
+
+答：
+- 挑战：
+  - 多用户：驾驶员、乘客不同配置
+  - 跨设备：手机-车辆配置同步
+  - 启动速度：系统启动瞬间账号需就绪
+  - 安全：人脸/声纹识别
+- 解决：
+  - 自定义AccountManagerService
+  - 跨进程同步：Binder mmap优化
+  - 硬件集成：HIDL/HAL集成摄像头
+  - 并发控制：文件锁+原子操作
+
+**Q: 如何实现无感登录？**
+
+答：
+- 人脸识别：摄像头采集 → 特征提取 → 匹配账号
+- 声纹识别：麦克风采集 → 声纹特征 → 匹配账号
+- 指纹/手势：传统方式
+- 自动同步：登录后恢复座椅、后视镜、空调等配置
+
+### HAL（硬件抽象层）
+
+**Q: HIDL与AIDL的区别？**
+
+答：
+- HIDL（Hardware Interface Definition Language）：Android 8引入，Binder通信
+- AIDL（Android Interface Definition Language）：Android 11+推荐，更简洁
+- 选择：新项目用AIDL，旧HIDL兼容
+
+**Q: 如何集成硬件传感器？**
+
+答：
+1. 定义HAL接口
+2. 实现HAL层：C/C++与硬件驱动通信
+3. Framework层：SensorManager、SensorService
+4. App层：SensorEventListener监听
+
+---
+
+**持续学习，保持技术敏感度，做一个有深度的技术专家！**
+`,contentPreviewEn:`# Android Expert Technical Stack Review
+
+> A shareable technical knowledge review document covering Java, Kotlin, Android, architecture design, distributed systems, and other core technologies
+>
+> Technical details and principles accumulated from 10+ years of client development experience
+
+---
+
+## Table of Contents
+
+1. [Java Basics & Advanced](#java-basics--advanced)
+2. [Kotlin Core](#kotlin-core)
+3. [Android Basics](#android-basics)
+4. [Android Advanced](#android-advanced)
+5. [Jetpack Compose](#jetpack-compose)
+6. [Performance Optimization](#performance-optimization)
+7. [Network Programming](#network-programming)
+8. [Concurrent Programming](#concurrent-programming)
+9. [Architecture Design](#architecture-design)
+10. [Distributed Systems](#distributed-systems)`,contentPreviewZh:`# Android技术专家技术栈复习
+
+> 可分享的技术知识点复习文档，包含Java、Kotlin、Android、架构设计、分布式系统等核心技术
+>
+> 涵盖10年+客户端开发经验积累的技术细节和原理
+
+---
+
+## 目录
+
+1. [Java基础与进阶](#java基础与进阶)
+2. [Kotlin核心](#kotlin核心)
+3. [Android基础](#android基础)
+4. [Android进阶](#android进阶)
+5. [Jetpack Compose](#jetpack-compose)
+6. [性能优化](#性能优化)
+7. [网络编程](#网络编程)
+8. [并发编程](#并发编程)
+9. [架构设计](#架构设计)
+10. [分布式系统](#分布式系统)
+11. [Framework与ROM定制](#framework与rom定制)
+12. [车载开发](#车载开发)
+
+---
+
+## Java基础与进阶
+
+### 集合框架
+
+**Q: HashMap的底层实现原理？**
+
+答：
+
+**核心数据结构**：
+- JDK 1.8之前：数组 + 链表
+- JDK 1.8及之后：数组 + 链表 + 红黑树
+- 树化条件：链表长度超过8 **且** 数组长度超过64（否则只扩容）
+- 树退化：红黑树节点数≤6时退化为链表
+
+**核心参数**：
+- initialCapacity：初始容量16，必须是2的幂次方
+- loadFactor：负载因子0.75，平衡时间和空间成本
+- threshold：扩容阈值 = capacity * loadFactor = 12
+
+**put过程详解**：
+1. **计算hash**：\`hash = (h = key.hashCode()) ^ (h >>> 16)\` —— 高16位异或低16位，减少碰撞
+2. **定位索引**：\`index = hash & (n - 1)\` —— 位运算替代取模，要求n是2的幂
+3. **桶位置判断**：
+   - 无数据：直接插入
+   - 相同key：覆盖value`,date:"2026-01-21",tags:["General"],readTime:5,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
 
 > How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and implementation approach.
 
@@ -4403,5 +6077,5 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **扩展性差**：订单量增长时，无法通过增加POS来提升性能
 - **硬件依赖**：必须配备性能足够的服务器设备
 
-### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,A){return n[A]||n.en}const o=e;export{o as a,i as g};
-//# sourceMappingURL=articles-CtVOUVFI.js.map
+### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,e){return n[e]||n.en}const o=A;export{o as a,i as g};
+//# sourceMappingURL=articles-C5QfAkmm.js.map
