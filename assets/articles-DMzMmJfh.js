@@ -1672,7 +1672,7 @@ AMS启动Activity（走流程1）
 2. **定位索引**：\`index = hash & (n - 1)\` —— 位运算替代取模，要求n是2的幂
 3. **桶位置判断**：
    - 无数据：直接插入
-   - 相同key：覆盖value`,date:"2026-01-21",tags:["General"],readTime:5,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
+   - 相同key：覆盖value`,date:"2026-01-24",tags:["General"],readTime:5,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
 
 > How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and implementation approach.
 
@@ -2766,7 +2766,257 @@ Tech Stack Layering:
 
 **举例：HashMap**
 
-\`\`\`markdown`,date:"2026-01-21",tags:["General"],readTime:5,isPaid:!1},{id:"talent-reflection",title:{en:'A Deep Reflection on "Talent Discovery"',zh:'关于"天赋发现"的一次深度思考'},excerpt:{en:'> After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article....',zh:'> 和AI聊了很久的"天赋发现"话题，最后得到的结论和那篇文章不太一样。...'},contentEn:`# A Deep Reflection on "Talent Discovery"
+\`\`\`markdown`,date:"2026-01-24",tags:["General"],readTime:5,isPaid:!1},{id:"unemployment-and-info-cocoon",title:{en:"Unemployment, Information Cocoon, and Financial Security",zh:"失业、信息茧房与财务安全"},excerpt:{en:"> A deep conversation about unemployment sparked a few reflections...",zh:"> 一次关于失业的深度对话，引发的几点思考..."},contentEn:`# Unemployment, Information Cocoon, and Financial Security
+
+> A deep conversation about unemployment sparked a few reflections
+
+## The Conversation
+
+Today I chatted with a friend who just got laid off with a severance package.
+
+"This time it was involuntary, but I still got the package. Last time I left voluntarily, that felt pretty good too."
+
+"Yeah, but there's anxiety."
+
+"Have you asked Wenbin for a referral to Alibaba?"
+
+"I just want to find something less competitive, enough to live on."
+
+![Real conversation scene](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+During the chat, he mentioned something:
+
+"In 2025, I know someone who bought a house and lost 1.2 million in six months. If they had just talked to more people, they could have been stopped."
+
+That statement made me think a lot.
+
+---
+
+## Information Cocoon is Dangerous
+
+Many people work hard with their heads down, missing major trends.
+
+Every day we scroll through algorithm-recommended content, seemingly rich in information, but actually trapped in an increasingly narrow cocoon.
+
+**Look up, chat with people from different circles—it might be more valuable than working a few extra months.**
+
+Others' experiences and perspectives are often the best way to break blind spots.
+
+![Information island](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=500&fit=crop)
+
+---
+
+## Financial Security is Your Foundation
+
+My friend is fortunate to have no debt and cashed out his property, so his mindset is relatively stable.
+
+In an uncertain environment, **cash flow and low leverage matter more than anything.**
+
+I'm not saying don't buy a house, but timing and rhythm are important.
+
+Sometimes, waiting and observing is wiser than acting blindly.
+
+![Financial planning](https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=500&fit=crop)
+
+---
+
+## Opportunities Lie in Exploration
+
+He's looking into AI monetization, and while there's anxiety, he's trying.
+
+He's right: **Pure technical tools are sufficient; the key is finding a viable business model.**
+
+Whether it's AI or other directions, what matters isn't chasing trends, but finding something you can sustainably do.
+
+![Exploring opportunities](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=500&fit=crop)
+
+---
+
+## Key Takeaways
+
+### 1. Break the Information Cocoon
+
+- Chat with people from different circles
+- Don't rely solely on algorithm-recommended content
+- Actively seek different perspectives
+
+### 2. Financial Security First
+
+- Maintain cash flow
+- Avoid high leverage
+- When the environment is uncertain, be conservative
+
+### 3. Explore New Opportunities
+
+- Unemployment isn't the end, it's a starting point for rethinking
+- Try different directions, but don't chase trends blindly
+- Find something you can sustainably do
+
+---
+
+## Final Thoughts
+
+**Take your time. Survive first, then find opportunities.**
+
+Stay open, stay observant, stay exploratory.
+
+Don't be trapped by information cocoons, and don't be driven by anxiety.
+
+**It's okay to be steady, and it's okay to be slow.**
+`,contentZh:`# 失业、信息茧房与财务安全
+
+> 一次关于失业的深度对话，引发的几点思考
+
+## 对话开始
+
+今天和朋友聊天，他刚被裁了，拿了礼包。
+
+"这次被动拿礼包了，上次主动拿，那也挺爽的啊。"
+
+"爽啊，但也焦虑啊。"
+
+"找文彬内推阿里呗？"
+
+"我现在就想找个不那么卷，够生活的就行。"
+
+![真实的对话场景](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+聊天时他提到一件事：
+
+"25年还有朋友买房，半年亏了120万。但凡多跟人聊一下，就拦住了。"
+
+这句话让我想了很多。
+
+---
+
+## 信息茧房很可怕
+
+很多人埋头干活，反而错过了大趋势。
+
+我们每天刷着算法推荐的内容，看似信息丰富，实则被困在越来越窄的茧房里。
+
+**抬头看看，多跟不同圈子的人聊，可能比多干几个月活更有价值。**
+
+别人的经验和视角，往往是打破盲区的最好方式。
+
+![信息孤岛](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=500&fit=crop)
+
+---
+
+## 财务安全是底气
+
+朋友庆幸自己无负债、房子卖了变现，所以心态还算稳。
+
+大环境不确定，**现金流和低杠杆比什么都重要。**
+
+不是说不买房，而是时机和节奏很重要。
+
+有时候，等一等、看一看，比盲目行动更明智。
+
+![财务规划](https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=500&fit=crop)
+
+---
+
+## 机会在探索里
+
+他在看AI变现，虽然有焦虑，但在尝试。
+
+他说的对：**纯技术工具够用，关键要找到能落地的商业模式。**
+
+AI也好，其他方向也好，重要的不是追逐热点，而是找到自己能持续做的事情。
+
+![探索机会](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=500&fit=crop)
+
+---
+
+## 几点思考
+
+### 1. 打破信息茧房
+
+- 多跟不同圈子的人聊天
+- 不要只依赖算法推荐的内容
+- 主动寻找不同的观点和视角
+
+### 2. 财务安全第一
+
+- 保持现金流
+- 避免高杠杆
+- 大环境不确定时，保守一点
+
+### 3. 探索新机会
+
+- 失业不是终点，是重新思考的起点
+- 尝试不同的方向，但不要盲目追热点
+- 找到自己能持续做的事情
+
+---
+
+## 最后
+
+**慢慢来，先活下来，再找机会。**
+
+保持开放，保持观察，保持探索。
+
+不要被信息茧房困住，也不要被焦虑驱使。
+
+**稳一点，慢一点，没关系。**
+`,contentPreviewEn:`# Unemployment, Information Cocoon, and Financial Security
+
+> A deep conversation about unemployment sparked a few reflections
+
+## The Conversation
+
+Today I chatted with a friend who just got laid off with a severance package.
+
+"This time it was involuntary, but I still got the package. Last time I left voluntarily, that felt pretty good too."
+
+"Yeah, but there's anxiety."
+
+"Have you asked Wenbin for a referral to Alibaba?"
+
+"I just want to find something less competitive, enough to live on."
+
+![Real conversation scene](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+During the chat, he mentioned something:
+
+"In 2025, I know someone who bought a house and lost 1.2 million in six months. If they had just talked to more people, they could have been stopped."
+
+That statement made me think a lot.
+
+---
+
+## Information Cocoon is Dangerous
+
+Many people work hard with their heads down, missing major trends.`,contentPreviewZh:`# 失业、信息茧房与财务安全
+
+> 一次关于失业的深度对话，引发的几点思考
+
+## 对话开始
+
+今天和朋友聊天，他刚被裁了，拿了礼包。
+
+"这次被动拿礼包了，上次主动拿，那也挺爽的啊。"
+
+"爽啊，但也焦虑啊。"
+
+"找文彬内推阿里呗？"
+
+"我现在就想找个不那么卷，够生活的就行。"
+
+![真实的对话场景](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+
+聊天时他提到一件事：
+
+"25年还有朋友买房，半年亏了120万。但凡多跟人聊一下，就拦住了。"
+
+这句话让我想了很多。
+
+---
+
+## 信息茧房很可怕
+
+很多人埋头干活，反而错过了大趋势。`,date:"2026-01-24",tags:["Career","Life","Finance","Reflection"],readTime:5,isPaid:!1},{id:"talent-reflection",title:{en:'A Deep Reflection on "Talent Discovery"',zh:'关于"天赋发现"的一次深度思考'},excerpt:{en:'> After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article....',zh:'> 和AI聊了很久的"天赋发现"话题，最后得到的结论和那篇文章不太一样。...'},contentEn:`# A Deep Reflection on "Talent Discovery"
 
 > After chatting with AI for a long time about "talent discovery," I reached a conclusion different from that article.
 
@@ -6078,4 +6328,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,e){return n[e]||n.en}const o=A;export{o as a,i as g};
-//# sourceMappingURL=articles-C5QfAkmm.js.map
+//# sourceMappingURL=articles-DMzMmJfh.js.map
