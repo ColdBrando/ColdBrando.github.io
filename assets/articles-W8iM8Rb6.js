@@ -2778,11 +2778,11 @@ Today I chatted with a friend who just got laid off with a severance package.
 
 "Yeah, but there's anxiety."
 
-"Have you asked Wenbin for a referral to Alibaba?"
+"Have you asked for a referral to Company A?"
 
 "I just want to find something less competitive, enough to live on."
 
-![Real conversation scene](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+![Late night conversation](https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1200&h=500&fit=crop)
 
 During the chat, he mentioned something:
 
@@ -2802,7 +2802,7 @@ Every day we scroll through algorithm-recommended content, seemingly rich in inf
 
 Others' experiences and perspectives are often the best way to break blind spots.
 
-![Information island](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=500&fit=crop)
+![Information cocoon](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=500&fit=crop)
 
 ---
 
@@ -2816,7 +2816,7 @@ I'm not saying don't buy a house, but timing and rhythm are important.
 
 Sometimes, waiting and observing is wiser than acting blindly.
 
-![Financial planning](https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=500&fit=crop)
+![Financial security](https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=500&fit=crop)
 
 ---
 
@@ -2828,7 +2828,7 @@ He's right: **Pure technical tools are sufficient; the key is finding a viable b
 
 Whether it's AI or other directions, what matters isn't chasing trends, but finding something you can sustainably do.
 
-![Exploring opportunities](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=500&fit=crop)
+![Exploring new opportunities](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=500&fit=crop)
 
 ---
 
@@ -2875,11 +2875,11 @@ Don't be trapped by information cocoons, and don't be driven by anxiety.
 
 "爽啊，但也焦虑啊。"
 
-"找文彬内推阿里呗？"
+"找人内推A公司呗？"
 
 "我现在就想找个不那么卷，够生活的就行。"
 
-![真实的对话场景](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+![深夜对话](https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1200&h=500&fit=crop)
 
 聊天时他提到一件事：
 
@@ -2899,7 +2899,7 @@ Don't be trapped by information cocoons, and don't be driven by anxiety.
 
 别人的经验和视角，往往是打破盲区的最好方式。
 
-![信息孤岛](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=500&fit=crop)
+![信息茧房](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=500&fit=crop)
 
 ---
 
@@ -2913,7 +2913,7 @@ Don't be trapped by information cocoons, and don't be driven by anxiety.
 
 有时候，等一等、看一看，比盲目行动更明智。
 
-![财务规划](https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=500&fit=crop)
+![财务安全](https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=500&fit=crop)
 
 ---
 
@@ -2925,7 +2925,7 @@ Don't be trapped by information cocoons, and don't be driven by anxiety.
 
 AI也好，其他方向也好，重要的不是追逐热点，而是找到自己能持续做的事情。
 
-![探索机会](https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=500&fit=crop)
+![探索新机会](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=500&fit=crop)
 
 ---
 
@@ -2972,11 +2972,11 @@ Today I chatted with a friend who just got laid off with a severance package.
 
 "Yeah, but there's anxiety."
 
-"Have you asked Wenbin for a referral to Alibaba?"
+"Have you asked for a referral to Company A?"
 
 "I just want to find something less competitive, enough to live on."
 
-![Real conversation scene](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+![Late night conversation](https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1200&h=500&fit=crop)
 
 During the chat, he mentioned something:
 
@@ -3000,11 +3000,11 @@ Many people work hard with their heads down, missing major trends.`,contentPrevi
 
 "爽啊，但也焦虑啊。"
 
-"找文彬内推阿里呗？"
+"找人内推A公司呗？"
 
 "我现在就想找个不那么卷，够生活的就行。"
 
-![真实的对话场景](https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=500&fit=crop)
+![深夜对话](https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1200&h=500&fit=crop)
 
 聊天时他提到一件事：
 
@@ -6328,4 +6328,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,e){return n[e]||n.en}const o=A;export{o as a,i as g};
-//# sourceMappingURL=articles-DMzMmJfh.js.map
+//# sourceMappingURL=articles-W8iM8Rb6.js.map
