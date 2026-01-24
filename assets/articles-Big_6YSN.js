@@ -2788,7 +2788,7 @@ Today I chatted with a friend who just got laid off with a severance package.
 
 During the chat, he mentioned something that made a deep impression on me:
 
-"In 2025, I know someone who bought a house and lost 1.2 million in six months. If they had just talked to more people, they could have been stopped."
+"In 2025, many friends bought houses. Some lost hundreds of thousands, some lost over a million."
 
 That statement made me think a lot.
 
@@ -2913,7 +2913,7 @@ What matters is building a complete system from cognition to action, giving your
 
 聊天时他提到一件事，让我印象深刻：
 
-"25年还有朋友买房，半年亏了120万。但凡多跟人聊一下，就拦住了。"
+"25年还有很多朋友买房，有些人亏了几十万，有些人亏了上百万。"
 
 这句话让我想了很多。
 
@@ -3038,7 +3038,7 @@ Today I chatted with a friend who just got laid off with a severance package.
 
 During the chat, he mentioned something that made a deep impression on me:
 
-"In 2025, I know someone who bought a house and lost 1.2 million in six months. If they had just talked to more people, they could have been stopped."
+"In 2025, many friends bought houses. Some lost hundreds of thousands, some lost over a million."
 
 That statement made me think a lot.
 
@@ -3074,7 +3074,7 @@ Every day we scroll through algorithm-recommended content, seemingly rich in inf
 
 聊天时他提到一件事，让我印象深刻：
 
-"25年还有朋友买房，半年亏了120万。但凡多跟人聊一下，就拦住了。"
+"25年还有很多朋友买房，有些人亏了几十万，有些人亏了上百万。"
 
 这句话让我想了很多。
 
@@ -6400,4 +6400,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,e){return n[e]||n.en}const o=A;export{o as a,i as g};
-//# sourceMappingURL=articles-S9cEgfy2.js.map
+//# sourceMappingURL=articles-Big_6YSN.js.map
