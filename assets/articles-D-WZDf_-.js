@@ -1672,7 +1672,18 @@ AMS启动Activity（走流程1）
 2. **定位索引**：\`index = hash & (n - 1)\` —— 位运算替代取模，要求n是2的幂
 3. **桶位置判断**：
    - 无数据：直接插入
-   - 相同key：覆盖value`,date:"2026-01-26",tags:["General"],readTime:5,isPaid:!1},{id:"getting-started-with-clawdbot",title:{en:"Getting Started with Clawdbot: Build Your Own Personal AI Assistant",zh:"Clawdbot入门指南：打造你的私人AI助手"},excerpt:{en:"In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would b...",zh:"在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？..."},contentEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+   - 相同key：覆盖value`,date:"2026-01-26",tags:["General"],readTime:5,isPaid:!1},{id:"getting-started-with-clawdbot",title:{en:"Getting Started with Clawdbot: Build Your Own Personal AI Assistant",zh:"Clawdbot入门指南：打造你的私人AI助手"},excerpt:{en:"![Clawdbot Demo](/clawdbot-demo.png)...",zh:"![Clawdbot Demo](/clawdbot-demo.png)..."},contentEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+
+![Clawdbot Demo](/clawdbot-demo.png)
+
+---
+
+**🎁 Free Gift**
+
+Here's a free AI Coding trial card for you—complete in hours what used to take weeks:
+[Claim Now →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
 
 In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
 
@@ -1923,16 +1934,6 @@ If you want to build your own personal AI assistant, start today!
 
 ---
 
-## Recommended Tools
-
-Besides Clawdbot, here are some other excellent AI tools I've used:
-
-**GLM Coding Plan**
-I've been using GLM Coding Plan, completing in hours what used to take weeks. If you also want to boost your development efficiency, here's a 7-day AI Coding trial card for you:
-[Get Your Trial Card](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
-
----
-
 ## Related Resources
 
 - Clawdbot Official Docs: https://docs.clawd.bot
@@ -1944,6 +1945,17 @@ I've been using GLM Coding Plan, completing in hours what used to take weeks. If
 
 *This article first appeared on my personal website. Welcome to discuss!*
 `,contentZh:`# Clawdbot入门指南：打造你的私人AI助手
+
+![Clawdbot Demo](/clawdbot-demo.png)
+
+---
+
+**🎁 免费福利**
+
+送你一个免费的AI Coding体验卡，数小时内完成过去需要数周的开发工作：
+[点击领取 →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
 
 在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
 
@@ -2194,16 +2206,6 @@ Clawdbot不仅仅是一个聊天机器人，它是一个**完整的AI操作系�
 
 ---
 
-## 推荐工具
-
-除了Clawdbot，这里还有一些我用过的优秀AI工具：
-
-**GLM Coding Plan**
-我在使用GLM Coding Plan，数小时内完成过去需要数周的开发工作。如果你也想提升开发效率，这里有一张7天AI Coding体验卡，一起来用吧：
-[点击领取体验卡](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
-
----
-
 ## 相关资源
 
 - Clawdbot官方文档：https://docs.clawd.bot
@@ -2215,6 +2217,17 @@ Clawdbot不仅仅是一个聊天机器人，它是一个**完整的AI操作系�
 
 *本文首发于我的个人网站，欢迎交流讨论。*
 `,contentPreviewEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+
+![Clawdbot Demo](/clawdbot-demo.png)
+
+---
+
+**🎁 Free Gift**
+
+Here's a free AI Coding trial card for you—complete in hours what used to take weeks:
+[Claim Now →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
 
 In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
 
@@ -2252,18 +2265,18 @@ Once installed, you have a complete AI assistant system on your device.
 When you run Clawdbot for the first time, it creates a workspace—the "home" for your AI assistant.
 
 \`\`\`bash
-cd ~/clawd
-clawdbot start
-\`\`\`
+cd ~/clawd`,contentPreviewZh:`# Clawdbot入门指南：打造你的私人AI助手
 
-The workspace contains several key files:
-- **SOUL.md** - Defines the AI's personality, principles, and behavior
-- **USER.md** - Information about you (name, preferences, projects, etc.)
-- **MEMORY.md** - Long-term memory, recording important events and knowledge
-- **memory/YYYY-MM-DD.md** - Daily notes, recording conversations and events from that day
-- **TOOLS.md** - Local configuration (device names, SSH addresses, etc.)
+![Clawdbot Demo](/clawdbot-demo.png)
 
----`,contentPreviewZh:`# Clawdbot入门指南：打造你的私人AI助手
+---
+
+**🎁 免费福利**
+
+送你一个免费的AI Coding体验卡，数小时内完成过去需要数周的开发工作：
+[点击领取 →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
 
 在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
 
@@ -2301,18 +2314,7 @@ npm install -g clawdbot
 第一次运行时，Clawdbot会创建一个工作空间（workspace），这是AI助手的"家"。
 
 \`\`\`bash
-cd ~/clawd
-clawdbot start
-\`\`\`
-
-工作空间包含几个关键文件：
-- **SOUL.md** - 定义AI助手的个性、原则、行为方式
-- **USER.md** - 关于你自己的信息（名字、偏好、项目等）
-- **MEMORY.md** - AI助手的长时记忆，记录重要事件和知识
-- **memory/YYYY-MM-DD.md** - 每日笔记，记录当天的对话和事件
-- **TOOLS.md** - 本地配置信息（如设备名称、SSH地址等）
-
----`,date:"2026-01-26",tags:["AI","Clawdbot","Tutorial","Personal Assistant"],readTime:10,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
+cd ~/clawd`,date:"2026-01-26",tags:["AI","Clawdbot","Tutorial","Personal Assistant"],readTime:10,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
 
 > How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and implementation approach.
 
@@ -7040,4 +7042,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function A(n,e){return n[e]||n.en}const o=i;export{o as a,A as g};
-//# sourceMappingURL=articles-C1Mm3Hmz.js.map
+//# sourceMappingURL=articles-D-WZDf_-.js.map
