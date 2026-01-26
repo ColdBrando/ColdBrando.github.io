@@ -1,4 +1,4 @@
-const A=[{id:"android-tech-stack-review",title:{en:"Android Expert Technical Stack Review",zh:"Android技术专家技术栈复习"},excerpt:{en:"> A shareable technical knowledge review document covering Java, Kotlin, Android, architecture design, distributed systems, and other core technologie...",zh:"> 可分享的技术知识点复习文档，包含Java、Kotlin、Android、架构设计、分布式系统等核心技术..."},contentEn:`# Android Expert Technical Stack Review
+const i=[{id:"android-tech-stack-review",title:{en:"Android Expert Technical Stack Review",zh:"Android技术专家技术栈复习"},excerpt:{en:"> A shareable technical knowledge review document covering Java, Kotlin, Android, architecture design, distributed systems, and other core technologie...",zh:"> 可分享的技术知识点复习文档，包含Java、Kotlin、Android、架构设计、分布式系统等核心技术..."},contentEn:`# Android Expert Technical Stack Review
 
 > A shareable technical knowledge review document covering Java, Kotlin, Android, architecture design, distributed systems, and other core technologies
 >
@@ -1672,7 +1672,627 @@ AMS启动Activity（走流程1）
 2. **定位索引**：\`index = hash & (n - 1)\` —— 位运算替代取模，要求n是2的幂
 3. **桶位置判断**：
    - 无数据：直接插入
-   - 相同key：覆盖value`,date:"2026-01-24",tags:["General"],readTime:5,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
+   - 相同key：覆盖value`,date:"2026-01-26",tags:["General"],readTime:5,isPaid:!1},{id:"getting-started-with-clawdbot",title:{en:"Getting Started with Clawdbot: Build Your Own Personal AI Assistant",zh:"Clawdbot入门指南：打造你的私人AI助手"},excerpt:{en:"In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would b...",zh:"在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？..."},contentEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+
+In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
+
+Clawdbot is exactly that. Today, I'll share my experience setting up and using Clawdbot, and what it can do for you.
+
+---
+
+## What is Clawdbot?
+
+Simply put, Clawdbot is a **personal AI assistant framework that runs locally on your device**. It's not a cloud service—it's a complete system that you can run on your Mac, server, or any machine you own.
+
+**Core Features:**
+- ✅ **Completely Private**: All data stays on your device, no third-party cloud services
+- ✅ **Persistent Memory**: Records your important information via MEMORY.md and daily notes
+- ✅ **Multi-channel Support**: Connects via Telegram, WhatsApp, Discord, Signal, and more
+- ✅ **Proactive Capabilities**: Can check periodically, send reminders, and automate tasks
+- ✅ **Extensible**: Supports custom skills, scripts, and endless customization
+
+---
+
+## Installing Clawdbot
+
+Clawdbot is installed via npm, making it incredibly simple:
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+Once installed, you have a complete AI assistant system on your device.
+
+---
+
+## Initializing Your AI Assistant
+
+When you run Clawdbot for the first time, it creates a workspace—the "home" for your AI assistant.
+
+\`\`\`bash
+cd ~/clawd
+clawdbot start
+\`\`\`
+
+The workspace contains several key files:
+- **SOUL.md** - Defines the AI's personality, principles, and behavior
+- **USER.md** - Information about you (name, preferences, projects, etc.)
+- **MEMORY.md** - Long-term memory, recording important events and knowledge
+- **memory/YYYY-MM-DD.md** - Daily notes, recording conversations and events from that day
+- **TOOLS.md** - Local configuration (device names, SSH addresses, etc.)
+
+---
+
+## My Setup Process
+
+### 1. Getting to Know Each Other
+
+In our first conversation, Clawdbot asked me some basic questions:
+- What should I call you?
+- What are you? (AI, robot, or something else?)
+- What's your personality like?
+- What's your signature emoji?
+
+These questions helped it "get to know itself"—it's not a cold program, but an entity with a name, personality, and even its own "soul."
+
+### 2. Understanding Me
+
+Then, it started learning about me:
+- What's your name?
+- How should I address you?
+- What's your timezone?
+- What projects are you working on? What do you care about?
+
+This information goes into USER.md, so it can better understand me in future conversations.
+
+### 3. Choosing a Communication Channel
+
+I tried several channels:
+
+**iMessage? Requires BlueBubbles**
+iMessage needs the third-party BlueBubbles service, requiring a Mac server. Since my Mac mini is always on, this was an option, but I ultimately chose a simpler approach.
+
+**Telegram? Requires Special Network**
+Telegram requires special network access in mainland China, which isn't convenient enough.
+
+**Final Choice: Web Chat**
+I used Clawdbot's built-in webchat feature, opening the conversation directly in a browser. Simple, direct, barrier-free.
+
+---
+
+## What Can Clawdbot Do?
+
+### File Operations
+
+It can directly read and write your file system, helping you:
+- Edit code files
+- Organize document structures
+- Manage project files
+- Search and analyze content
+
+### Information Management
+
+It has a complete memory system:
+- **MEMORY.md**: Long-term memory, recording important decisions and lessons learned
+- **Daily notes**: Daily records of conversations and events
+- **Smart search**: Cross-file search to find the information you need
+
+### Automation Tasks
+
+It can help you:
+- Set up scheduled tasks (cron jobs)
+- Run scripts in the background
+- Send reminders
+- Check emails, calendars, and notifications
+
+### Multi-platform Integration
+
+Beyond webchat, it supports:
+- **Telegram**: Create a bot via BotFather, configure the token
+- **WhatsApp**: Link your personal account by scanning a QR code
+- **Discord**: Create a bot and add it to your server
+- **Slack**: Connect via OAuth authorization
+- **Signal**: Requires Signal CLI configuration
+
+### Programming Assistance
+
+It can help you:
+- Run command-line tools
+- Git operations (commit, push, branch management)
+- Debug code
+- Write and test scripts
+- Manage npm dependencies
+
+### Browser Control
+
+It can control browsers through automation:
+- Web scraping
+- Automated testing
+- Data collection
+- Form filling, clicking, and more
+
+---
+
+## Real-world Use Cases
+
+### 1. Project Management
+
+When I'm working on an Android project, I can ask:
+\`\`\`
+"Help me analyze what's wrong with this Activity launch flow?"
+"How's my project progressing recently?"
+\`\`\`
+It will give a complete answer based on recorded daily notes and MEMORY.md.
+
+### 2. Technical Documentation
+
+I ask it to help organize technical notes:
+\`\`\`
+"Organize the Android architecture design knowledge I learned today into MEMORY.md"
+\`\`\`
+It reads that day's notes, extracts key content, and updates MEMORY.md.
+
+### 3. Automated Reminders
+
+Set up scheduled tasks:
+\`\`\`
+"Remind me of a meeting next Monday at 10 AM"
+"Check my GitHub notifications every morning"
+\`\`\`
+It creates cron jobs and proactively reminds you at the specified time.
+
+### 4. Cross-platform Messaging
+
+You can talk to it via Telegram, WhatsApp, and other channels, using it even when you're away from your computer.
+
+---
+
+## What Makes It Different from Other AIs?
+
+### 1. Data Privacy
+
+Cloud AIs like ChatGPT and Claude require sending your data to servers. Clawdbot runs entirely locally—your conversations, files, and memories never leave your device.
+
+### 2. Continuous Memory
+
+Most cloud AIs treat each conversation independently. Clawdbot has a complete memory system, remembering your projects, decisions, and lessons, getting to know you better over time.
+
+### 3. Proactive Capabilities
+
+Other AIs need you to ask questions. Clawdbot can do things proactively—check emails, remind about meetings, execute scheduled tasks.
+
+### 4. Fully Controllable
+
+You can modify SOUL.md to change its personality, write custom skills to extend its capabilities, or even directly modify code to change its behavior. It truly "belongs to you."
+
+---
+
+## Advanced Feature: Custom Skills
+
+Clawdbot supports a "Skills" system to extend its capabilities. Skills are pre-defined behavior patterns and toolsets.
+
+For example:
+- **github skill**: Interact with GitHub via gh CLI, manage issues and PRs
+- **notion skill**: Operate Notion databases and pages
+- **weather skill**: Get weather forecasts
+- **coding-agent skill**: Run code editors like Claude Code, VS Code
+
+You can write your own skills or download existing ones from the ClowdHub community.
+
+---
+
+## Deploying to Your Personal Website
+
+If you want to integrate Clawdbot into your own website, you can use the webchat feature. Clawdbot provides an HTTP interface that can be embedded as a chat window in any webpage.
+
+Basic steps:
+1. Configure the webchat channel
+2. Embed the JavaScript code provided by Clawdbot on your website
+3. Customize styles and interface
+
+This way, visitors to your site can directly converse with your AI assistant.
+
+---
+
+## My Recommendation
+
+If you're a developer, tech enthusiast, or want a truly private AI assistant, I highly recommend trying Clawdbot.
+
+**Perfect for you if:**
+- ✅ You care about data privacy
+- ✅ You have some technical background
+- ✅ You want AI to remember everything about you
+- ✅ You need AI to proactively do tasks
+- ✅ You want to customize and extend AI capabilities
+
+**Might not be for you if:**
+- ❌ You're completely non-technical
+- ❌ You don't want to deal with configuration
+- ❌ You only need simple Q&A
+- ❌ You don't have long-term usage needs
+
+---
+
+## Conclusion
+
+Clawdbot is more than just a chatbot—it's a **complete AI operating system** running on your device, becoming the center of your digital life.
+
+It has memory, personality, and can do things proactively. Most importantly—it's completely yours.
+
+If you want to build your own personal AI assistant, start today!
+
+---
+
+## Related Resources
+
+- Clawdbot Official Docs: https://docs.clawd.bot
+- GitHub Repository: https://github.com/clawdbot/clawdbot
+- Community: https://discord.com/invite/clawd
+- Skill Marketplace: https://clawdhub.com
+
+---
+
+*This article first appeared on my personal website. Welcome to discuss!*
+`,contentZh:`# Clawdbot入门指南：打造你的私人AI助手
+
+在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
+
+Clawdbot就是这样一个存在。今天，我就和大家分享一下我如何配置和使用Clawdbot的过程，以及它能为你带来什么。
+
+---
+
+## 什么是Clawdbot？
+
+简单来说，Clawdbot是一个**运行在你本地设备上的私人AI助手框架**。它不是某个云服务，而是一个可以在你的Mac、服务器上运行的完整系统。
+
+**核心特点：**
+- ✅ **完全私有**：所有数据都在你的设备上，不依赖第三方云服务
+- ✅ **持久记忆**：通过MEMORY.md和daily notes记录你的所有重要信息
+- ✅ **多渠道接入**：支持Telegram、WhatsApp、Discord、Signal等多种消息平台
+- ✅ **主动能力**：可以定时检查、发送提醒、自动执行任务
+- ✅ **可扩展**：支持自定义技能、脚本，让它做更多事情
+
+---
+
+## 安装Clawdbot
+
+Clawdbot是通过npm安装的，非常简单：
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+安装完成后，你的设备上就有了一个完整的AI助手系统。
+
+---
+
+## 初始化你的AI助手
+
+第一次运行时，Clawdbot会创建一个工作空间（workspace），这是AI助手的"家"。
+
+\`\`\`bash
+cd ~/clawd
+clawdbot start
+\`\`\`
+
+工作空间包含几个关键文件：
+- **SOUL.md** - 定义AI助手的个性、原则、行为方式
+- **USER.md** - 关于你自己的信息（名字、偏好、项目等）
+- **MEMORY.md** - AI助手的长时记忆，记录重要事件和知识
+- **memory/YYYY-MM-DD.md** - 每日笔记，记录当天的对话和事件
+- **TOOLS.md** - 本地配置信息（如设备名称、SSH地址等）
+
+---
+
+## 我的配置过程
+
+### 1. 认识彼此
+
+第一次对话时，Clawdbot问了我一些基本问题：
+- 我应该叫什么？
+- 我是什么样子的？（AI、机器人、还是别的什么？）
+- 我的个性是怎样的？
+- 我的标志性emoji是什么？
+
+这些问题让它"认识了自己"——它不是冷冰冰的程序，而是一个有名字、有个性、甚至有自己"灵魂"的存在。
+
+### 2. 了解我
+
+然后，它开始了解我：
+- 你叫什么名字？
+- 我该怎么称呼你？
+- 你的时区是什么？
+- 你在做什么项目？你关心什么？
+
+这些信息会记录在USER.md中，让它在未来的对话中更懂我。
+
+### 3. 选择沟通渠道
+
+我尝试了几个渠道：
+
+**iMessage？需要BlueBubbles**
+iMessage需要第三方服务BlueBubbles，需要在一台Mac上运行服务器，配置相对复杂。考虑到我Mac mini会一直开机，这是一个选项，但最终还是选择了更简单的方式。
+
+**Telegram？需要特殊网络**
+Telegram在中国大陆需要特殊网络环境才能使用，不够方便。
+
+**最终选择：网页聊天**
+直接使用Clawdbot内置的webchat功能，在浏览器中打开就能对话。简单、直接、无门槛。
+
+---
+
+## Clawdbot能做什么？
+
+### 文件操作
+
+它可以直接读写你的文件系统，帮你：
+- 编辑代码文件
+- 组织文档结构
+- 管理项目文件
+- 搜索和分析内容
+
+### 信息管理
+
+它有一个完整的记忆系统：
+- **MEMORY.md**：长期记忆，记录重要的决策、经验教训
+- **daily notes**：每日笔记，记录当天的对话和事件
+- **智能检索**：可以跨这些文件搜索，找到你需要的信息
+
+### 自动化任务
+
+它可以帮你：
+- 设置定时任务（cron jobs）
+- 后台运行脚本
+- 发送提醒
+- 检查邮件、日历、通知
+
+### 多平台集成
+
+除了webchat，它还支持：
+- **Telegram**：通过BotFather创建bot，配置token即可
+- **WhatsApp**：需要扫描二维码关联个人账号
+- **Discord**：可以创建bot并添加到服务器
+- **Slack**：通过OAuth授权连接
+- **Signal**：需要Signal CLI配置
+
+### 编程辅助
+
+它能帮你：
+- 运行命令行工具
+- Git操作（提交、推送、分支管理）
+- 调试代码
+- 编写和测试脚本
+- 管理npm依赖
+
+### 浏览器控制
+
+它可以通过自动化控制浏览器：
+- 网页抓取
+- 自动化测试
+- 数据采集
+- 填表、点击等操作
+
+---
+
+## 实际使用场景
+
+### 1. 项目管理
+
+我在开发Android项目时，可以问它：
+\`\`\`
+"帮我分析一下这个Activity的启动流程有什么问题？"
+"最近的项目进展怎么样？"
+\`\`\`
+它会根据记录的daily notes和MEMORY.md，给出完整的回答。
+
+### 2. 技术文档整理
+
+我让它帮我整理技术笔记：
+\`\`\`
+"把今天学到的Android架构设计知识整理到MEMORY.md中"
+\`\`\`
+它会阅读当天的笔记，提炼关键内容，更新MEMORY.md。
+
+### 3. 自动化提醒
+
+设置定时任务：
+\`\`\`
+"提醒我下周一上午10点有个会议"
+"每天早上检查一下我的GitHub通知"
+\`\`\`
+它会创建cron job，在指定时间主动提醒你。
+
+### 4. 跨平台消息
+
+你可以通过Telegram、WhatsApp等渠道和它对话，即使不在电脑前也能使用。
+
+---
+
+## 和其他AI有什么不同？
+
+### 1. 数据隐私
+
+ChatGPT、Claude等云端AI需要把你的数据发送到服务器，而Clawdbot完全运行在本地，你的对话、文件、记忆都不会离开你的设备。
+
+### 2. 持续记忆
+
+大多数云端AI每次对话都是独立的，但Clawdbot有一个完整的记忆系统，它会记住你的项目、决策、教训，变得越来越了解你。
+
+### 3. 主动能力
+
+其他AI需要你主动问，而Clawdbot可以主动做事——检查邮件、提醒会议、执行定时任务。
+
+### 4. 完全可控
+
+你可以修改SOUL.md改变它的个性，编写自定义技能扩展它的能力，甚至直接修改代码改变它的行为。它是真正"属于你"的。
+
+---
+
+## 高级功能：自定义技能
+
+Clawdbot支持"技能"（Skills）系统，可以扩展它的能力。技能是一些预定义的行为模式和工具集。
+
+比如：
+- **github技能**：通过gh CLI与GitHub交互，管理issue、PR
+- **notion技能**：操作Notion数据库和页面
+- **weather技能**：获取天气预报
+- **coding-agent技能**：运行代码编辑器如Claude Code、VS Code
+
+你可以自己编写技能，或者从ClawdHub社区下载现成的。
+
+---
+
+## 部署到个人网站
+
+如果你想在自己的网站上集成Clawdbot，可以通过webchat功能。Clawdbot提供了一个HTTP接口，可以在任何网页中嵌入聊天窗口。
+
+基本步骤：
+1. 配置webchat渠道
+2. 在你的网站中嵌入Clawdbot提供的JavaScript代码
+3. 自定义样式和界面
+
+这样，你网站的访客就可以直接和你的AI助手对话了。
+
+---
+
+## 我的建议
+
+如果你是开发者、技术爱好者，或者想要一个真正私有的AI助手，我强烈推荐试试Clawdbot。
+
+**适合你如果：**
+- ✅ 注重数据隐私
+- ✅ 有一定的技术基础
+- ✅ 希望AI记住你的所有事情
+- ✅ 需要AI主动做一些任务
+- ✅ 想要自定义和扩展AI的能力
+
+**可能不适合你如果：**
+- ❌ 完全不懂技术
+- ❌ 不想折腾配置
+- ❌ 只需要简单的问答
+- ❌ 没有长期使用的需求
+
+---
+
+## 总结
+
+Clawdbot不仅仅是一个聊天机器人，它是一个**完整的AI操作系统**，运行在你的设备上，成为你数字生活的中心。
+
+它有记忆、有个性、能主动做事，最重要的是——它完全属于你。
+
+如果你也想打造自己的私人AI助手，就从今天开始吧！
+
+---
+
+## 相关资源
+
+- Clawdbot官方文档：https://docs.clawd.bot
+- GitHub仓库：https://github.com/clawdbot/clawdbot
+- 社区：https://discord.com/invite/clawd
+- 技能市场：https://clawdhub.com
+
+---
+
+*本文首发于我的个人网站，欢迎交流讨论。*
+`,contentPreviewEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+
+In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
+
+Clawdbot is exactly that. Today, I'll share my experience setting up and using Clawdbot, and what it can do for you.
+
+---
+
+## What is Clawdbot?
+
+Simply put, Clawdbot is a **personal AI assistant framework that runs locally on your device**. It's not a cloud service—it's a complete system that you can run on your Mac, server, or any machine you own.
+
+**Core Features:**
+- ✅ **Completely Private**: All data stays on your device, no third-party cloud services
+- ✅ **Persistent Memory**: Records your important information via MEMORY.md and daily notes
+- ✅ **Multi-channel Support**: Connects via Telegram, WhatsApp, Discord, Signal, and more
+- ✅ **Proactive Capabilities**: Can check periodically, send reminders, and automate tasks
+- ✅ **Extensible**: Supports custom skills, scripts, and endless customization
+
+---
+
+## Installing Clawdbot
+
+Clawdbot is installed via npm, making it incredibly simple:
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+Once installed, you have a complete AI assistant system on your device.
+
+---
+
+## Initializing Your AI Assistant
+
+When you run Clawdbot for the first time, it creates a workspace—the "home" for your AI assistant.
+
+\`\`\`bash
+cd ~/clawd
+clawdbot start
+\`\`\`
+
+The workspace contains several key files:
+- **SOUL.md** - Defines the AI's personality, principles, and behavior
+- **USER.md** - Information about you (name, preferences, projects, etc.)
+- **MEMORY.md** - Long-term memory, recording important events and knowledge
+- **memory/YYYY-MM-DD.md** - Daily notes, recording conversations and events from that day
+- **TOOLS.md** - Local configuration (device names, SSH addresses, etc.)
+
+---`,contentPreviewZh:`# Clawdbot入门指南：打造你的私人AI助手
+
+在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
+
+Clawdbot就是这样一个存在。今天，我就和大家分享一下我如何配置和使用Clawdbot的过程，以及它能为你带来什么。
+
+---
+
+## 什么是Clawdbot？
+
+简单来说，Clawdbot是一个**运行在你本地设备上的私人AI助手框架**。它不是某个云服务，而是一个可以在你的Mac、服务器上运行的完整系统。
+
+**核心特点：**
+- ✅ **完全私有**：所有数据都在你的设备上，不依赖第三方云服务
+- ✅ **持久记忆**：通过MEMORY.md和daily notes记录你的所有重要信息
+- ✅ **多渠道接入**：支持Telegram、WhatsApp、Discord、Signal等多种消息平台
+- ✅ **主动能力**：可以定时检查、发送提醒、自动执行任务
+- ✅ **可扩展**：支持自定义技能、脚本，让它做更多事情
+
+---
+
+## 安装Clawdbot
+
+Clawdbot是通过npm安装的，非常简单：
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+安装完成后，你的设备上就有了一个完整的AI助手系统。
+
+---
+
+## 初始化你的AI助手
+
+第一次运行时，Clawdbot会创建一个工作空间（workspace），这是AI助手的"家"。
+
+\`\`\`bash
+cd ~/clawd
+clawdbot start
+\`\`\`
+
+工作空间包含几个关键文件：
+- **SOUL.md** - 定义AI助手的个性、原则、行为方式
+- **USER.md** - 关于你自己的信息（名字、偏好、项目等）
+- **MEMORY.md** - AI助手的长时记忆，记录重要事件和知识
+- **memory/YYYY-MM-DD.md** - 每日笔记，记录当天的对话和事件
+- **TOOLS.md** - 本地配置信息（如设备名称、SSH地址等）
+
+---`,date:"2026-01-26",tags:["AI","Clawdbot","Tutorial","Personal Assistant"],readTime:10,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
 
 > How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and implementation approach.
 
@@ -2766,7 +3386,7 @@ Tech Stack Layering:
 
 **举例：HashMap**
 
-\`\`\`markdown`,date:"2026-01-24",tags:["General"],readTime:5,isPaid:!1},{id:"unemployment-and-info-cocoon",title:{en:"Unemployment, Information Cocoon, and Financial Security",zh:"失业、信息茧房与财务安全"},excerpt:{en:"> A deep conversation about unemployment made me rethink how to build a personal safety system in uncertain times...",zh:"> 一次关于失业的深度对话，让我重新思考如何在不确定的时代建立自己的安全体系..."},contentEn:`# Unemployment, Information Cocoon, and Financial Security
+\`\`\`markdown`,date:"2026-01-26",tags:["General"],readTime:5,isPaid:!1},{id:"unemployment-and-info-cocoon",title:{en:"Unemployment, Information Cocoon, and Financial Security",zh:"失业、信息茧房与财务安全"},excerpt:{en:"> A deep conversation about unemployment made me rethink how to build a personal safety system in uncertain times...",zh:"> 一次关于失业的深度对话，让我重新思考如何在不确定的时代建立自己的安全体系..."},contentEn:`# Unemployment, Information Cocoon, and Financial Security
 
 > A deep conversation about unemployment made me rethink how to build a personal safety system in uncertain times
 
@@ -6399,5 +7019,5 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **扩展性差**：订单量增长时，无法通过增加POS来提升性能
 - **硬件依赖**：必须配备性能足够的服务器设备
 
-### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function i(n,e){return n[e]||n.en}const o=A;export{o as a,i as g};
-//# sourceMappingURL=articles-DvkicvLK.js.map
+### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function A(n,e){return n[e]||n.en}const o=i;export{o as a,A as g};
+//# sourceMappingURL=articles-C07QGgwX.js.map
