@@ -59,6 +59,24 @@ const articlesConfig = {
     tags: ['Talent', 'Self-Discovery', 'Career', 'Growth'],
     readTime: 8,
     isPaid: false,  // 天赋发现反思，免费
+  },
+  'unemployment-and-info-cocoon': {
+    date: '2026-01-24',
+    tags: ['Career', 'Life', 'Finance', 'Reflection'],
+    readTime: 5,
+    isPaid: false,  // 失业与信息茧房，免费
+  },
+  'getting-started-with-clawdbot': {
+    date: '2026-01-26',
+    tags: ['AI', 'Clawdbot', 'Tutorial', 'Personal Assistant'],
+    readTime: 10,
+    isPaid: false,  // Clawdbot入门指南，免费
+  },
+  'life-wisdom-from-livestream': {
+    date: '2026-02-01',
+    tags: ['Life', 'Wisdom', 'Growth', 'Reflection'],
+    readTime: 8,
+    isPaid: false,  // 人生智慧，免费
   }
 };
 
