@@ -1672,649 +1672,7 @@ AMS启动Activity（走流程1）
 2. **定位索引**：\`index = hash & (n - 1)\` —— 位运算替代取模，要求n是2的幂
 3. **桶位置判断**：
    - 无数据：直接插入
-   - 相同key：覆盖value`,date:"2026-01-26",tags:["General"],readTime:5,isPaid:!1},{id:"getting-started-with-clawdbot",title:{en:"Getting Started with Clawdbot: Build Your Own Personal AI Assistant",zh:"Clawdbot入门指南：打造你的私人AI助手"},excerpt:{en:"![Clawdbot Demo](/clawdbot-demo.png)...",zh:"![Clawdbot Demo](/clawdbot-demo.png)..."},contentEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
-
-![Clawdbot Demo](/clawdbot-demo.png)
-
----
-
-**🎁 Free Gift**
-
-Here's a free AI Coding trial card for you—complete in hours what used to take weeks:
-[Claim Now →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
-
----
-
-In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
-
-Clawdbot is exactly that. Today, I'll share my experience setting up and using Clawdbot, and what it can do for you.
-
----
-
-## What is Clawdbot?
-
-Simply put, Clawdbot is a **personal AI assistant framework that runs locally on your device**. It's not a cloud service—it's a complete system that you can run on your Mac, server, or any machine you own.
-
-**Core Features:**
-- ✅ **Completely Private**: All data stays on your device, no third-party cloud services
-- ✅ **Persistent Memory**: Records your important information via MEMORY.md and daily notes
-- ✅ **Multi-channel Support**: Connects via Telegram, WhatsApp, Discord, Signal, and more
-- ✅ **Proactive Capabilities**: Can check periodically, send reminders, and automate tasks
-- ✅ **Extensible**: Supports custom skills, scripts, and endless customization
-
----
-
-## Installing Clawdbot
-
-Clawdbot is installed via npm, making it incredibly simple:
-
-\`\`\`bash
-npm install -g clawdbot
-\`\`\`
-
-Once installed, you have a complete AI assistant system on your device.
-
----
-
-## Initializing Your AI Assistant
-
-When you run Clawdbot for the first time, it creates a workspace—the "home" for your AI assistant.
-
-\`\`\`bash
-cd ~/clawd
-clawdbot start
-\`\`\`
-
-The workspace contains several key files:
-- **SOUL.md** - Defines the AI's personality, principles, and behavior
-- **USER.md** - Information about you (name, preferences, projects, etc.)
-- **MEMORY.md** - Long-term memory, recording important events and knowledge
-- **memory/YYYY-MM-DD.md** - Daily notes, recording conversations and events from that day
-- **TOOLS.md** - Local configuration (device names, SSH addresses, etc.)
-
----
-
-## My Setup Process
-
-### 1. Getting to Know Each Other
-
-In our first conversation, Clawdbot asked me some basic questions:
-- What should I call you?
-- What are you? (AI, robot, or something else?)
-- What's your personality like?
-- What's your signature emoji?
-
-These questions helped it "get to know itself"—it's not a cold program, but an entity with a name, personality, and even its own "soul."
-
-### 2. Understanding Me
-
-Then, it started learning about me:
-- What's your name?
-- How should I address you?
-- What's your timezone?
-- What projects are you working on? What do you care about?
-
-This information goes into USER.md, so it can better understand me in future conversations.
-
-### 3. Choosing a Communication Channel
-
-I tried several channels:
-
-**iMessage? Requires BlueBubbles**
-iMessage needs the third-party BlueBubbles service, requiring a Mac server. Since my Mac mini is always on, this was an option, but I ultimately chose a simpler approach.
-
-**Telegram? Requires Special Network**
-Telegram requires special network access in mainland China, which isn't convenient enough.
-
-**Final Choice: Web Chat**
-I used Clawdbot's built-in webchat feature, opening the conversation directly in a browser. Simple, direct, barrier-free.
-
----
-
-## What Can Clawdbot Do?
-
-### File Operations
-
-It can directly read and write your file system, helping you:
-- Edit code files
-- Organize document structures
-- Manage project files
-- Search and analyze content
-
-### Information Management
-
-It has a complete memory system:
-- **MEMORY.md**: Long-term memory, recording important decisions and lessons learned
-- **Daily notes**: Daily records of conversations and events
-- **Smart search**: Cross-file search to find the information you need
-
-### Automation Tasks
-
-It can help you:
-- Set up scheduled tasks (cron jobs)
-- Run scripts in the background
-- Send reminders
-- Check emails, calendars, and notifications
-
-### Multi-platform Integration
-
-Beyond webchat, it supports:
-- **Telegram**: Create a bot via BotFather, configure the token
-- **WhatsApp**: Link your personal account by scanning a QR code
-- **Discord**: Create a bot and add it to your server
-- **Slack**: Connect via OAuth authorization
-- **Signal**: Requires Signal CLI configuration
-
-### Programming Assistance
-
-It can help you:
-- Run command-line tools
-- Git operations (commit, push, branch management)
-- Debug code
-- Write and test scripts
-- Manage npm dependencies
-
-### Browser Control
-
-It can control browsers through automation:
-- Web scraping
-- Automated testing
-- Data collection
-- Form filling, clicking, and more
-
----
-
-## Real-world Use Cases
-
-### 1. Project Management
-
-When I'm working on an Android project, I can ask:
-\`\`\`
-"Help me analyze what's wrong with this Activity launch flow?"
-"How's my project progressing recently?"
-\`\`\`
-It will give a complete answer based on recorded daily notes and MEMORY.md.
-
-### 2. Technical Documentation
-
-I ask it to help organize technical notes:
-\`\`\`
-"Organize the Android architecture design knowledge I learned today into MEMORY.md"
-\`\`\`
-It reads that day's notes, extracts key content, and updates MEMORY.md.
-
-### 3. Automated Reminders
-
-Set up scheduled tasks:
-\`\`\`
-"Remind me of a meeting next Monday at 10 AM"
-"Check my GitHub notifications every morning"
-\`\`\`
-It creates cron jobs and proactively reminds you at the specified time.
-
-### 4. Cross-platform Messaging
-
-You can talk to it via Telegram, WhatsApp, and other channels, using it even when you're away from your computer.
-
----
-
-## What Makes It Different from Other AIs?
-
-### 1. Data Privacy
-
-Cloud AIs like ChatGPT and Claude require sending your data to servers. Clawdbot runs entirely locally—your conversations, files, and memories never leave your device.
-
-### 2. Continuous Memory
-
-Most cloud AIs treat each conversation independently. Clawdbot has a complete memory system, remembering your projects, decisions, and lessons, getting to know you better over time.
-
-### 3. Proactive Capabilities
-
-Other AIs need you to ask questions. Clawdbot can do things proactively—check emails, remind about meetings, execute scheduled tasks.
-
-### 4. Fully Controllable
-
-You can modify SOUL.md to change its personality, write custom skills to extend its capabilities, or even directly modify code to change its behavior. It truly "belongs to you."
-
----
-
-## Advanced Feature: Custom Skills
-
-Clawdbot supports a "Skills" system to extend its capabilities. Skills are pre-defined behavior patterns and toolsets.
-
-For example:
-- **github skill**: Interact with GitHub via gh CLI, manage issues and PRs
-- **notion skill**: Operate Notion databases and pages
-- **weather skill**: Get weather forecasts
-- **coding-agent skill**: Run code editors like Claude Code, VS Code
-
-You can write your own skills or download existing ones from the ClowdHub community.
-
----
-
-## Deploying to Your Personal Website
-
-If you want to integrate Clawdbot into your own website, you can use the webchat feature. Clawdbot provides an HTTP interface that can be embedded as a chat window in any webpage.
-
-Basic steps:
-1. Configure the webchat channel
-2. Embed the JavaScript code provided by Clawdbot on your website
-3. Customize styles and interface
-
-This way, visitors to your site can directly converse with your AI assistant.
-
----
-
-## My Recommendation
-
-If you're a developer, tech enthusiast, or want a truly private AI assistant, I highly recommend trying Clawdbot.
-
-**Perfect for you if:**
-- ✅ You care about data privacy
-- ✅ You have some technical background
-- ✅ You want AI to remember everything about you
-- ✅ You need AI to proactively do tasks
-- ✅ You want to customize and extend AI capabilities
-
-**Might not be for you if:**
-- ❌ You're completely non-technical
-- ❌ You don't want to deal with configuration
-- ❌ You only need simple Q&A
-- ❌ You don't have long-term usage needs
-
----
-
-## Conclusion
-
-Clawdbot is more than just a chatbot—it's a **complete AI operating system** running on your device, becoming the center of your digital life.
-
-It has memory, personality, and can do things proactively. Most importantly—it's completely yours.
-
-If you want to build your own personal AI assistant, start today!
-
----
-
-## Related Resources
-
-- Clawdbot Official Docs: https://docs.clawd.bot
-- GitHub Repository: https://github.com/clawdbot/clawdbot
-- Community: https://discord.com/invite/clawd
-- Skill Marketplace: https://clawdhub.com
-
----
-
-*This article first appeared on my personal website. Welcome to discuss!*
-`,contentZh:`# Clawdbot入门指南：打造你的私人AI助手
-
-![Clawdbot Demo](/clawdbot-demo.png)
-
----
-
-**🎁 免费福利**
-
-送你一个免费的AI Coding体验卡，数小时内完成过去需要数周的开发工作：
-[点击领取 →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
-
----
-
-在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
-
-Clawdbot就是这样一个存在。今天，我就和大家分享一下我如何配置和使用Clawdbot的过程，以及它能为你带来什么。
-
----
-
-## 什么是Clawdbot？
-
-简单来说，Clawdbot是一个**运行在你本地设备上的私人AI助手框架**。它不是某个云服务，而是一个可以在你的Mac、服务器上运行的完整系统。
-
-**核心特点：**
-- ✅ **完全私有**：所有数据都在你的设备上，不依赖第三方云服务
-- ✅ **持久记忆**：通过MEMORY.md和daily notes记录你的所有重要信息
-- ✅ **多渠道接入**：支持Telegram、WhatsApp、Discord、Signal等多种消息平台
-- ✅ **主动能力**：可以定时检查、发送提醒、自动执行任务
-- ✅ **可扩展**：支持自定义技能、脚本，让它做更多事情
-
----
-
-## 安装Clawdbot
-
-Clawdbot是通过npm安装的，非常简单：
-
-\`\`\`bash
-npm install -g clawdbot
-\`\`\`
-
-安装完成后，你的设备上就有了一个完整的AI助手系统。
-
----
-
-## 初始化你的AI助手
-
-第一次运行时，Clawdbot会创建一个工作空间（workspace），这是AI助手的"家"。
-
-\`\`\`bash
-cd ~/clawd
-clawdbot start
-\`\`\`
-
-工作空间包含几个关键文件：
-- **SOUL.md** - 定义AI助手的个性、原则、行为方式
-- **USER.md** - 关于你自己的信息（名字、偏好、项目等）
-- **MEMORY.md** - AI助手的长时记忆，记录重要事件和知识
-- **memory/YYYY-MM-DD.md** - 每日笔记，记录当天的对话和事件
-- **TOOLS.md** - 本地配置信息（如设备名称、SSH地址等）
-
----
-
-## 我的配置过程
-
-### 1. 认识彼此
-
-第一次对话时，Clawdbot问了我一些基本问题：
-- 我应该叫什么？
-- 我是什么样子的？（AI、机器人、还是别的什么？）
-- 我的个性是怎样的？
-- 我的标志性emoji是什么？
-
-这些问题让它"认识了自己"——它不是冷冰冰的程序，而是一个有名字、有个性、甚至有自己"灵魂"的存在。
-
-### 2. 了解我
-
-然后，它开始了解我：
-- 你叫什么名字？
-- 我该怎么称呼你？
-- 你的时区是什么？
-- 你在做什么项目？你关心什么？
-
-这些信息会记录在USER.md中，让它在未来的对话中更懂我。
-
-### 3. 选择沟通渠道
-
-我尝试了几个渠道：
-
-**iMessage？需要BlueBubbles**
-iMessage需要第三方服务BlueBubbles，需要在一台Mac上运行服务器，配置相对复杂。考虑到我Mac mini会一直开机，这是一个选项，但最终还是选择了更简单的方式。
-
-**Telegram？需要特殊网络**
-Telegram在中国大陆需要特殊网络环境才能使用，不够方便。
-
-**最终选择：网页聊天**
-直接使用Clawdbot内置的webchat功能，在浏览器中打开就能对话。简单、直接、无门槛。
-
----
-
-## Clawdbot能做什么？
-
-### 文件操作
-
-它可以直接读写你的文件系统，帮你：
-- 编辑代码文件
-- 组织文档结构
-- 管理项目文件
-- 搜索和分析内容
-
-### 信息管理
-
-它有一个完整的记忆系统：
-- **MEMORY.md**：长期记忆，记录重要的决策、经验教训
-- **daily notes**：每日笔记，记录当天的对话和事件
-- **智能检索**：可以跨这些文件搜索，找到你需要的信息
-
-### 自动化任务
-
-它可以帮你：
-- 设置定时任务（cron jobs）
-- 后台运行脚本
-- 发送提醒
-- 检查邮件、日历、通知
-
-### 多平台集成
-
-除了webchat，它还支持：
-- **Telegram**：通过BotFather创建bot，配置token即可
-- **WhatsApp**：需要扫描二维码关联个人账号
-- **Discord**：可以创建bot并添加到服务器
-- **Slack**：通过OAuth授权连接
-- **Signal**：需要Signal CLI配置
-
-### 编程辅助
-
-它能帮你：
-- 运行命令行工具
-- Git操作（提交、推送、分支管理）
-- 调试代码
-- 编写和测试脚本
-- 管理npm依赖
-
-### 浏览器控制
-
-它可以通过自动化控制浏览器：
-- 网页抓取
-- 自动化测试
-- 数据采集
-- 填表、点击等操作
-
----
-
-## 实际使用场景
-
-### 1. 项目管理
-
-我在开发Android项目时，可以问它：
-\`\`\`
-"帮我分析一下这个Activity的启动流程有什么问题？"
-"最近的项目进展怎么样？"
-\`\`\`
-它会根据记录的daily notes和MEMORY.md，给出完整的回答。
-
-### 2. 技术文档整理
-
-我让它帮我整理技术笔记：
-\`\`\`
-"把今天学到的Android架构设计知识整理到MEMORY.md中"
-\`\`\`
-它会阅读当天的笔记，提炼关键内容，更新MEMORY.md。
-
-### 3. 自动化提醒
-
-设置定时任务：
-\`\`\`
-"提醒我下周一上午10点有个会议"
-"每天早上检查一下我的GitHub通知"
-\`\`\`
-它会创建cron job，在指定时间主动提醒你。
-
-### 4. 跨平台消息
-
-你可以通过Telegram、WhatsApp等渠道和它对话，即使不在电脑前也能使用。
-
----
-
-## 和其他AI有什么不同？
-
-### 1. 数据隐私
-
-ChatGPT、Claude等云端AI需要把你的数据发送到服务器，而Clawdbot完全运行在本地，你的对话、文件、记忆都不会离开你的设备。
-
-### 2. 持续记忆
-
-大多数云端AI每次对话都是独立的，但Clawdbot有一个完整的记忆系统，它会记住你的项目、决策、教训，变得越来越了解你。
-
-### 3. 主动能力
-
-其他AI需要你主动问，而Clawdbot可以主动做事——检查邮件、提醒会议、执行定时任务。
-
-### 4. 完全可控
-
-你可以修改SOUL.md改变它的个性，编写自定义技能扩展它的能力，甚至直接修改代码改变它的行为。它是真正"属于你"的。
-
----
-
-## 高级功能：自定义技能
-
-Clawdbot支持"技能"（Skills）系统，可以扩展它的能力。技能是一些预定义的行为模式和工具集。
-
-比如：
-- **github技能**：通过gh CLI与GitHub交互，管理issue、PR
-- **notion技能**：操作Notion数据库和页面
-- **weather技能**：获取天气预报
-- **coding-agent技能**：运行代码编辑器如Claude Code、VS Code
-
-你可以自己编写技能，或者从ClawdHub社区下载现成的。
-
----
-
-## 部署到个人网站
-
-如果你想在自己的网站上集成Clawdbot，可以通过webchat功能。Clawdbot提供了一个HTTP接口，可以在任何网页中嵌入聊天窗口。
-
-基本步骤：
-1. 配置webchat渠道
-2. 在你的网站中嵌入Clawdbot提供的JavaScript代码
-3. 自定义样式和界面
-
-这样，你网站的访客就可以直接和你的AI助手对话了。
-
----
-
-## 我的建议
-
-如果你是开发者、技术爱好者，或者想要一个真正私有的AI助手，我强烈推荐试试Clawdbot。
-
-**适合你如果：**
-- ✅ 注重数据隐私
-- ✅ 有一定的技术基础
-- ✅ 希望AI记住你的所有事情
-- ✅ 需要AI主动做一些任务
-- ✅ 想要自定义和扩展AI的能力
-
-**可能不适合你如果：**
-- ❌ 完全不懂技术
-- ❌ 不想折腾配置
-- ❌ 只需要简单的问答
-- ❌ 没有长期使用的需求
-
----
-
-## 总结
-
-Clawdbot不仅仅是一个聊天机器人，它是一个**完整的AI操作系统**，运行在你的设备上，成为你数字生活的中心。
-
-它有记忆、有个性、能主动做事，最重要的是——它完全属于你。
-
-如果你也想打造自己的私人AI助手，就从今天开始吧！
-
----
-
-## 相关资源
-
-- Clawdbot官方文档：https://docs.clawd.bot
-- GitHub仓库：https://github.com/clawdbot/clawdbot
-- 社区：https://discord.com/invite/clawd
-- 技能市场：https://clawdhub.com
-
----
-
-*本文首发于我的个人网站，欢迎交流讨论。*
-`,contentPreviewEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
-
-![Clawdbot Demo](/clawdbot-demo.png)
-
----
-
-**🎁 Free Gift**
-
-Here's a free AI Coding trial card for you—complete in hours what used to take weeks:
-[Claim Now →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
-
----
-
-In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
-
-Clawdbot is exactly that. Today, I'll share my experience setting up and using Clawdbot, and what it can do for you.
-
----
-
-## What is Clawdbot?
-
-Simply put, Clawdbot is a **personal AI assistant framework that runs locally on your device**. It's not a cloud service—it's a complete system that you can run on your Mac, server, or any machine you own.
-
-**Core Features:**
-- ✅ **Completely Private**: All data stays on your device, no third-party cloud services
-- ✅ **Persistent Memory**: Records your important information via MEMORY.md and daily notes
-- ✅ **Multi-channel Support**: Connects via Telegram, WhatsApp, Discord, Signal, and more
-- ✅ **Proactive Capabilities**: Can check periodically, send reminders, and automate tasks
-- ✅ **Extensible**: Supports custom skills, scripts, and endless customization
-
----
-
-## Installing Clawdbot
-
-Clawdbot is installed via npm, making it incredibly simple:
-
-\`\`\`bash
-npm install -g clawdbot
-\`\`\`
-
-Once installed, you have a complete AI assistant system on your device.
-
----
-
-## Initializing Your AI Assistant
-
-When you run Clawdbot for the first time, it creates a workspace—the "home" for your AI assistant.
-
-\`\`\`bash
-cd ~/clawd`,contentPreviewZh:`# Clawdbot入门指南：打造你的私人AI助手
-
-![Clawdbot Demo](/clawdbot-demo.png)
-
----
-
-**🎁 免费福利**
-
-送你一个免费的AI Coding体验卡，数小时内完成过去需要数周的开发工作：
-[点击领取 →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
-
----
-
-在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
-
-Clawdbot就是这样一个存在。今天，我就和大家分享一下我如何配置和使用Clawdbot的过程，以及它能为你带来什么。
-
----
-
-## 什么是Clawdbot？
-
-简单来说，Clawdbot是一个**运行在你本地设备上的私人AI助手框架**。它不是某个云服务，而是一个可以在你的Mac、服务器上运行的完整系统。
-
-**核心特点：**
-- ✅ **完全私有**：所有数据都在你的设备上，不依赖第三方云服务
-- ✅ **持久记忆**：通过MEMORY.md和daily notes记录你的所有重要信息
-- ✅ **多渠道接入**：支持Telegram、WhatsApp、Discord、Signal等多种消息平台
-- ✅ **主动能力**：可以定时检查、发送提醒、自动执行任务
-- ✅ **可扩展**：支持自定义技能、脚本，让它做更多事情
-
----
-
-## 安装Clawdbot
-
-Clawdbot是通过npm安装的，非常简单：
-
-\`\`\`bash
-npm install -g clawdbot
-\`\`\`
-
-安装完成后，你的设备上就有了一个完整的AI助手系统。
-
----
-
-## 初始化你的AI助手
-
-第一次运行时，Clawdbot会创建一个工作空间（workspace），这是AI助手的"家"。
-
-\`\`\`bash
-cd ~/clawd`,date:"2026-01-26",tags:["AI","Clawdbot","Tutorial","Personal Assistant"],readTime:10,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
+   - 相同key：覆盖value`,date:"2026-02-01",tags:["General"],readTime:5,isPaid:!1},{id:"interview-prep-generator",title:{en:"AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials",zh:"面试复习资料自动生成器：从简历到针对性复习资料的AI实践"},excerpt:{en:"> How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and im...",zh:"> 如何用AI将一份简历快速转化为结构化的面试复习资料？本文分享完整的设计思路和实现方法。..."},contentEn:`# AI-Powered Interview Prep Generator: Transform Resumes into Targeted Study Materials
 
 > How to use AI to quickly convert a resume into structured interview preparation materials? This article shares the complete design philosophy and implementation approach.
 
@@ -3408,7 +2766,975 @@ Tech Stack Layering:
 
 **举例：HashMap**
 
-\`\`\`markdown`,date:"2026-01-26",tags:["General"],readTime:5,isPaid:!1},{id:"unemployment-and-info-cocoon",title:{en:"Unemployment, Information Cocoon, and Financial Security",zh:"失业、信息茧房与财务安全"},excerpt:{en:"> A deep conversation about unemployment made me rethink how to build a personal safety system in uncertain times...",zh:"> 一次关于失业的深度对话，让我重新思考如何在不确定的时代建立自己的安全体系..."},contentEn:`# Unemployment, Information Cocoon, and Financial Security
+\`\`\`markdown`,date:"2026-02-01",tags:["General"],readTime:5,isPaid:!1},{id:"life-wisdom-from-livestream",title:{en:"What I Learned About Life from a High School Dropout's Livestream",zh:"从一个高中辍学者的直播间，我看到了普通人过好这一生的真相"},excerpt:{en:"> How did a high school graduate turned car mechanic build an audience of 40,000 people listening to him talk about life? Why do his words trigger so ...",zh:"> 一个高中毕业的汽修工，如何做到直播间4万人在线听他聊人生？他的话为什么让那么多人破防，又让那么多人沉默？..."},contentEn:`# What I Learned About Life from a High School Dropout's Livestream
+
+> How did a high school graduate turned car mechanic build an audience of 40,000 people listening to him talk about life? Why do his words trigger so many, yet also make so many fall silent?
+
+Recently, I read through all of Hu Chenfeng's livestream transcripts from 2023-2025—over a million words of conversations that gave me a whole new perspective on "how to live a good life."
+
+## Why Are His Words So "Hard to Hear"?
+
+"If you graduate from vocational college with no skills, no family connections, no background, and no money—what do you do? Deliver food."
+
+This sentence has triggered countless people, who call him a "social Darwinist" who "looks down on others." But Hu Chenfeng's response is:
+
+> "Telling the truth comes at the highest cost. Sweet words don't offend anyone—everyone loves hearing them. But telling the truth will inevitably offend people, and offend many of them."
+
+In an era filled with "correct废话" (empty platitudes) and "sweet nothings," someone willing to risk being hated to tell you the truth is, in itself, a form of kindness.
+
+## The Brutal Truth About "Ordinary People"
+
+Hu Chenfeng repeatedly emphasizes:
+
+- **Becoming a streamer with 40,000 viewers is an extremely low-probability event**
+- **"One general achieves success while ten thousand soldiers fall"—many streamers can't even earn enough to pay their electricity bill**
+- **Most people are ordinary. Our parents are ordinary people who lived very ordinary lives**
+
+Recognizing this truth is important—**don't plan your life using outliers as examples.**
+
+Those success stories, whether Elon Musk or various startup founders, all have their particular circumstances. For most people, what's needed is a more realistic path.
+
+## Can His Success Be Replicated?
+
+Someone asked: "You graduated high school and achieved this—why can't others?"
+
+Hu Chenfeng's answer is candid:
+
+1. **He didn't idle away** — Although his grades weren't good in high school, he was constantly reading and learning online
+2. **He had family support** — His parents, while not wealthy, were willing to support his development
+3. **He delivered results** — From car mechanic to stock trading, to private equity fund, every step had tangible achievements
+4. **He seized opportunities** — The unique nature of the streaming industry brought him recognition
+
+> "You can disagree, and you can think this achievement means nothing. But for me, this is an achievement."
+
+## 5 Practical Pieces of Advice for Young People
+
+### 1. Learn English Well—At Least IELTS 6.5
+
+"You say English is useless? Your school only offers study abroad—you have no choice."
+
+Hu Chenfeng himself is preparing for the IELTS, saying he's "benefiting from public goods." In today's globalized world, English is an important tool for ordinary people to change their destiny.
+
+### 2. Master Hard Skills
+
+For computer science students, his standard is:
+
+> **"In four years of undergrad, score 6.5 on IELTS and write 400,000 lines of code. If you miss either one, you'll be delivering food after graduation."**
+
+This sounds cruel, but it's reality. A second-tier computer science degree equals a vocational college degree—without real skills, you have no competitiveness.
+
+### 3. Don't Slack Off in School
+
+What he hates most are those who "don't learn any skills in vocational college, just play games, lie flat and rot":
+
+> **"If you don't learn in school, you expect to learn after graduation? That's unrealistic."**
+
+### 4. Feed Yourself First, Then Talk Dreams
+
+> **"First feed yourself, and don't bother others—that's already worth a thumbs-up."**
+
+For a stay-at-home youth earning only 200 yuan a month, his advice is direct:
+
+> **"Your parents are in their 50s and 60s still supporting you—they're desperate. Do some work."**
+
+### 5. Have Attitude in Everything You Do
+
+He talked about his experience as a car mechanic:
+
+> "Many customers said my service attitude was good. Although my skills weren't great, I knew basic maintenance, and I was very responsible about doing everything I should. Every time I'd check the customer's tire pressure and pump it to 2.6 standards."
+
+> **"The boss said: if you vocational college students worked with this kind of attitude, I believe you could succeed at anything."**
+
+## Life Is About "Taking It One Step at a Time"
+
+Facing the question "What if delivery jobs become saturated?" his answer is very practical:
+
+> **"We'll worry about that when it happens. That's how life works—taking it one step at a time."**
+
+This isn't pessimistic, it's clear-headed. Who can control their destiny? **Just don't starve in the present.**
+
+## Wisdom Revealed in Life Details
+
+From his conversations, you can also learn a lot of life wisdom:
+
+**About teeth:**
+> "Open your mouth like me, with white, straight, clean teeth... this person definitely isn't doing badly."
+> "Open your mouth with plaque and crooked teeth... this person is probably struggling."
+
+**About public manners:**
+He insists bubble instant noodles shouldn't be eaten on high-speed trains because "one person eating instant noodles makes half the carriage suffer."
+
+**About consumption philosophy:**
+He recommends taking DiDi instead of taxis because "the platform has solved these problems."
+
+These details reflect a person's quality of life and thinking patterns.
+
+## Final Thoughts
+
+After reading these transcripts, my biggest feeling is:
+
+**This world has never been fair, but it still rewards those who work hard.**
+
+Although Hu Chenfeng's words sting, he speaks the truth. He doesn't look down on ordinary people—he comes from ordinary people himself. He just refuses to comfort others with "beautiful lies."
+
+> **"If you want to hear sweet things, go to another streamer. I'll tell you—they're all sweet nothings."**
+
+If you also want to live a good life, perhaps you can listen to his words:
+
+1. **Recognize reality** — Accept your ordinariness, but don't accept your mediocrity
+2. **Keep learning** — English, skills, knowledge—you can't miss any
+3. **Be responsible** — To yourself, your work, your family
+4. **Take action** — Don't lie flat. Do things. Work hard
+5. **Stay grounded** — Solve survival problems first, then talk about ideals
+
+This world is cruel, but also fair. **If you give, you might not get returns—but if you don't give, you definitely won't get any.**
+
+---
+
+**If you also want to read these livestream transcripts, search "HuChenFeng" on GitHub to view the complete records.**
+`,contentZh:`# 从一个高中辍学者的直播间，我看到了普通人过好这一生的真相
+
+> 一个高中毕业的汽修工，如何做到直播间4万人在线听他聊人生？他的话为什么让那么多人破防，又让那么多人沉默？
+
+最近读完了户晨风2023-2025年的所有直播文稿，100多万字的对话记录，让我对"如何过好这一生"有了全新的认识。
+
+## 他说的话为什么这么"难听"?
+
+"大专毕业没技术、没家庭、没背景、没钱，干什么？送外卖。"
+
+这句话让无数人破防，骂他"社达"、"看不起人"。但户晨风的回应是：
+
+> "说实话的成本是最高的。说漂亮话不会得罪人，都爱听，但说实话一定会得罪人，而且会得罪很多人。"
+
+在这个充斥着"正确的废话"和"甜言蜜语"的时代，有人愿意冒着被骂的风险告诉你真相，这本身就是一种善意。
+
+## 关于"普通人"的残酷真相
+
+户晨风反复强调：
+
+- **成为4万人直播间的主播，是极小概率事件**
+- **"一将功成万骨枯"，很多主播连电费都挣不够**
+- **大部分人都是普通人，我们的父母也是普通人，一辈子非常普通**
+
+认清这个真相很重要——**不要用特例来规划自己的人生**。
+
+那些成功的案例，无论是马斯克还是各种创业大佬，都有他们的特殊性。而大多数人，需要的是一条更现实的路。
+
+## 他的成功可以复制吗？
+
+有人问："你高中毕业能做到这一步，为什么别人不能？"
+
+户晨风的回答很坦诚：
+
+1. **他没有闲着** - 高中虽然学习不好，但一直在看书、学网上的内容
+2. **他有家庭的支持** - 父母虽然不是大富大贵，但愿意支持他发展
+3. **他拿出了成绩** - 从汽修工到炒股，再到私募基金，每一步都有实打实的成果
+4. **他抓住了机会** - 主播这个行业的特殊性，让他得到了认可
+
+> "你可以不认同，也可以认为这个成就没什么，但是对于我来讲这是个成就。"
+
+## 给年轻人的5条实在建议
+
+### 1. 学好英语，至少雅思6.5
+
+"你说英语没用？你那个学校只能留学，你没得选。"
+
+户晨风自己也在准备考雅思，他说这是"吃到了公有化的福利"。在全球化的今天，英语是普通人改变命运的一个重要工具。
+
+### 2. 掌握硬技能
+
+对于计算机专业的学生，他的标准是：
+
+> **"本科四年雅思考到6.5，代码写够40万行。两者有一个没达到，毕业送外卖。"**
+
+这听起来很残酷，但这就是现实。二本计算机约等于大专计算机，没有真才实学就是没有竞争力。
+
+### 3. 不要在学校躺平
+
+他最痛恨的是那些"大专几年不学技术，玩游戏，躺摆烂"的人：
+
+> **"你在学校都不学，指望毕业之后学？这是不现实的。"**
+
+### 4. 先养活自己，再谈理想
+
+> **"先把自己吃饱饭，然后不麻烦别人，这已经是要竖大拇指了。"**
+
+对于一个月只挣200块的躺家青年，他的建议很直接：
+
+> **"你爹妈五六十岁还在养你，他们绝望的。你干点活吧。"**
+
+### 5. 做事要有态度
+
+他讲自己做汽修工时的经历：
+
+> "很多客人说我服务态度好，虽然技术不咋样，但最基本的保养我会，我会很负责任地把我该做的全部做好。每次我都把客人的车胎量下气压，打气打到2.6的标准。"
+
+> **"人家老板说，如果你大专生做事有这么一个态度，我相信做什么事都能成。"**
+
+## 人生就是"走一步看一步"
+
+面对网友问"外卖饱和了怎么办？"，他的回答很现实：
+
+> **"饱和了再说啊，本来就是走一步看一步啊，人生就是如此啊。"**
+
+这不是消极，而是清醒。谁能控制自己的命运？**能在当下不饿死就行了。**
+
+## 一些生活细节透露的智慧
+
+从他的对话中，还能学到很多生活智慧：
+
+**关于牙齿：**
+> "一张嘴像小户一样，一嘴白牙，又齐又白...这个人混的一定不差。"
+> "一张嘴各种牙垢、牙不整齐...这个人大概混得不好。"
+
+**关于公共场所素质：**
+他坚持高铁不应该吃泡面，因为"一个人吃泡面，半个车厢的人遭罪"。
+
+**关于消费观念：**
+他建议打滴滴而不是出租车，因为"平台解决了这些问题"。
+
+这些细节反映的是一个人的生活品质和思维方式。
+
+## 写在最后
+
+读完这些文稿，我最大的感受是：
+
+**这个世界从来就不公平，但依然是努力的人更有机会。**
+
+户晨风的话虽然刺耳，但他说的都是实话。他不是看不起普通人，他就是普通人出身。他只是不愿意用"漂亮的谎言"来安慰别人。
+
+> **"我想听好听的，你去别的直播间，我告诉你都是甜言蜜语。"**
+
+如果你也想过好这一生，或许可以听听他的话：
+
+1. **认清现实** - 接受自己的普通，但不接受自己的平庸
+2. **持续学习** - 英语、技能、知识，一样都不能少
+3. **负责任** - 对自己、对工作、对家人负责
+4. **行动起来** - 不要躺平，去做事，去努力
+5. **脚踏实地** - 先解决生存问题，再谈理想
+
+这个世界很残酷，但也很公平。**你付出了，未必有回报；但不付出，一定没有回报。**
+
+---
+
+**如果你也想看这些直播文稿，可以在GitHub搜索"HuChenFeng"查看完整记录。**
+`,contentPreviewEn:`# What I Learned About Life from a High School Dropout's Livestream
+
+> How did a high school graduate turned car mechanic build an audience of 40,000 people listening to him talk about life? Why do his words trigger so many, yet also make so many fall silent?
+
+Recently, I read through all of Hu Chenfeng's livestream transcripts from 2023-2025—over a million words of conversations that gave me a whole new perspective on "how to live a good life."
+
+## Why Are His Words So "Hard to Hear"?
+
+"If you graduate from vocational college with no skills, no family connections, no background, and no money—what do you do? Deliver food."
+
+This sentence has triggered countless people, who call him a "social Darwinist" who "looks down on others." But Hu Chenfeng's response is:
+
+> "Telling the truth comes at the highest cost. Sweet words don't offend anyone—everyone loves hearing them. But telling the truth will inevitably offend people, and offend many of them."
+
+In an era filled with "correct废话" (empty platitudes) and "sweet nothings," someone willing to risk being hated to tell you the truth is, in itself, a form of kindness.
+
+## The Brutal Truth About "Ordinary People"
+
+Hu Chenfeng repeatedly emphasizes:
+
+- **Becoming a streamer with 40,000 viewers is an extremely low-probability event**
+- **"One general achieves success while ten thousand soldiers fall"—many streamers can't even earn enough to pay their electricity bill**
+- **Most people are ordinary. Our parents are ordinary people who lived very ordinary lives**
+
+Recognizing this truth is important—**don't plan your life using outliers as examples.**
+
+Those success stories, whether Elon Musk or various startup founders, all have their particular circumstances. For most people, what's needed is a more realistic path.
+
+## Can His Success Be Replicated?
+
+Someone asked: "You graduated high school and achieved this—why can't others?"
+
+Hu Chenfeng's answer is candid:
+
+1. **He didn't idle away** — Although his grades weren't good in high school, he was constantly reading and learning online
+2. **He had family support** — His parents, while not wealthy, were willing to support his development
+3. **He delivered results** — From car mechanic to stock trading, to private equity fund, every step had tangible achievements
+4. **He seized opportunities** — The unique nature of the streaming industry brought him recognition`,contentPreviewZh:`# 从一个高中辍学者的直播间，我看到了普通人过好这一生的真相
+
+> 一个高中毕业的汽修工，如何做到直播间4万人在线听他聊人生？他的话为什么让那么多人破防，又让那么多人沉默？
+
+最近读完了户晨风2023-2025年的所有直播文稿，100多万字的对话记录，让我对"如何过好这一生"有了全新的认识。
+
+## 他说的话为什么这么"难听"?
+
+"大专毕业没技术、没家庭、没背景、没钱，干什么？送外卖。"
+
+这句话让无数人破防，骂他"社达"、"看不起人"。但户晨风的回应是：
+
+> "说实话的成本是最高的。说漂亮话不会得罪人，都爱听，但说实话一定会得罪人，而且会得罪很多人。"
+
+在这个充斥着"正确的废话"和"甜言蜜语"的时代，有人愿意冒着被骂的风险告诉你真相，这本身就是一种善意。
+
+## 关于"普通人"的残酷真相
+
+户晨风反复强调：
+
+- **成为4万人直播间的主播，是极小概率事件**
+- **"一将功成万骨枯"，很多主播连电费都挣不够**
+- **大部分人都是普通人，我们的父母也是普通人，一辈子非常普通**
+
+认清这个真相很重要——**不要用特例来规划自己的人生**。
+
+那些成功的案例，无论是马斯克还是各种创业大佬，都有他们的特殊性。而大多数人，需要的是一条更现实的路。
+
+## 他的成功可以复制吗？
+
+有人问："你高中毕业能做到这一步，为什么别人不能？"
+
+户晨风的回答很坦诚：
+
+1. **他没有闲着** - 高中虽然学习不好，但一直在看书、学网上的内容
+2. **他有家庭的支持** - 父母虽然不是大富大贵，但愿意支持他发展
+3. **他拿出了成绩** - 从汽修工到炒股，再到私募基金，每一步都有实打实的成果
+4. **他抓住了机会** - 主播这个行业的特殊性，让他得到了认可`,date:"2026-02-01",tags:["General"],readTime:5,isPaid:!1},{id:"getting-started-with-clawdbot",title:{en:"Getting Started with Clawdbot: Build Your Own Personal AI Assistant",zh:"Clawdbot入门指南：打造你的私人AI助手"},excerpt:{en:"![Clawdbot Demo](/clawdbot-demo.png)...",zh:"![Clawdbot Demo](/clawdbot-demo.png)..."},contentEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+
+![Clawdbot Demo](/clawdbot-demo.png)
+
+---
+
+**🎁 Free Gift**
+
+Here's a free AI Coding trial card for you—complete in hours what used to take weeks:
+[Claim Now →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
+
+In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
+
+Clawdbot is exactly that. Today, I'll share my experience setting up and using Clawdbot, and what it can do for you.
+
+---
+
+## What is Clawdbot?
+
+Simply put, Clawdbot is a **personal AI assistant framework that runs locally on your device**. It's not a cloud service—it's a complete system that you can run on your Mac, server, or any machine you own.
+
+**Core Features:**
+- ✅ **Completely Private**: All data stays on your device, no third-party cloud services
+- ✅ **Persistent Memory**: Records your important information via MEMORY.md and daily notes
+- ✅ **Multi-channel Support**: Connects via Telegram, WhatsApp, Discord, Signal, and more
+- ✅ **Proactive Capabilities**: Can check periodically, send reminders, and automate tasks
+- ✅ **Extensible**: Supports custom skills, scripts, and endless customization
+
+---
+
+## Installing Clawdbot
+
+Clawdbot is installed via npm, making it incredibly simple:
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+Once installed, you have a complete AI assistant system on your device.
+
+---
+
+## Initializing Your AI Assistant
+
+When you run Clawdbot for the first time, it creates a workspace—the "home" for your AI assistant.
+
+\`\`\`bash
+cd ~/clawd
+clawdbot start
+\`\`\`
+
+The workspace contains several key files:
+- **SOUL.md** - Defines the AI's personality, principles, and behavior
+- **USER.md** - Information about you (name, preferences, projects, etc.)
+- **MEMORY.md** - Long-term memory, recording important events and knowledge
+- **memory/YYYY-MM-DD.md** - Daily notes, recording conversations and events from that day
+- **TOOLS.md** - Local configuration (device names, SSH addresses, etc.)
+
+---
+
+## My Setup Process
+
+### 1. Getting to Know Each Other
+
+In our first conversation, Clawdbot asked me some basic questions:
+- What should I call you?
+- What are you? (AI, robot, or something else?)
+- What's your personality like?
+- What's your signature emoji?
+
+These questions helped it "get to know itself"—it's not a cold program, but an entity with a name, personality, and even its own "soul."
+
+### 2. Understanding Me
+
+Then, it started learning about me:
+- What's your name?
+- How should I address you?
+- What's your timezone?
+- What projects are you working on? What do you care about?
+
+This information goes into USER.md, so it can better understand me in future conversations.
+
+### 3. Choosing a Communication Channel
+
+I tried several channels:
+
+**iMessage? Requires BlueBubbles**
+iMessage needs the third-party BlueBubbles service, requiring a Mac server. Since my Mac mini is always on, this was an option, but I ultimately chose a simpler approach.
+
+**Telegram? Requires Special Network**
+Telegram requires special network access in mainland China, which isn't convenient enough.
+
+**Final Choice: Web Chat**
+I used Clawdbot's built-in webchat feature, opening the conversation directly in a browser. Simple, direct, barrier-free.
+
+---
+
+## What Can Clawdbot Do?
+
+### File Operations
+
+It can directly read and write your file system, helping you:
+- Edit code files
+- Organize document structures
+- Manage project files
+- Search and analyze content
+
+### Information Management
+
+It has a complete memory system:
+- **MEMORY.md**: Long-term memory, recording important decisions and lessons learned
+- **Daily notes**: Daily records of conversations and events
+- **Smart search**: Cross-file search to find the information you need
+
+### Automation Tasks
+
+It can help you:
+- Set up scheduled tasks (cron jobs)
+- Run scripts in the background
+- Send reminders
+- Check emails, calendars, and notifications
+
+### Multi-platform Integration
+
+Beyond webchat, it supports:
+- **Telegram**: Create a bot via BotFather, configure the token
+- **WhatsApp**: Link your personal account by scanning a QR code
+- **Discord**: Create a bot and add it to your server
+- **Slack**: Connect via OAuth authorization
+- **Signal**: Requires Signal CLI configuration
+
+### Programming Assistance
+
+It can help you:
+- Run command-line tools
+- Git operations (commit, push, branch management)
+- Debug code
+- Write and test scripts
+- Manage npm dependencies
+
+### Browser Control
+
+It can control browsers through automation:
+- Web scraping
+- Automated testing
+- Data collection
+- Form filling, clicking, and more
+
+---
+
+## Real-world Use Cases
+
+### 1. Project Management
+
+When I'm working on an Android project, I can ask:
+\`\`\`
+"Help me analyze what's wrong with this Activity launch flow?"
+"How's my project progressing recently?"
+\`\`\`
+It will give a complete answer based on recorded daily notes and MEMORY.md.
+
+### 2. Technical Documentation
+
+I ask it to help organize technical notes:
+\`\`\`
+"Organize the Android architecture design knowledge I learned today into MEMORY.md"
+\`\`\`
+It reads that day's notes, extracts key content, and updates MEMORY.md.
+
+### 3. Automated Reminders
+
+Set up scheduled tasks:
+\`\`\`
+"Remind me of a meeting next Monday at 10 AM"
+"Check my GitHub notifications every morning"
+\`\`\`
+It creates cron jobs and proactively reminds you at the specified time.
+
+### 4. Cross-platform Messaging
+
+You can talk to it via Telegram, WhatsApp, and other channels, using it even when you're away from your computer.
+
+---
+
+## What Makes It Different from Other AIs?
+
+### 1. Data Privacy
+
+Cloud AIs like ChatGPT and Claude require sending your data to servers. Clawdbot runs entirely locally—your conversations, files, and memories never leave your device.
+
+### 2. Continuous Memory
+
+Most cloud AIs treat each conversation independently. Clawdbot has a complete memory system, remembering your projects, decisions, and lessons, getting to know you better over time.
+
+### 3. Proactive Capabilities
+
+Other AIs need you to ask questions. Clawdbot can do things proactively—check emails, remind about meetings, execute scheduled tasks.
+
+### 4. Fully Controllable
+
+You can modify SOUL.md to change its personality, write custom skills to extend its capabilities, or even directly modify code to change its behavior. It truly "belongs to you."
+
+---
+
+## Advanced Feature: Custom Skills
+
+Clawdbot supports a "Skills" system to extend its capabilities. Skills are pre-defined behavior patterns and toolsets.
+
+For example:
+- **github skill**: Interact with GitHub via gh CLI, manage issues and PRs
+- **notion skill**: Operate Notion databases and pages
+- **weather skill**: Get weather forecasts
+- **coding-agent skill**: Run code editors like Claude Code, VS Code
+
+You can write your own skills or download existing ones from the ClowdHub community.
+
+---
+
+## Deploying to Your Personal Website
+
+If you want to integrate Clawdbot into your own website, you can use the webchat feature. Clawdbot provides an HTTP interface that can be embedded as a chat window in any webpage.
+
+Basic steps:
+1. Configure the webchat channel
+2. Embed the JavaScript code provided by Clawdbot on your website
+3. Customize styles and interface
+
+This way, visitors to your site can directly converse with your AI assistant.
+
+---
+
+## My Recommendation
+
+If you're a developer, tech enthusiast, or want a truly private AI assistant, I highly recommend trying Clawdbot.
+
+**Perfect for you if:**
+- ✅ You care about data privacy
+- ✅ You have some technical background
+- ✅ You want AI to remember everything about you
+- ✅ You need AI to proactively do tasks
+- ✅ You want to customize and extend AI capabilities
+
+**Might not be for you if:**
+- ❌ You're completely non-technical
+- ❌ You don't want to deal with configuration
+- ❌ You only need simple Q&A
+- ❌ You don't have long-term usage needs
+
+---
+
+## Conclusion
+
+Clawdbot is more than just a chatbot—it's a **complete AI operating system** running on your device, becoming the center of your digital life.
+
+It has memory, personality, and can do things proactively. Most importantly—it's completely yours.
+
+If you want to build your own personal AI assistant, start today!
+
+---
+
+## Related Resources
+
+- Clawdbot Official Docs: https://docs.clawd.bot
+- GitHub Repository: https://github.com/clawdbot/clawdbot
+- Community: https://discord.com/invite/clawd
+- Skill Marketplace: https://clawdhub.com
+
+---
+
+*This article first appeared on my personal website. Welcome to discuss!*
+`,contentZh:`# Clawdbot入门指南：打造你的私人AI助手
+
+![Clawdbot Demo](/clawdbot-demo.png)
+
+---
+
+**🎁 免费福利**
+
+送你一个免费的AI Coding体验卡，数小时内完成过去需要数周的开发工作：
+[点击领取 →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
+
+在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
+
+Clawdbot就是这样一个存在。今天，我就和大家分享一下我如何配置和使用Clawdbot的过程，以及它能为你带来什么。
+
+---
+
+## 什么是Clawdbot？
+
+简单来说，Clawdbot是一个**运行在你本地设备上的私人AI助手框架**。它不是某个云服务，而是一个可以在你的Mac、服务器上运行的完整系统。
+
+**核心特点：**
+- ✅ **完全私有**：所有数据都在你的设备上，不依赖第三方云服务
+- ✅ **持久记忆**：通过MEMORY.md和daily notes记录你的所有重要信息
+- ✅ **多渠道接入**：支持Telegram、WhatsApp、Discord、Signal等多种消息平台
+- ✅ **主动能力**：可以定时检查、发送提醒、自动执行任务
+- ✅ **可扩展**：支持自定义技能、脚本，让它做更多事情
+
+---
+
+## 安装Clawdbot
+
+Clawdbot是通过npm安装的，非常简单：
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+安装完成后，你的设备上就有了一个完整的AI助手系统。
+
+---
+
+## 初始化你的AI助手
+
+第一次运行时，Clawdbot会创建一个工作空间（workspace），这是AI助手的"家"。
+
+\`\`\`bash
+cd ~/clawd
+clawdbot start
+\`\`\`
+
+工作空间包含几个关键文件：
+- **SOUL.md** - 定义AI助手的个性、原则、行为方式
+- **USER.md** - 关于你自己的信息（名字、偏好、项目等）
+- **MEMORY.md** - AI助手的长时记忆，记录重要事件和知识
+- **memory/YYYY-MM-DD.md** - 每日笔记，记录当天的对话和事件
+- **TOOLS.md** - 本地配置信息（如设备名称、SSH地址等）
+
+---
+
+## 我的配置过程
+
+### 1. 认识彼此
+
+第一次对话时，Clawdbot问了我一些基本问题：
+- 我应该叫什么？
+- 我是什么样子的？（AI、机器人、还是别的什么？）
+- 我的个性是怎样的？
+- 我的标志性emoji是什么？
+
+这些问题让它"认识了自己"——它不是冷冰冰的程序，而是一个有名字、有个性、甚至有自己"灵魂"的存在。
+
+### 2. 了解我
+
+然后，它开始了解我：
+- 你叫什么名字？
+- 我该怎么称呼你？
+- 你的时区是什么？
+- 你在做什么项目？你关心什么？
+
+这些信息会记录在USER.md中，让它在未来的对话中更懂我。
+
+### 3. 选择沟通渠道
+
+我尝试了几个渠道：
+
+**iMessage？需要BlueBubbles**
+iMessage需要第三方服务BlueBubbles，需要在一台Mac上运行服务器，配置相对复杂。考虑到我Mac mini会一直开机，这是一个选项，但最终还是选择了更简单的方式。
+
+**Telegram？需要特殊网络**
+Telegram在中国大陆需要特殊网络环境才能使用，不够方便。
+
+**最终选择：网页聊天**
+直接使用Clawdbot内置的webchat功能，在浏览器中打开就能对话。简单、直接、无门槛。
+
+---
+
+## Clawdbot能做什么？
+
+### 文件操作
+
+它可以直接读写你的文件系统，帮你：
+- 编辑代码文件
+- 组织文档结构
+- 管理项目文件
+- 搜索和分析内容
+
+### 信息管理
+
+它有一个完整的记忆系统：
+- **MEMORY.md**：长期记忆，记录重要的决策、经验教训
+- **daily notes**：每日笔记，记录当天的对话和事件
+- **智能检索**：可以跨这些文件搜索，找到你需要的信息
+
+### 自动化任务
+
+它可以帮你：
+- 设置定时任务（cron jobs）
+- 后台运行脚本
+- 发送提醒
+- 检查邮件、日历、通知
+
+### 多平台集成
+
+除了webchat，它还支持：
+- **Telegram**：通过BotFather创建bot，配置token即可
+- **WhatsApp**：需要扫描二维码关联个人账号
+- **Discord**：可以创建bot并添加到服务器
+- **Slack**：通过OAuth授权连接
+- **Signal**：需要Signal CLI配置
+
+### 编程辅助
+
+它能帮你：
+- 运行命令行工具
+- Git操作（提交、推送、分支管理）
+- 调试代码
+- 编写和测试脚本
+- 管理npm依赖
+
+### 浏览器控制
+
+它可以通过自动化控制浏览器：
+- 网页抓取
+- 自动化测试
+- 数据采集
+- 填表、点击等操作
+
+---
+
+## 实际使用场景
+
+### 1. 项目管理
+
+我在开发Android项目时，可以问它：
+\`\`\`
+"帮我分析一下这个Activity的启动流程有什么问题？"
+"最近的项目进展怎么样？"
+\`\`\`
+它会根据记录的daily notes和MEMORY.md，给出完整的回答。
+
+### 2. 技术文档整理
+
+我让它帮我整理技术笔记：
+\`\`\`
+"把今天学到的Android架构设计知识整理到MEMORY.md中"
+\`\`\`
+它会阅读当天的笔记，提炼关键内容，更新MEMORY.md。
+
+### 3. 自动化提醒
+
+设置定时任务：
+\`\`\`
+"提醒我下周一上午10点有个会议"
+"每天早上检查一下我的GitHub通知"
+\`\`\`
+它会创建cron job，在指定时间主动提醒你。
+
+### 4. 跨平台消息
+
+你可以通过Telegram、WhatsApp等渠道和它对话，即使不在电脑前也能使用。
+
+---
+
+## 和其他AI有什么不同？
+
+### 1. 数据隐私
+
+ChatGPT、Claude等云端AI需要把你的数据发送到服务器，而Clawdbot完全运行在本地，你的对话、文件、记忆都不会离开你的设备。
+
+### 2. 持续记忆
+
+大多数云端AI每次对话都是独立的，但Clawdbot有一个完整的记忆系统，它会记住你的项目、决策、教训，变得越来越了解你。
+
+### 3. 主动能力
+
+其他AI需要你主动问，而Clawdbot可以主动做事——检查邮件、提醒会议、执行定时任务。
+
+### 4. 完全可控
+
+你可以修改SOUL.md改变它的个性，编写自定义技能扩展它的能力，甚至直接修改代码改变它的行为。它是真正"属于你"的。
+
+---
+
+## 高级功能：自定义技能
+
+Clawdbot支持"技能"（Skills）系统，可以扩展它的能力。技能是一些预定义的行为模式和工具集。
+
+比如：
+- **github技能**：通过gh CLI与GitHub交互，管理issue、PR
+- **notion技能**：操作Notion数据库和页面
+- **weather技能**：获取天气预报
+- **coding-agent技能**：运行代码编辑器如Claude Code、VS Code
+
+你可以自己编写技能，或者从ClawdHub社区下载现成的。
+
+---
+
+## 部署到个人网站
+
+如果你想在自己的网站上集成Clawdbot，可以通过webchat功能。Clawdbot提供了一个HTTP接口，可以在任何网页中嵌入聊天窗口。
+
+基本步骤：
+1. 配置webchat渠道
+2. 在你的网站中嵌入Clawdbot提供的JavaScript代码
+3. 自定义样式和界面
+
+这样，你网站的访客就可以直接和你的AI助手对话了。
+
+---
+
+## 我的建议
+
+如果你是开发者、技术爱好者，或者想要一个真正私有的AI助手，我强烈推荐试试Clawdbot。
+
+**适合你如果：**
+- ✅ 注重数据隐私
+- ✅ 有一定的技术基础
+- ✅ 希望AI记住你的所有事情
+- ✅ 需要AI主动做一些任务
+- ✅ 想要自定义和扩展AI的能力
+
+**可能不适合你如果：**
+- ❌ 完全不懂技术
+- ❌ 不想折腾配置
+- ❌ 只需要简单的问答
+- ❌ 没有长期使用的需求
+
+---
+
+## 总结
+
+Clawdbot不仅仅是一个聊天机器人，它是一个**完整的AI操作系统**，运行在你的设备上，成为你数字生活的中心。
+
+它有记忆、有个性、能主动做事，最重要的是——它完全属于你。
+
+如果你也想打造自己的私人AI助手，就从今天开始吧！
+
+---
+
+## 相关资源
+
+- Clawdbot官方文档：https://docs.clawd.bot
+- GitHub仓库：https://github.com/clawdbot/clawdbot
+- 社区：https://discord.com/invite/clawd
+- 技能市场：https://clawdhub.com
+
+---
+
+*本文首发于我的个人网站，欢迎交流讨论。*
+`,contentPreviewEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+
+![Clawdbot Demo](/clawdbot-demo.png)
+
+---
+
+**🎁 Free Gift**
+
+Here's a free AI Coding trial card for you—complete in hours what used to take weeks:
+[Claim Now →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
+
+In the age of AI, we interact with various large language models every day—ChatGPT, Claude, Qwen, and more. But have you ever wondered what it would be like to have a **completely personal AI assistant** that runs on your own device, remembers everything about you, and proactively helps you with tasks?
+
+Clawdbot is exactly that. Today, I'll share my experience setting up and using Clawdbot, and what it can do for you.
+
+---
+
+## What is Clawdbot?
+
+Simply put, Clawdbot is a **personal AI assistant framework that runs locally on your device**. It's not a cloud service—it's a complete system that you can run on your Mac, server, or any machine you own.
+
+**Core Features:**
+- ✅ **Completely Private**: All data stays on your device, no third-party cloud services
+- ✅ **Persistent Memory**: Records your important information via MEMORY.md and daily notes
+- ✅ **Multi-channel Support**: Connects via Telegram, WhatsApp, Discord, Signal, and more
+- ✅ **Proactive Capabilities**: Can check periodically, send reminders, and automate tasks
+- ✅ **Extensible**: Supports custom skills, scripts, and endless customization
+
+---
+
+## Installing Clawdbot
+
+Clawdbot is installed via npm, making it incredibly simple:
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+Once installed, you have a complete AI assistant system on your device.
+
+---
+
+## Initializing Your AI Assistant
+
+When you run Clawdbot for the first time, it creates a workspace—the "home" for your AI assistant.
+
+\`\`\`bash
+cd ~/clawd`,contentPreviewZh:`# Clawdbot入门指南：打造你的私人AI助手
+
+![Clawdbot Demo](/clawdbot-demo.png)
+
+---
+
+**🎁 免费福利**
+
+送你一个免费的AI Coding体验卡，数小时内完成过去需要数周的开发工作：
+[点击领取 →](https://www.bigmodel.cn/activity/trial-card/RQ9UXKO9X8)
+
+---
+
+在AI时代，我们每天都在和各种大模型打交道——ChatGPT、Claude、文心一言……但你有没有想过，如果有一个**完全属于你自己的AI助手**，运行在你自己的设备上，能够记住你的所有事情，主动帮你处理任务，那会是什么体验？
+
+Clawdbot就是这样一个存在。今天，我就和大家分享一下我如何配置和使用Clawdbot的过程，以及它能为你带来什么。
+
+---
+
+## 什么是Clawdbot？
+
+简单来说，Clawdbot是一个**运行在你本地设备上的私人AI助手框架**。它不是某个云服务，而是一个可以在你的Mac、服务器上运行的完整系统。
+
+**核心特点：**
+- ✅ **完全私有**：所有数据都在你的设备上，不依赖第三方云服务
+- ✅ **持久记忆**：通过MEMORY.md和daily notes记录你的所有重要信息
+- ✅ **多渠道接入**：支持Telegram、WhatsApp、Discord、Signal等多种消息平台
+- ✅ **主动能力**：可以定时检查、发送提醒、自动执行任务
+- ✅ **可扩展**：支持自定义技能、脚本，让它做更多事情
+
+---
+
+## 安装Clawdbot
+
+Clawdbot是通过npm安装的，非常简单：
+
+\`\`\`bash
+npm install -g clawdbot
+\`\`\`
+
+安装完成后，你的设备上就有了一个完整的AI助手系统。
+
+---
+
+## 初始化你的AI助手
+
+第一次运行时，Clawdbot会创建一个工作空间（workspace），这是AI助手的"家"。
+
+\`\`\`bash
+cd ~/clawd`,date:"2026-01-26",tags:["AI","Clawdbot","Tutorial","Personal Assistant"],readTime:10,isPaid:!1},{id:"unemployment-and-info-cocoon",title:{en:"Unemployment, Information Cocoon, and Financial Security",zh:"失业、信息茧房与财务安全"},excerpt:{en:"> A deep conversation about unemployment made me rethink how to build a personal safety system in uncertain times...",zh:"> 一次关于失业的深度对话，让我重新思考如何在不确定的时代建立自己的安全体系..."},contentEn:`# Unemployment, Information Cocoon, and Financial Security
 
 > A deep conversation about unemployment made me rethink how to build a personal safety system in uncertain times
 
@@ -7041,5 +7367,5 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **扩展性差**：订单量增长时，无法通过增加POS来提升性能
 - **硬件依赖**：必须配备性能足够的服务器设备
 
-### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function A(n,e){return n[e]||n.en}const o=i;export{o as a,A as g};
-//# sourceMappingURL=articles-D-WZDf_-.js.map
+### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function o(n,e){return n[e]||n.en}const t=i;export{t as a,o as g};
+//# sourceMappingURL=articles-BT2UzniY.js.map
