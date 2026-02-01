@@ -3092,7 +3092,7 @@ Hu Chenfeng's answer is candid:
 1. **他没有闲着** - 高中虽然学习不好，但一直在看书、学网上的内容
 2. **他有家庭的支持** - 父母虽然不是大富大贵，但愿意支持他发展
 3. **他拿出了成绩** - 从汽修工到炒股，再到私募基金，每一步都有实打实的成果
-4. **他抓住了机会** - 主播这个行业的特殊性，让他得到了认可`,date:"2026-02-01",tags:["General"],readTime:5,isPaid:!1},{id:"getting-started-with-clawdbot",title:{en:"Getting Started with Clawdbot: Build Your Own Personal AI Assistant",zh:"Clawdbot入门指南：打造你的私人AI助手"},excerpt:{en:"![Clawdbot Demo](/clawdbot-demo.png)...",zh:"![Clawdbot Demo](/clawdbot-demo.png)..."},contentEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
+4. **他抓住了机会** - 主播这个行业的特殊性，让他得到了认可`,date:"2026-02-01",tags:["Life","Wisdom","Growth","Reflection"],readTime:8,isPaid:!1},{id:"getting-started-with-clawdbot",title:{en:"Getting Started with Clawdbot: Build Your Own Personal AI Assistant",zh:"Clawdbot入门指南：打造你的私人AI助手"},excerpt:{en:"![Clawdbot Demo](/clawdbot-demo.png)...",zh:"![Clawdbot Demo](/clawdbot-demo.png)..."},contentEn:`# Getting Started with Clawdbot: Build Your Own Personal AI Assistant
 
 ![Clawdbot Demo](/clawdbot-demo.png)
 
@@ -7368,4 +7368,4 @@ In the overseas restaurant SaaS business, I led the architecture transformation 
 - **硬件依赖**：必须配备性能足够的服务器设备
 
 ### 新架构：分布式边缘计算`,date:"2026-01-10",tags:["Distributed Systems","Architecture","Backend"],readTime:8,isPaid:!0}];function o(n,e){return n[e]||n.en}const t=i;export{t as a,o as g};
-//# sourceMappingURL=articles-BT2UzniY.js.map
+//# sourceMappingURL=articles-CHP3Snht.js.map
